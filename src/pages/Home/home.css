@@ -19,9 +19,9 @@ body {
     gap: 1rem;
 }
 #logo {
-    width: 26vw;
+    width: 99px;
 
-    height: auto;
+    height: 166px;
 }
 #container-button {
     display: flex;
