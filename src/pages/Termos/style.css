@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--Peltre);
+}
+
+:root {
+  --Azul-escuro: #333652;
+  --Amarelo: #fad02c;
+  --Peltre: #e9eaec;
+  --Cinza-azulado: #90adc6;
+  --input: rgba(219, 194, 73, 0.39);
+  --Azul-check: #353854;
+}
+
+#btns-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reject {
+  width: 231px;
+  height: 45px;
+  border-radius: 15px;
+  border-style: none;
+  margin: 25px 0;
+  background-color: var(--Azul-check);
+  color: #e9eaec;
+}
