@@ -28,3 +28,26 @@ body {
   background-color: var(--Azul-check);
   color: #e9eaec;
 }
+
+.termos {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  /*max-width: 80%; */
+  margin: 40 auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.fundo{
+  padding: 10px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+#titulo{
+  text-align: center;
+}
+
