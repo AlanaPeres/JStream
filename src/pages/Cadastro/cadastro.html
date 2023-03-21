@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +9,40 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
     <section>
         <div id="container-logo">
-            <img src="../img/LOGO 1.png">
+            <img src="/src/assets/Logo simples.png">
         </div>
 
         <div id="container-form">
-            <form id="form">
-                <label for="fullName">Nome Completo</label>
-                <input type="text" id="fullName" name="fullname" placeholder="Digite o nome completo" required>
+            <form>
+                <div id="form">
+                    <label for="fullName">Nome</label>
+                    <input type="text" id="fullName" name="fullname" placeholder="Digite o nome completo" required />
 
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" maxlength="11" minlength="11" placeholder="Digite apenas números" required>
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" maxlength="11" minlength="11" placeholder="Digite o CPF"
+                        required />
+
+                    <label for="fullName">Senha</label>
+                    <input type="text" id="password" name="password" placeholder="Digite a senha" required />
+
+                    <label for="cpf">Repetir senha</label>
+                    <input type="text" name="password" maxlength="11" minlength="11" placeholder="Repita a senha"
+                        required />
+                </div>
+                <div id="terms">
+                    <input type="checkbox" id="accept-terms" name="accept-terms" />
+                    <label for="">ACEITAR <a href="#">TERMOS DE PRIVACIDADE</a></label>
+                </div>
+                <div>
+                    <input id="submit" type="submit" value="Criar conta" />
+                </div>
             </form>
         </div>
     </section>
 </body>
+
 </html>
