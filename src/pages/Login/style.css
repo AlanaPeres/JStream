@@ -38,8 +38,6 @@
 
 .login_cpf,
 .login_password {
-    /* all: unset; */
-
     width: 231px;
     height: 45px;
 
@@ -54,8 +52,7 @@
 
     background: rgba(219, 194, 73, 0.39);
     border-radius: 15px;
-    border: 0 none;
-    color: #fff;
+    border: 1px solid #b69b2e;
     cursor: pointer;
 }
 
@@ -115,4 +112,3 @@
     text-decoration: none;
     color: #fff;
 }
-
