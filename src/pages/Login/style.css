@@ -38,7 +38,7 @@
 
 .login_cpf,
 .login_password {
-    all: unset;
+    /* all: unset; */
 
     width: 231px;
     height: 45px;
@@ -54,6 +54,9 @@
 
     background: rgba(219, 194, 73, 0.39);
     border-radius: 15px;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
 }
 
 .login_remember-password,
@@ -101,5 +104,15 @@
 
     background: #353854;;
     border-radius: 15px;
+    cursor: pointer;
+}
+
+.login_btn:hover {
+    background-color: #DBC249;   
+}
+
+.btn_link {    
+    text-decoration: none;
     color: #fff;
 }
+

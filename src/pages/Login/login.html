@@ -8,26 +8,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
     <title>Login</title>
 </head>
 <body>
     <div class="container">
-            <img src="/src/assets/LOGO Bugpay.png" class="img-logo" alt="logo">
+        <div class="mensagem"></div>
+
+        <img src="/src/assets/LOGO Bugpay.png" class="img-logo" alt="logo">
         <form class="login">   
             <label for="cpf">CPF</label>
-            <input type="text" name="cpf" class="login_cpf" placeholder="DIGITE SEU CPF">
+            <input class="login_cpf" type="text" name="cpf" placeholder="DIGITE SEU CPF" required>
             <label for="password">SENHA</label>
-            <input type="text" name="password" class="login_password" placeholder="DIGITE SUA SENHA">
+            <input class="login_password" type="text" name="password" placeholder="DIGITE SUA SENHA" required>
             <div class="login_remember-password">
                 <input class="remember-password_checkbox" type="checkbox" name="remember-password" value="">
                 <label for="remember-password">LEMBRAR SENHA</label>
             </div>
             <div class="login_forgot-password">
                 <p class="forgot-password_text">ESQUECEU A SENHA?</p>
-                <a class="forgot-password_link" href="/src/pages/RecuperarSenha/teladerecuperacao.html">CLIQUE AQUI</a>
+                <a class="forgot-password_link" href="/pages/RecuperarSenha/teladerecuperacao.html">CLIQUE AQUI</a>
             </div>
-            <button class="login_btn">LOGIN</button>
-
+            <button class="login_btn" type="submit">
+                <a class="btn_link" href="#">LOGIN</a>
+            </button>
         </form>   
     </div>
 </body>
