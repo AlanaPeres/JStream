@@ -105,7 +105,8 @@
 }
 
 .login_btn:hover {
-    background-color: #DBC249;   
+    background-color: #DBC249;  
+    transition: 0.2s;
 }
 
 .btn_link {    
