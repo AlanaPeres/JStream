@@ -1,56 +1,40 @@
-# JStream
+## 🏦 Empresa
 
-## 📦 Introdução
+<div align="center">
+<img height="190px" src="/src/assets/Soft Finance.png"> 
+</div>
 
-Software desenvolvido para a edtech Imã Learning Place, como projeto final do bootcamp Sharp Coders.
+<br />
 
-⚙️ Professor: Hugo Rafael
+<h4 align="center">🚧 Status da aplicação: Em contrução 🚧</h4>
+
+<br />
+
+## 🚀 Introdução
+
+Software desenvolvido como projeto final do bootcamp <b>Sharp Coders</b>.
+
+⚙️ Edtech: <b>Imã Tech</b>
+⚙️ Professor: <b>Hugo Rafael</b>
+
 <br />
 
 ## 🛠️ 1ª Etapa do projeto Front-end construído com
 
 - [HTML 5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
 - [CSS 3](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [TypeScript](https://www.typescriptlang.org/)
-
-<br />
-
-## 🚀 Descrição
-
-<p>O objetivo do projeto ...</p>
-A empresa foi denominada:
-
-<img align="center" src="/"> <!--Colocar aqui logo da empresa-->
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 <br />
 
 ## 📌 Escopo do Projeto
 
-A Empresa, deseja fornecer aos clientes os seguintes acessos:
-
+<h5>A <u>Soft Finance</u> deseja fornecer aos clientes os seguintes acessos:</h5>
 <ul>
-<li>Acesso 1</li>
-<li>Acesso 2</li>
-<li>Acesso 3.</li>
-</ul>
-<br />
-
-## 📄 Documentação do Projeto
-
-Clique sobre o item desejado para acessar a documentação da página correspondente:
-
-<li><a href="/">Home</a></li>
-
-<li><a href="/">Área de Cadastro para Novos usuários</a></li>
-
-<li><a href="/">Área de Login</a></li>
-
-<li><a href="/">Home do Cliente Logado</a></li>
-
-<br />
-
-<li><a href="/"> Software Requirements Specification (SRS)</a></li>
-
+<li>Home</li>
+<li>Área de Cadastro para Novos usuários</li>
+<li>Área de Login</li>
+<li>Home do Cliente Logado</li>
 </ul>
 
 <br />
@@ -64,27 +48,27 @@ Clique sobre o item desejado para acessar a documentação da página correspond
       <a href="https://github.com/AlanaPeres">
         <img src="https://img.shields.io/badge/GitHub-100000?&logo=github&logoColor=white">
       </a>
-      <a href="https://www.linkedin.com/in/alana-peres-1ba0b6169/">
+      <a href="https://www.linkedin.com/in/alana-peres/">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?&logo=linkedin&logoColor=white">
       </a>
     </li>
     <!-- Larissa Leal Dos Santos Dias -->
     <li>
-      <img src="https://img.shields.io/badge/Dev-Larissa%Leal-blueviolet">
-      <a href="https://github.com/">
+      <img src="https://img.shields.io/badge/Dev-Larissa%20Leal-blueviolet">
+      <a href="https://github.com/LariLealDias">
         <img src="https://img.shields.io/badge/GitHub-100000?&logo=github&logoColor=white">
       </a>
-      <a href="https://www.linkedin.com/in/">
+      <a href="https://www.linkedin.com/in/larissa-leal-dias-408455157/">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?&logo=linkedin&logoColor=white">
       </a>
     </li>
         <!-- Leandro Gomes Lopes  -->
     <li>
       <img src="https://img.shields.io/badge/Dev-Leandro%20Lopes-blueviolet">
-      <a href="https://github.com/">
+      <a href="https://github.com/leandrolopes86">
         <img src="https://img.shields.io/badge/GitHub-100000?&logo=github&logoColor=white">
       </a>
-      <a href="https://www.linkedin.com/in/">
+      <a href="https://www.linkedin.com/in/leandrolopes86/">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?&logo=linkedin&logoColor=white">
       </a>
       </a>
@@ -92,30 +76,30 @@ Clique sobre o item desejado para acessar a documentação da página correspond
     <!-- Lennan Renzo -->
     <li>
       <img src="https://img.shields.io/badge/Dev-Lennan%20Renzo-blueviolet">
-      <a href="https://github.com/">
+      <a href="https://github.com/LENNANrnz">
         <img src="https://img.shields.io/badge/GitHub-100000?&logo=github&logoColor=white">
       </a>
-      <a href="https://www.linkedin.com/in/">
+      <a href="https://www.linkedin.com/in/lennanrnz/">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?&logo=linkedin&logoColor=white">
       </a>
     </li>
     <!-- Leonardo Borges -->
     <li>
       <img src="https://img.shields.io/badge/Dev-Leonardo%20Borges-blueviolet">
-      <a href="https://github.com/">
+      <a href="https://github.com/lbvargas99">
         <img src="https://img.shields.io/badge/GitHub-100000?&logo=github&logoColor=white">
       </a>
-      <a href="https://www.linkedin.com/in/">
+      <a href="https://www.linkedin.com/in/lbvargas99">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?&logo=linkedin&logoColor=white">
       </a>
     </li>
     <!-- Luana Oliveira Da Silva -->
     <li>
       <img src="https://img.shields.io/badge/Dev-Luana%20Silva-blueviolet">
-      <a href="https://github.com/">
+      <a href="https://github.com/luanaoliveira">
         <img src="https://img.shields.io/badge/GitHub-100000?&logo=github&logoColor=white">
       </a>
-      <a href="https://www.linkedin.com/in/">
+      <a href="https://www.linkedin.com/in/eng-luana-oliveira">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?&logo=linkedin&logoColor=white">
       </a>
     </li>
@@ -132,27 +116,26 @@ Clique sobre o item desejado para acessar a documentação da página correspond
     <!-- Natanael Barboza Lima -->
     <li>
       <img src="https://img.shields.io/badge/Dev-Natanael%20Lima-blueviolet">
-      <a href="https://github.com/">
+      <a href="https://github.com/Natanaelbarboz">
         <img src="https://img.shields.io/badge/GitHub-100000?&logo=github&logoColor=white">
       </a>
-      <a href="https://www.linkedin.com/in/">
+      <a href="https://www.linkedin.com/in/natanael-barboza">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?&logo=linkedin&logoColor=white">
       </a>
     </li>
     <!-- Raphael Albergaria -->
     <li>
       <img src="https://img.shields.io/badge/Dev-Raphael%20Albergaria-blueviolet">
-      <a href="https://github.com/">
+      <a href="https://github.com/Raphael-Albergaria">
         <img src="https://img.shields.io/badge/GitHub-100000?&logo=github&logoColor=white">
       </a>
-      <a href="https://www.linkedin.com/in/">
+      <a href="https://www.linkedin.com/in/raphael-albergaria">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?&logo=linkedin&logoColor=white">
       </a>
     </li>
-
   </ul>
 <br />
 
 ## 📌 Versão
 
-Nós usamos o GitHub para controle de versão.
+Nós usamos o Git e o GitHub para controle de versão.
