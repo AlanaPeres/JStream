@@ -10,16 +10,15 @@
     <script src="teladerecuperacao.js" defer></script>
   </head>
   <body>
-    <div id="cardprincipal">
-      <img id="logotipo" src="/src/assets/LOGO Bugpay.png" alt="Logotipo" />
-
-      <input id="cpfarea" placeholder="DIGITE SEU CPF" type="text" />
-
-      <button onclick="mostrartexto()" id="btnsenha" type="submit">Enviar código de recuperação</button>
-
-      <div  id="codigoenviado">
-        O código foi enviado para o seu e-mail
+    <form> 
+      <div id="cardprincipal">
+        <img id="logotipo" src="/src/assets/LOGO Bugpay.png" alt="Logotipo" />
+        <input id="cpfarea" placeholder="DIGITE SEU CPF" type="text" />
+        <button onclick="mostrartexto()" id="btnsenha" type="submit">Enviar código de recuperação</button>
+        <div  id="codigoenviado">
+          O código foi enviado para o seu e-mail
+        </div>
       </div>
-    </div>
+    </form>
   </body>
 </html>
