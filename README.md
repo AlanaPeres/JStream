@@ -6,7 +6,7 @@
 
 <br />
 
-<h4 align="center">🚧 Status da aplicação: Em contrução 🚧</h4>
+<h4 align="center">🚧 Status da aplicação: Em construção 🚧</h4>
 
 <br />
 
@@ -15,6 +15,7 @@
 Software desenvolvido como projeto final do bootcamp <b>Sharp Coders</b>.
 
 ⚙️ Edtech: <b>Imã Tech</b>
+
 ⚙️ Professor: <b>Hugo Rafael</b>
 
 <br />
@@ -32,9 +33,10 @@ Software desenvolvido como projeto final do bootcamp <b>Sharp Coders</b>.
 <h5>A <u>Soft Finance</u> deseja fornecer aos clientes os seguintes acessos:</h5>
 <ul>
 <li>Home</li>
-<li>Área de Cadastro para Novos usuários</li>
-<li>Área de Login</li>
-<li>Home do Cliente Logado</li>
+<li>Cadastro para Novos usuários</li>
+<li>Login</li>
+<li>Recuperação de Senha</li>
+<li>Termos e Condições</li>
 </ul>
 
 <br />
