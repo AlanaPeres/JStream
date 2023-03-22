@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--Peltre);
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -30,8 +31,8 @@ body {
 }
 
 .termos {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   align-items: center;
   /*max-width: 80%; */
   margin: 40 auto;
@@ -40,14 +41,13 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
 }
-.fundo{
+.fundo {
   padding: 10px;
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-#titulo{
+#titulo {
   text-align: center;
 }
-
