@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--Peltre);
+  font-family: "Roboto", sans-serif;
+ 
 }
 
 :root {
@@ -38,6 +40,7 @@ section {
   line-height: 15px;
   text-transform: uppercase;
   margin-bottom: 5px;
+  
 }
 
 #form input {
@@ -47,11 +50,13 @@ section {
   border-style: none;
   background-color: var(--input);
   margin: 0 0 25px 0;
+  border: 1px solid #b69b2e;
+    
 }
 
 #form input::placeholder {
   padding: 30px;
-  text-transform: uppercase;
+  text-transform: uppercase;  
 }
 
 #terms {
@@ -98,5 +103,6 @@ section {
     border-style: none;
     background-color: var(--input);
     margin: 0 0 15px 0;
+    
   }
 }
