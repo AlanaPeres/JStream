@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--Peltre);
-  font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -14,40 +13,70 @@ body {
   --Azul-check: #353854;
 }
 
-#btns-container {
+.logo_container img {
+  max-width: 65px;
+  max-height: 109px;
+  margin: auto;
+  display: flex;
+}
+
+.logo {
+  border-radius: 15px;
+  margin: 35px 155px 30px 155px;
+}
+
+.title {
+  width: 151px;
+  height: 15px;
+  align-items: center;
+  margin: auto;
+}
+.text_title {
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.termos {
+  width: 236px;
+  height: 350px;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  margin: 11px auto 22px;
+  box-sizing: border-box;
+}
+
+.text_termos {
+  margin: auto;
+  max-width: 197px;
+  max-height: 330px;
+  overflow: auto;
+  font-family: "Roboto";
+  text-align: justify;
+  color: #000000;
+  font-style: normal;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.btns-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#reject {
+.reject {
   width: 231px;
   height: 45px;
   border-radius: 15px;
   border-style: none;
-  margin: 25px 0;
   background-color: var(--Azul-check);
   color: #e9eaec;
-}
-
-.termos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /*max-width: 80%; */
-  margin: 40 auto;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-.fundo {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#titulo {
-  text-align: center;
 }
