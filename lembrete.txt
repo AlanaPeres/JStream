@@ -1,0 +1,3 @@
+1. Nome dos arquivos em Camel Case
+2. Páginas e seus arquivos, com nomes iguais, só diferencia a extensão dos arquivos
+3. Iniciar no modelo mobile
