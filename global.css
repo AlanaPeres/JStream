@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "roboto";
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+}
+
+:root {
+    --backgroundmobile-color: #e0f2f1;
+    --darkbtn-color: #263339;
+    --backgrounddesktop-color: #80cbc4;
+    --hoverbotaoescuropraclaro--color: #5d7a88;
+    --hoverbotaoclaropraescuro--color: #408d86;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+html,
+body,
+#root {
+    font-family: "roboto";
+    height: 100vh;
+}

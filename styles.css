@@ -1,0 +1,135 @@
+@import url(global.css);
+   
+   
+
+@media screen and (min-width: 350px) {
+    
+    nav {display: none;}
+    
+        #containermobile {
+            flex-direction: column;
+            width: 10rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        
+        }
+        
+        
+        #soft {
+            color: var(--darkbtn-color);
+            
+        }
+        
+        #finance {
+            
+            color: #408d86;
+            letter-spacing: 0.2rem;
+        }
+        
+        .btnmobile {
+            background-color: var(--darkbtn-color);
+            color: var(--backgroundmobile-color);
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            width: 10rem;
+            margin-top: 2rem;
+            border: none;
+            color: var(--backgroundmobile-color);
+            letter-spacing: 0.1rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: all 0.25s ease-in-out;
+        }
+                 
+        .btnmobile:hover {
+            
+            cursor: pointer;
+            background-color: var( --hoverbotaoescuropraclaro--color);
+            color: black;
+        }
+}
+
+
+
+
+@media  screen and (min-width: 900px) {
+
+
+    
+    
+    
+    nav {
+        display: block;
+        background-color: var(--darkbtn-color);
+        overflow: hidden;
+        height: 4rem;
+        text-decoration: dotted;
+        text-transform: uppercase;
+    
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: end;
+        margin: 1rem;
+        margin-right: 7rem;
+    
+    }
+    
+    nav li {
+        display: inline-block;
+        margin-right: 2rem;
+        color: var(--backgrounddesktop-color);
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    nav li a{
+    
+        text-decoration: none;
+        color:  var(--backgrounddesktop-color);
+        transition: all 0.25s ease-in-out;
+    }
+    
+    nav li a:hover {
+        color: var(--backgroundmobile-color);
+      
+    }
+    
+    
+    .btnnavdesktop {
+    
+        height: 2rem;
+        border-radius: 0.5rem;
+        width: 5rem;
+        background-color: var(--backgrounddesktop-color);
+        border: none;
+        font-family: "roboto";
+        text-transform: uppercase;
+        color: var(--darkbtn-color);
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.25s ease-in-out;
+    
+    
+    }
+    
+    .btnnavdesktop:hover {
+    
+        cursor: pointer;
+        background-color: var(--hoverbotaoclaropraescuro--color);
+        color: #fafafa;
+    }
+    
+     #containermobile{
+        display: none;
+    } 
+
+    
+}
+
