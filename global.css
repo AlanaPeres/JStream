@@ -1,14 +1,12 @@
-@font-face {
-    font-family: "roboto";
-    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --backgroundmobile-color: #e0f2f1;
+    --backgroundmobile-color: #E0F2F1;
     --darkbtn-color: #263339;
-    --backgrounddesktop-color: #80cbc4;
-    --hoverbotaoescuropraclaro--color: #5d7a88;
+    --backgrounddesktop-color: #80CBC4;
+    --hoverbotaoescuropraclaro--color: #80CBC4;
     --hoverbotaoclaropraescuro--color: #408d86;
+    font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -21,6 +19,5 @@
 html,
 body,
 #root {
-    font-family: "roboto";
     height: 100vh;
 }
