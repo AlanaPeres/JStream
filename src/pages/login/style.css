@@ -1,0 +1,82 @@
+@import url(/global.css);
+
+body,
+form {
+  background: var(--backgroundmobile-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  margin-bottom: 30px;
+  max-width: 70px;
+}
+
+input {
+  background: var(--hoverbotaoclaropraescuro--color);
+  margin: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  max-width: 150px;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #f9f9f9;
+}
+
+.senha #lembrar-senha {
+  margin: 0 10px 10px 0;
+}
+
+span,
+.senha {
+  display: flex;
+  flex-direction: column;
+}
+
+.senha,
+a {
+  font-size: 10px;
+  color: var(--darkbtn-color);
+  display: flex;
+  flex-direction: row;
+}
+
+.senha div {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  margin-bottom: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  min-width: 150px;
+  outline: none;
+  padding: 5px 10px;
+  background: var(--darkbtn-color);
+  color: #f9f9f9;
+}
+
+@media screen and (min-width: 350px) {
+  button {
+    min-width: 170px;
+  }
+
+  input {
+    max-width: 170px;
+  }
+
+  .senha,
+  a {
+    font-size: 12px;
+  }
+}
