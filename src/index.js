@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Register from './pages/Register/register';
+import SignUp from './pages/SignUp/signUp';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
 );
 root.render(
   <React.StrictMode>
-    <Register/>
+    <SignUp/>
   </React.StrictMode>
 );
 
