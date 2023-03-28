@@ -10,33 +10,32 @@
 </head>
 
 <body>
-
-    <div class="logo">
-        <img src="../../assets/logo dark.png" alt="Logo" width="100px">
-    </div>
-
-    <div class="img">
-        <!--Campo onde vai a imagem do Desktop-->
-    </div>
-
-
-    <form class="form">
-        <input placeholder="CPF" type="text" id="cpf" autocomplete="off" required pattern="[0-9]{11}+$">
-        <input placeholder="SENHA" type="password" id="senha" autocomplete="off" required>
-        <div class="senha">
-            <input type="checkbox" id="lembrar-senha" name="lembrar-senha">
-            <span>
-                <label for="lembrar-senha">REMEMBER PASSWORD</label>
-                <a href="#">FORGOT PASSWORD</a>
-            </span>
+    <div class="container">
+        <div class="login-img">
+            <img src="../../assets/login_image.png" alt="Logo">
         </div>
-        <div class="botao-login">
-            <button type="submit">SIGN IN</button>
+        <div>
+            <div class="logo">
+                <img src="../../assets/logo dark.png" alt="Logo" width="100px">
+            </div>
+
+            <form class="form">
+                <input placeholder="CPF" type="text" id="cpf" autocomplete="off" required pattern="[0-9]{11}+$">
+                <input placeholder="PASSWORD" type="password" id="password" autocomplete="off" required>
+                <div class="password">
+                    <input type="checkbox" id="remember-password" name="remember-password">
+                    <span>
+                        <label for="remember-password">REMEMBER PASSWORD</label>
+                        <a href="#">FORGOT PASSWORD</a>
+                    </span>
+                </div>
+                <div class="buttons">
+                    <button type="submit">SIGN IN</button>
+                    <button class="back" type="button" onclick="history.go(-1)"> &lt; BACK</button>
+                </div>
+            </form>
         </div>
-
-    </form>
-
-
+    </div>
 </body>
 
 </html>

@@ -1,17 +1,32 @@
 @import url(/global.css);
 
-body,
-form {
+body {
   background: var(--backgroundmobile-color);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+form,
+.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-img {
+img .logo {
   margin-bottom: 30px;
   max-width: 70px;
+}
+
+.login-img {
+  display: none;
 }
 
 input {
@@ -29,17 +44,16 @@ input::placeholder {
   color: #f9f9f9;
 }
 
-.senha #lembrar-senha {
+.password #remember-password {
   margin: 0 10px 10px 0;
 }
 
-span,
-.senha {
+.password {
   display: flex;
   flex-direction: column;
 }
 
-.senha,
+.password,
 a {
   font-size: 10px;
   color: var(--darkbtn-color);
@@ -47,7 +61,7 @@ a {
   flex-direction: row;
 }
 
-.senha div {
+.password div {
   display: flex;
   flex-direction: column;
 }
@@ -66,6 +80,19 @@ button {
   color: #f9f9f9;
 }
 
+button:hover {
+  background: var(--hoverbotaoclaropraescuro--color);
+}
+
+.buttons button {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.back {
+  display: none;
+}
+
 @media screen and (min-width: 350px) {
   button {
     min-width: 170px;
@@ -75,8 +102,25 @@ button {
     max-width: 170px;
   }
 
-  .senha,
+  .password,
   a {
     font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .container {
+    grid-template-columns: 1fr 450px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .back,
+  .login-img {
+    display: block;
   }
 }
