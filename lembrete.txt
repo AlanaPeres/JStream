@@ -1,3 +1,8 @@
 1. Nome dos arquivos em Camel Case
 2. Páginas e seus arquivos, com nomes iguais, só diferencia a extensão dos arquivos
-3. Iniciar no modelo mobile
+3. Iniciar no modelo mobile, usando max-width 375px
+
+Pastas: CamelCase iniciando com letra maiuscula
+Arquivo: CamelCase com tipo de arquivo que é no final, ex:
+Page = HomePage
+Componente = HomeComponent
