@@ -1,0 +1,54 @@
+
+@media screen and (min-width: 1000px) {
+
+    body {
+        background-color: var(--backgrounddesktop-color);
+    }
+
+    .logotipo {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 25%;
+        left: 65%;
+        transform: translateY(-50%);
+        animation: move-up-down 3s ease-in-out infinite;
+    
+    }
+    
+    
+    .imagem {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 50%;
+        left: 20%;
+        transform: translateY(-50%);
+    
+    }
+    
+    @keyframes move-up-down {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-25px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }}
+
+    @media screen and (max-width: 1000px) {
+
+
+        .logotipo{
+            display: none;
+        }
+        .imagem{
+            display: none;
+        }
+        
+    }
+
+  
