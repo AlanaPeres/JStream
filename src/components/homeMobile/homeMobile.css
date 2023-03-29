@@ -41,7 +41,7 @@ h1 span {
     transition: all 0.25s ease-in-out;
 }
 
-.btnmobile:hover {
+.btn_mobile:hover {
 
     cursor: pointer;
     background-color: var(--hoverbotaoescuropraclaro--color);
