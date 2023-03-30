@@ -1,9 +1,10 @@
-import FormSignUp from "../../components/FormSignUp/formSignUp";
+import React from "react";
+import FormSignUpMobile from "../../components/FormSignUpMobile/formSignUp";
 
-function SignUp() {
+const FormSignUp = () => {
     return (
-        <FormSignUp/>
+        <FormSignUpMobile/>
     );
 }
 
-export default SignUp;
+export default FormSignUp;
