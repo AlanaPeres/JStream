@@ -13,14 +13,9 @@
         width: 80vh;
         height: 80vh;
         margin-top: 50px;
-        margin-right: 250px; /*  */
+        margin-right: 290px;
     }
-/* 
-    .sign-up-page {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }  */
+
 }
 @media only screen and (max-width: 800px) {
     .register-image {

@@ -96,26 +96,32 @@ input[type=date]:focus{ color: #fff; }
 
 @media only screen and (min-width: 800px) {
     .create-account {
-        padding: 50px;
+        padding: 90px;
         background-color: #408D86;
         border-radius: 30px;
+        margin-top: 50px;
+        margin-right: 150px;
+        margin-bottom: 100px;
     }
 
     .create-account_form {
         display: flex;
-        max-width: 400px;
+        max-width: 700px;
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
     .form_group {
-        width: 190px;
+        width: 330px;
         margin: 10px 0px;
+        font-size: 24px;
     }
 
     .input, .group_uf {
         background-color: #fff;
         color: #263339;
-        border-radius: 20px;
+        border-radius: 40px;
+        height: 60px;
     }
 
     .group_uf option {
@@ -124,10 +130,12 @@ input[type=date]:focus{ color: #fff; }
 
     .input-label {
         color: #263339;
+        margin-left: 10px;
     }
 
     .create-account_form input:focus ~ label {
         color: #fff;
+        font-size: 24px;
     }
 
     .btn_sign-up {
@@ -145,11 +153,13 @@ input[type=date]:focus{ color: #fff; }
         width: 100%;
         padding: 0 40px;
         margin-bottom: 20px;
+        font-size: 24px;
     }
 
     .terms-conditions-label,
     .terms-conditions-label a {
         color: #fff;
+        font-size: 28px;
     }
 
     .form_btn {
@@ -159,5 +169,20 @@ input[type=date]:focus{ color: #fff; }
 
     .btn_sign-up {
         border-radius: 20px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .create-account_form input:focus ~ label {
+        transform: translateY(-42px);
+    }
+
+    .checkbox_input {
+        width: 20px;
+        height: 20px;
+    }
+
+    .img-logo {
+        
     }
 }
