@@ -70,6 +70,24 @@ nav li a:hover {
   background-color: var(--hoverbotaoclaropraescuro--color);
   color: #fafafa;
 }
+@media screen and (max-width: 768px) { 
+  nav li {
+    font-size: 0.9em;
+    margin-right: 1.5rem;
+   
+  }
+  nav{
+    height: 3.5rem;
+  }
+
+  .btn {
+    font-size: 1em; 
+    padding: 0em 0em;
+    height: 1.2rem;
+    width: 5rem;
+  }
+}
+
 
 @media screen and (max-width: 500px) { 
   nav li {
