@@ -1,8 +1,8 @@
 import * as React from "react"
-import './formSignUp.css'
+import './SignUpForm.css'
 import logo from '../../assets/logo dark.png'
 
-const FormSignUp = () => {
+const SignUpForm = () => {
     return (
         <div className="create-account">
             <div className='img'>
@@ -85,18 +85,18 @@ const FormSignUp = () => {
                         <option value="TO">Tocantins</option>
                     </select>
                 </div>
-                <div className='form_group'>
-                    <input name="confirm-terms-and-conditions" className='checkbox_input' type="checkbox" required/>
-                    <label className="confirm-terms-and-conditions" htmlFor="confirm-terms-and-conditions" >
+                <div className='form_group terms-conditions-group'>
+                    <input name="terms-conditions-label" className='checkbox_input' type="checkbox" required/>
+                    <label className="terms-conditions-label" htmlFor="terms-conditions-label" >
                         Li e concordo com os <a href="#">termos e condições</a>.
                     </label>
                 </div>
                 <div className='form_btn'>               
-                    <button className='form_sign-up' type="submit">Criar conta</button>          
+                    <button className='btn_sign-up' type="submit">Criar conta</button>          
                 </div>
             </form>
             </div>
     );
 }
 
-export default FormSignUp;
+export default SignUpForm;

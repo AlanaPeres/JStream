@@ -1,10 +1,15 @@
 import React from "react";
-import FormSignUpMobile from "../../components/FormSignUpMobile/formSignUp";
+import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import registerImage from '../../assets/register_image.png';
+import './SignUp.css';
 
-const FormSignUp = () => {
+const SignUp = () => {
     return (
-        <FormSignUpMobile/>
+        <div className="sign-up-page">
+            <img className="register-image" src={registerImage} alt="user register" />
+            <SignUpForm />
+        </div>
     );
 }
 
-export default FormSignUp;
+export default SignUp;

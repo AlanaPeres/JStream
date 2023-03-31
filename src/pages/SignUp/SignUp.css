@@ -1,0 +1,30 @@
+
+@media only screen and (min-width: 800px) {
+    .sign-up-page {
+        display: flex;
+        justify-content: flex-end;
+        background-color: #80CBC4;
+        padding: 40px 30px;
+        box-sizing: border-box;
+        height: 100vh;
+    }
+
+    .register-image {
+        width: 80vh;
+        height: 80vh;
+        margin-top: 50px;
+        margin-right: 250px; /*  */
+    }
+/* 
+    .sign-up-page {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }  */
+}
+@media only screen and (max-width: 800px) {
+    .register-image {
+        display: none;
+    }
+
+}
