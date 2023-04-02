@@ -66,12 +66,18 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .btn {
     width: 29.31rem;
-    height: 3rem;
+    height: 4rem;
     margin: 0.3rem;
     background-color: var(--hoverbotaoescuropraclaro--color);
     border-radius: 3.12rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--backgroundmobile-color);
+    font-size: 2.18rem;
+    border: none;
 }
