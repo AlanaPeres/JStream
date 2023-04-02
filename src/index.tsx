@@ -2,7 +2,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import SignUp from './pages/SignUp/signUp';
-import { Homepage } from "./pages/homePage/homePage";
+// import { Homepage } from "./pages/homePage/homePage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <SignUp/>
-    <Homepage />
+    {/* <Homepage /> */}
   </React.StrictMode>
 );
 

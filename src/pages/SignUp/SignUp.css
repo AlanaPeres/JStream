@@ -11,7 +11,7 @@
     }
 
     .sign-up-page_container {
-        max-width: 1200px;
+        max-width: 1000px;
         padding: 40px;
         box-sizing: border-box;
 
@@ -21,14 +21,28 @@
 
     .register-image {
         width: 50%;
-        height: 740px;
+        height: 600px;
         margin: 60px 60px 0 0;
     }
 
 }
 @media only screen and (max-width: 375px) {
+    .sign-up-page_container {
+        background-color: #E0F2F1;
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 800px) {
     .register-image {
         display: none;
     }
 
+    .register-image {
+        display: none;
+    }
+
+    .create-account {
+        max-width: 100%;
+    }
 }
