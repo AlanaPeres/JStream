@@ -6,8 +6,11 @@ import './SignUp.css';
 const SignUp = () => {
     return (
         <div className="sign-up-page">
-            <img className="register-image" src={registerImage} alt="user register" />
-            <SignUpForm />
+            <div className="sign-up-page_container">
+                <img className="register-image" src={registerImage} alt="user register" />
+                <SignUpForm />
+            </div>
+            
         </div>
     );
 }
