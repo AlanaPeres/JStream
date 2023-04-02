@@ -90,13 +90,12 @@ input[type=date]:focus{ color: #fff; }
     margin-left: 5px;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width:768px) {
     .create-account {
-        padding: 10px;
-        max-width: 44%;
+        padding: 10px 10px 30px 10px;
+        max-width: 48%;
         background-color: #408D86;
         border-radius: 50px;
-        height: 700px;
     }
 
     .img-logo-dark {

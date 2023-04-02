@@ -20,7 +20,7 @@ function NavBar() {
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/registrar">
               <button className={Style.btn}>Registrar</button>
             </a>
           </li>
