@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Style from "../navBarComponent/navBarComponent.module.css";
 
 function NavBar() {
@@ -15,9 +16,9 @@ function NavBar() {
             <a href="">Propostas</a>
           </li>
           <li>
-            <a href="">
+            <Link to={"login"}>
               <button className={Style.btn}>Entrar</button>
-            </a>
+            </Link>
           </li>
           <li>
             <a href="">
