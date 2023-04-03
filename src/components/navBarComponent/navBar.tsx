@@ -21,9 +21,9 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <a href="/registrar">
+            <Link to={"registrar"}>
               <button className={Style.btn}>Registrar</button>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

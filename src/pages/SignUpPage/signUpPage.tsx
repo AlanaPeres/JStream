@@ -1,7 +1,7 @@
 import React from "react";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import registerImage from '../../assets/register_image.png';
-import './SignUp.css';
+import './SignUpPage.css';
 
 const SignUp = () => {
     return (
