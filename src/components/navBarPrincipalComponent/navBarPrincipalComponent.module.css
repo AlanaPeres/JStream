@@ -36,18 +36,33 @@
     border: none;
     transition: all 0.25s ease-in-out;
 }
-.btn:hover{
+
+.btn:hover {
     cursor: pointer;
-    background-color: pink;
+    background-color: var( --backgrounddesktop-color);
 }
 
-.homebtn {width: 5rem;}
-
-.dollarbtn{
+.imagemsaldo {
     width: 5rem;
 }
 
-.transferbtn{
+.imagemdollar {
     width: 5rem;
 }
 
+.imagemtranfer {
+    width: 5rem;
+}
+
+.saldobtnActive {
+    border-right: 5px solid var(--darkbtn-color);
+
+}
+
+.extratobtnActive {
+    border-right: 5px solid var(--darkbtn-color);
+}
+
+.transferbtnActive {
+    border-right: 5px solid var(--darkbtn-color);
+}
