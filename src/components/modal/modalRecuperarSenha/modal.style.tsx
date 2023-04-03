@@ -43,9 +43,9 @@ export const ContainerInputModal = styled.div`
 
     label {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 5px;
-    transform: translateY(-50%);
+    transform: translateY(-90%);
     pointer-events: none;
     transition: .5s;
     padding: 5px 5px 5px 15px;
