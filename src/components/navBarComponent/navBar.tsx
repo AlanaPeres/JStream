@@ -4,24 +4,24 @@ import Style from "../navBarComponent/navBarComponent.module.css";
 function NavBar() {
   return (
     <>
-      <nav>
-        <ul>
+      <nav className={Style.navbarnew}>
+        <ul className={Style.ulis}>
           <li className={Style.texto_nav}>
-            <a href="">Sobre</a>
+            <a className={Style.alink} href="">Sobre</a>
           </li>
           <li className={Style.texto_nav}>
-            <a href="">Contanto</a>
+            <a className={Style.alink} href="">Contanto</a>
           </li>
           <li className={Style.texto_nav}>
-            <a href="">Propostas</a>
+            <a className={Style.alink} href="">Propostas</a>
           </li>
-          <li>
+          <li className={Style.button_div}>
             <Link to={"login"}>
-              <button className={Style.btn}>Entrar</button>
+              <a className={Style.alink} href=""><button className={Style.btn}>Entrar</button></a>
             </Link>
           </li>
-          <li>
-            <a href="">
+          <li className={Style.button_div}>
+            <a className={Style.alink} href="">
               <button className={Style.btn}>Registrar</button>
             </a>
           </li>

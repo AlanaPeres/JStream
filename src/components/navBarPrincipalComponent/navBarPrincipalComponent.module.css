@@ -1,0 +1,53 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--hoverbotaoclaropraescuro--color);
+    height: 100vh;
+    width: 15%;
+    text-align: center;
+
+}
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    height: 50vh;
+    width: 100%;
+}
+
+.logotipo {
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+
+.perfil {
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    width: 100%;
+    height: 8rem;
+    background-color: var(--hoverbotaoclaropraescuro--color);
+    border: none;
+    transition: all 0.25s ease-in-out;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: pink;
+}
+
+.homebtn {width: 5rem;}
+
+.dollarbtn{
+    width: 5rem;
+}
+
+.transferbtn{
+    width: 5rem;
+}
+

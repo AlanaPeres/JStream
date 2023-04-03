@@ -62,7 +62,7 @@ export const LoginComponent = () => {
                                 </div>
                             </div>
                             <div className={styles.btns}>
-                                <button className={styles.btn}>Entrar</button>
+                                <Link to={"/saldo"}><button className={styles.btn}>Entrar</button></Link>
                                 <Link to="/">
                                     <button className={styles.btn}>
                                         Voltar
