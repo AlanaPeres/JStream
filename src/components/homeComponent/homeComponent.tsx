@@ -11,8 +11,6 @@ export const HomeComponent = () => {
         <h1 className={Style.soft}>
           Soft <span>Finance</span>
         </h1>
-      <button className={Style.btn}>Entrar</button>
-      <button className={Style.btn}>Registrar</button>
       </div>
     </>
   );

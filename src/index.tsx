@@ -1,7 +1,7 @@
-import * as React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './router';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { AppRoutes } from "./AppRoutes";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <AppRoutes />
   </React.StrictMode>
 );
 
