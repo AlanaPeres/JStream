@@ -84,6 +84,11 @@ a {
     color: var(--backgroundmobile-color);
     font-size: 2.18rem;
     border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--hoverbotaoclaropraescuro--color);
 }
 
 @media screen and (max-width: 375px) {

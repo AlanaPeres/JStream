@@ -22,7 +22,12 @@ export const LoginComponent = () => {
                         alt=""
                         width="100"
                     />
-                    <img className={styles.dark_logo} src={logo_dark} alt="" width="100" />
+                    <img
+                        className={styles.dark_logo}
+                        src={logo_dark}
+                        alt=""
+                        width="100"
+                    />
                     <div>
                         <form>
                             <div>
@@ -43,8 +48,14 @@ export const LoginComponent = () => {
                             </div>
                             <div className={styles.pass_check}>
                                 <div className={styles.input_checkbox}>
-                                    <input type="checkbox" required />
-                                    Lembrar senha
+                                    <input
+                                        type="checkbox"
+                                        id="lemebrar_senha"
+                                        required
+                                    />
+                                    <label htmlFor="lemebrar_senha">
+                                        Lembrar senha
+                                    </label>
                                 </div>
                                 <div className={styles.esqueci_senha}>
                                     <Link to={''}>Esqueci minha senha</Link>
