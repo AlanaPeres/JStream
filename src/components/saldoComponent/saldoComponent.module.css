@@ -46,43 +46,26 @@
 
 @media screen and (max-width: 490px) {
     .content {
-        position: relative;
+        position: absolute;
         width: 100%;
-        height: 100vh;
         z-index: -1;
-
+        height: 100vh;
+        overflow: hidden;
     }
 
     .titulo {
 
 
-        padding-top: 2rem;
-        margin: auto;
-        font-size: 2rem;
-        text-align: center;
-        color:black;
+       display: none;
     }
 
-    .saldo {
-        position: absolute;
-        font-size: 1rem;
-        margin: auto;
-        top: 7rem;
-        word-spacing: normal;
-        padding: 0.5rem;
-        padding-right: 5rem;
-        padding-left: 5rem;
-        background-color: aquamarine;
-        border-radius: 30px;
-        left: 50%;
-        transform: translate(-50%);
-    }
+    
     .valorsaldo{
-        font-size: 1.25rem;
+      display: none;
     }
 
     .article {
-        margin-top: 10rem;
+        padding-top: 3rem;
         
     }
 

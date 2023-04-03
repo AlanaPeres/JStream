@@ -101,18 +101,12 @@
     }
 
     .logotipo {
-        position: absolute;
-        width: 2rem;
-        top: -88vh;
-        left: 1rem;
+       display: none;
 
     }
 
     .perfil {
-        position: absolute;
-        width: 3rem;
-        top: -92vh;
-        right: 1rem;
+   display: none;
     }
 
     .btn {
@@ -162,18 +156,12 @@
 @media screen and (max-width: 350px) {
 
     .logotipo {
-        position: absolute;
-        width: 2rem;
-        top: -80vh;
-        left: 1rem;
+        display: none;
 
     }
 
     .perfil {
-        position: absolute;
-        width: 3rem;
-        top: -87vh;
-        right: 1rem;
+        display: none;
     }
 
 }
