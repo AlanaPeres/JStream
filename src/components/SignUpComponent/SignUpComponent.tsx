@@ -4,6 +4,10 @@ import { STATES_BR } from './constants'
 import logoDark from '../../assets/logo dark.png'
 import logoColorized from '../../assets/logo colorized.png'
 
+const Back = () => {
+    window.history.back();
+}
+
 const SignUpForm = () => {
     return (
         <div className={Style.sign_up}>
@@ -71,7 +75,8 @@ const SignUpForm = () => {
                     </label>
                 </div>
                 <div className={Style.form_btn}>               
-                    <button className={Style.btn_sign_up} type="submit">Criar conta</button>          
+                    <button className={Style.btn_sign_up} type="submit">Criar conta</button>  
+                    <button className={Style.btn_sign_up} onClick={Back}>Voltar</button>         
                 </div>
             </form>
             </div>

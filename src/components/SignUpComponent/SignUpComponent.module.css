@@ -98,10 +98,14 @@ input[type=date]:focus{ color: #fff; }
     color: #000;
 }
 
-.form_btn {
+/* .form_btn {
     margin-top: 20px;
+} */
 
+.btn_sign_up {
+    margin-bottom: 10px;
 }
+
 @media only screen and (min-width:768px) {
     .sign_up {
         padding: 10px 10px 30px 10px;
