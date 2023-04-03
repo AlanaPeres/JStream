@@ -21,9 +21,8 @@ function NavBar() {
             </Link>
           </li>
           <li className={Style.button_div}>
-            <a className={Style.alink} href="">
-              <button className={Style.btn}>Registrar</button>
-            </Link>
+            <Link to={"registrar"}> <a className={Style.alink} href=""><button className={Style.btn}>registrar</button></a>  </Link>
+           
           </li>
         </ul>
       </nav>
@@ -32,3 +31,4 @@ function NavBar() {
 }
 
 export default NavBar;
+
