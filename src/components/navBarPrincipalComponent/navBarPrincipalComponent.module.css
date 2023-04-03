@@ -68,7 +68,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 490px) {
 
 
     .navbar {
@@ -81,9 +81,8 @@
         width: 100%;
         position: absolute;
         bottom: 0;
-        border-radius: 10px 10px 0 0 ;
+        border-radius: 10px 10px 0 0;
         justify-content: center;
-
     }
 
     .ul {
@@ -98,14 +97,22 @@
 
     .li {
         width: 5rem;
+
     }
 
     .logotipo {
-        display: none;
+        position: absolute;
+        width: 2rem;
+        top: -88vh;
+        left: 1rem;
+
     }
 
     .perfil {
-        display: none;
+        position: absolute;
+        width: 3rem;
+        top: -92vh;
+        right: 1rem;
     }
 
     .btn {
@@ -136,16 +143,37 @@
 
     .saldobtnActive {
         border-top: 4px solid var(--darkbtn-color);
-    
+
     }
-    
+
     .extratobtnActive {
         border-top: 4px solid var(--darkbtn-color);
     }
-    
+
     .transferbtnActive {
         border-top: 4px solid var(--darkbtn-color);
     }
+
     
+
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .logotipo {
+        position: absolute;
+        width: 2rem;
+        top: -80vh;
+        left: 1rem;
+
+    }
+
+    .perfil {
+        position: absolute;
+        width: 3rem;
+        top: -87vh;
+        right: 1rem;
+    }
 
 }

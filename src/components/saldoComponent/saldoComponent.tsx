@@ -7,14 +7,10 @@ export const SaldoContent = () => {
         <h1 className={styles.titulo}>Olá, Fulano</h1>
         <div className={styles.article}>
           <h2 className={styles.saldo}>
-            saldo: <span className={styles.valorsaldo}>R$ valor</span>
+            <span className={styles.saldoword}>saldo:</span> <span className={styles.valorsaldo}>R$ valor</span>
           </h2>
           <h2 className={styles.ultimas_trans}>ultimas transações</h2>
-        <div className={styles.transacoes}>
-
-
-        </div>
-
+          <div className={styles.transacoes}></div>
         </div>
       </div>
     </>

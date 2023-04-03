@@ -1,10 +1,10 @@
-.content{
-position: absolute;
-height: 100vh;
-width: 85%;
-top: 0;
-background-color: var(--backgroundmobile-color);
-right: 0;
+.content {
+    position: absolute;
+    height: 100vh;
+    width: 85%;
+    top: 0;
+    background-color: var(--backgroundmobile-color);
+    right: 0;
 }
 
 .titulo {
@@ -17,7 +17,6 @@ right: 0;
 
 .article {
     margin: auto;
-    background-color: pink;
     width: 50%;
     margin-top: 7rem;
     text-align: center;
@@ -30,7 +29,7 @@ right: 0;
     margin-right: 6rem;
 }
 
-.valorsaldo{
+.valorsaldo {
 
     font-size: 3rem;
     word-spacing: 0;
@@ -45,9 +44,57 @@ right: 0;
     font-size: 2rem;
 }
 
-@media screen and (max-width: 768px) 
-{
- .content{
-    display: none;
- }   
+@media screen and (max-width: 490px) {
+    .content {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+
+    }
+
+    .titulo {
+
+
+        padding-top: 2rem;
+        margin: auto;
+        font-size: 2rem;
+        text-align: center;
+        color:black;
+    }
+
+    .saldo {
+        position: absolute;
+        font-size: 1rem;
+        margin: auto;
+        top: 7rem;
+        word-spacing: normal;
+        padding: 0.5rem;
+        padding-right: 5rem;
+        padding-left: 5rem;
+        background-color: aquamarine;
+        border-radius: 30px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .valorsaldo{
+        font-size: 1.25rem;
+    }
+
+    .article {
+        margin-top: 10rem;
+        
+    }
+
+    .ultimas_trans {
+
+        font-size: 1rem;
+    }
+
+    .saldoword {
+        display: none;
+    }
+
+
+   
 }
