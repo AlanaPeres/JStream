@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import login_image from '../../assets/login_image.png';
 import logo from '../../assets/logo colorized.png';
 import styles from './loginComponent.module.css';
+import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
 
 export const LoginComponent = () => {
     return (
@@ -40,7 +41,7 @@ export const LoginComponent = () => {
                                     Lembrar senha
                                 </div>
                                 <div className={styles.esqueci_senha}>
-                                    <Link to={''}>Esqueci minha senha</Link>
+                                    <MostrarModal />
                                 </div>
                             </div>
                             <div className={styles.btns}>
