@@ -1,5 +1,5 @@
 import React from "react";
-import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import SignUpForm from "../../components/SignUpComponent/SignUpComponent";
 import registerImage from '../../assets/register_image.png';
 import './SignUpPage.css';
 
