@@ -13,6 +13,10 @@
     transform: translate(-50%, -50%);
 }
 
+.dark_logo {
+    display: none !important;
+}
+
 .main {
     display: flex;
     align-content: center;
@@ -66,12 +70,82 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .btn {
     width: 29.31rem;
-    height: 3rem;
+    height: 4rem;
     margin: 0.3rem;
     background-color: var(--hoverbotaoescuropraclaro--color);
     border-radius: 3.12rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--backgroundmobile-color);
+    font-size: 2.18rem;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--hoverbotaoclaropraescuro--color);
+}
+
+@media screen and (max-width: 375px) {
+
+    .form_content {
+        position: absolute;
+        top: 50%;
+        left: 55%;
+    }
+
+    .dark_logo {
+        display: block !important;
+    }
+    .img {
+        display: none;
+    }
+
+    .form_content {
+        background-color: var(--backgroundmobile-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    }
+
+    .form_content img:first-child {
+        display: none;
+    }
+
+    .input {
+        width: 14.5rem;
+        height: 2.62rem;
+        border: none;
+        font-size: 1.18rem;
+        background-color: var(--hoverbotaoclaropraescuro--color);
+    }
+
+    .pass_check {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--darkbtn-color);
+    }
+    
+    a {
+        color: var(--darkbtn-color);
+    }
+
+    .btn {
+        width: 14.5rem;
+        height: 2.62rem;
+        font-size: 1.18rem;
+        background-color: var(--darkbtn-color);
+    }
+
+    .btn button:last-child {
+        display: none;
+    }
 }
