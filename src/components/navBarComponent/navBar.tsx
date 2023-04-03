@@ -23,7 +23,7 @@ function NavBar() {
           <li className={Style.button_div}>
             <a className={Style.alink} href="">
               <button className={Style.btn}>Registrar</button>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
