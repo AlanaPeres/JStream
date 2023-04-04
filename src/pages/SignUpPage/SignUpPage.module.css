@@ -1,0 +1,48 @@
+
+@media only screen and (min-width: 768px) {
+    .sign_up_page {
+        width: 100%;
+        min-height: 100vh;
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #80CBC4;
+    }
+
+    .container {
+        max-width: 1000px;
+        padding: 40px;
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .register_image {
+        width: 50%;
+        height: 500px;
+        margin: 60px 60px 0 0;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        background-color: #E0F2F1;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .register_image {
+        display: none;
+    }
+
+    .register_image {
+        display: none;
+    }
+
+    .sign_up {
+        max-width: 100%;
+    }
+}
