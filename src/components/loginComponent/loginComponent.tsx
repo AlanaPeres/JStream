@@ -2,37 +2,37 @@ import { Link } from 'react-router-dom';
 import login_image from '../../assets/login_image.png';
 import logo from '../../assets/logo colorized.png';
 import logo_dark from '../../assets/logo dark.png';
-import styles from './loginComponent.module.css';
+import Style from './loginComponent.module.css';
 
 export const LoginComponent = () => {
     return (
         <>
-            <div className={styles.main}>
-                <div className={styles.img}>
+            <div className={Style.main}>
+                <div className={Style.img}>
                     <img
                         src={login_image}
                         width={'761'}
                         alt="Mulher ao lado de uma pilha de moeda"
                     />
                 </div>
-                <div className={styles.form_content}>
+                <div className={Style.form_content}>
                     <img
-                        className={styles.normal_logo}
+                        className={Style.normal_logo}
                         src={logo}
-                        alt=""
+                        alt="Imagem da logo"
                         width="100"
                     />
                     <img
-                        className={styles.dark_logo}
+                        className={Style.dark_logo}
                         src={logo_dark}
-                        alt=""
+                        alt="Imagem da logo"
                         width="100"
                     />
                     <div>
                         <form>
                             <div>
                                 <input
-                                    className={styles.input}
+                                    className={Style.input}
                                     type="number"
                                     placeholder="CPF"
                                     required
@@ -40,14 +40,14 @@ export const LoginComponent = () => {
                             </div>
                             <div>
                                 <input
-                                    className={styles.input}
+                                    className={Style.input}
                                     type="password"
                                     placeholder="SENHA"
                                     required
                                 />
                             </div>
-                            <div className={styles.pass_check}>
-                                <div className={styles.input_checkbox}>
+                            <div className={Style.pass_check}>
+                                <div className={Style.input_checkbox}>
                                     <input
                                         type="checkbox"
                                         id="lemebrar_senha"
@@ -57,14 +57,14 @@ export const LoginComponent = () => {
                                         Lembrar senha
                                     </label>
                                 </div>
-                                <div className={styles.esqueci_senha}>
+                                <div className={Style.esqueci_senha}>
                                     <Link to={''}>Esqueci minha senha</Link>
                                 </div>
                             </div>
-                            <div className={styles.btns}>
-                                <button className={styles.btn}>Entrar</button>
+                            <div className={Style.btns}>
+                                <button className={Style.btn}>Entrar</button>
                                 <Link to="/">
-                                    <button className={styles.btn}>
+                                    <button className={Style.btn}>
                                         Voltar
                                     </button>
                                 </Link>

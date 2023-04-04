@@ -10,7 +10,7 @@ function NavBar() {
             <a href="">Sobre</a>
           </li>
           <li className={Style.texto_nav}>
-            <a href="">Contanto</a>
+            <a href="">Contato</a>
           </li>
           <li className={Style.texto_nav}>
             <a href="">Propostas</a>
