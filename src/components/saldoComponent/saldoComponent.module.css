@@ -44,7 +44,7 @@
     font-size: 2rem;
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 520px) {
     .content {
         position: absolute;
         width: 100%;
