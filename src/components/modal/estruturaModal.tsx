@@ -4,7 +4,7 @@ interface Props{
 
 export const EstruturaModal = ({children} : Props)=>{
     return(
-        <div className="modal-root"> 
+        <div className="modalRoot"> 
             {children} 
         </div>
     );

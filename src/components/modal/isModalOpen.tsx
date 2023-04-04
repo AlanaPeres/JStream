@@ -12,5 +12,5 @@ export const IsOpen = ({onBackdropClick, children} : ModalProps) =>{
         <span></span>
         {children}
     </div>, 
-    document.getElementById('modal-root')!);
+    document.getElementById('modalRoot')!);
 }
