@@ -20,7 +20,7 @@ export const Scroll = styled.div`
 `;
 
 export const ModalContainer = styled.div`
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     /* Estilos para smartphones */
 	font-family:"roboto", sans-serif;
 	position: fixed;
