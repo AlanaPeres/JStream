@@ -47,8 +47,8 @@
     color: #fff;
 }
 
-form input:focus ~ label,
-form input:valid ~ label {
+input:focus ~ label,
+input:valid ~ label {
     transform: translateY(-30px);
     font-size: 0.875rem;
     opacity: 1;
@@ -151,7 +151,7 @@ input[type=date]:focus{ color: #fff; }
         margin-left: 0.3rem;
     }
 
-    form input:focus ~ label {
+    input:focus ~ label {
         color: #fff;
         font-size: 0.875rem;
     }

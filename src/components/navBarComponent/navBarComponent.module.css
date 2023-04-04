@@ -30,6 +30,7 @@ nav li a {
   text-decoration: none;
   color: var(--backgrounddesktop-color);
   transition: all 0.25s ease-in-out;
+  font-size: 0.875rem;
 }
 
 nav li a:hover {
@@ -52,14 +53,14 @@ nav li a:hover {
 
 .btn {
   height: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 1.25rem;
   width: 6rem;
   background-color: var(--backgrounddesktop-color);
   border: none;
   font-family: "roboto";
   color: var(--darkbtn-color);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.875rem;
   transition: all 0.25s ease-in-out;
 }
 
