@@ -21,7 +21,7 @@
     position: relative;
 }
 
-.input, .group_uf {
+ .group_uf {
     width: 100%;
     height: 2.8rem;
     padding-left: 0.7rem;
@@ -35,15 +35,6 @@
 }
 
 .group_uf option {
-    color: #fff;
-}
-
-.input_label {
-    position: absolute;
-    left: 0.7rem;
-    top: 0.7rem;
-    pointer-events: none;
-    transition: 0.5s;
     color: #fff;
 }
 
@@ -96,7 +87,7 @@ input[type=date]:focus{ color: #fff; }
     .sign_up {
         padding: 0.6rem 0.6rem 1.8rem 0.6rem;
         max-width: 48%;
-        background-color: #408D86;
+        background-color: var(--darkbtn-color);
         border-radius: 3rem;
     }
 
@@ -132,7 +123,7 @@ input[type=date]:focus{ color: #fff; }
         margin: 0;
     }
 
-    .input, .group_uf {
+    .group_uf {
         background-color: #fff;
         color: #263339;
         border-radius: 1.25rem;
@@ -144,11 +135,6 @@ input[type=date]:focus{ color: #fff; }
 
     .group_uf option {
         color: #263339;
-    }
-
-    .input_label {
-        color: #263339;
-        margin-left: 0.3rem;
     }
 
     input:focus ~ label {

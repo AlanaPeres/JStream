@@ -1,29 +1,9 @@
 import * as React from "react"
 import Style from './SignUpComponent.module.css'
 import { STATES_BR } from './constants'
+import { InputTextComponent } from "../InputComponent/inputComponent"
 import logoDark from '../../assets/logo dark.png'
 import logoColorized from '../../assets/logo colorized.png'
-
-type InputTextComponentProps = {
-    name: string
-    label: string
-    required?: boolean
-    type?: string
-}
-
-const InputTextComponent = ({
-    name,
-    label,
-    required = true,
-    type = 'text'
-}: InputTextComponentProps) => {
-    return (
-        <div className={Style.form_group}>
-            <input name={name} className={Style.input} type={type} required={required}/>
-            <label className={Style.input_label} htmlFor={name}>{label}</label>
-        </div>
-    )
-}
 
 const SignUpForm = () => {
     const handleClickBackButton = () => {
