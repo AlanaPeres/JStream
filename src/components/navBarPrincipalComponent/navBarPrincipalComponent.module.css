@@ -69,7 +69,7 @@
 
 
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 768px) {
 
 
     .navbar {
@@ -149,13 +149,6 @@
         border-top: 4px solid var(--darkbtn-color);
     }
 
-    
-
-
-}
-
-@media screen and (max-width: 350px) {
-
     .logotipo {
         display: none;
 
@@ -165,4 +158,6 @@
         display: none;
     }
 
+
 }
+

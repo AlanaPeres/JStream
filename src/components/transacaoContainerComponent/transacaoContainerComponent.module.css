@@ -1,0 +1,35 @@
+
+
+.transacao {
+
+    width: 50%;
+    margin: auto;
+    overflow-y: scroll;
+    height: 50vh;
+
+}
+
+.transacao::-webkit-scrollbar {
+    width: 0.65rem;
+    
+}
+.transacao::-webkit-scrollbar-track {
+    background: var(--hoverbotaoclaropraescuro--color);
+    border-radius: 1rem;
+}
+.transacao::-webkit-scrollbar-thumb {
+    background: var(--darkbtn-color);
+    border-radius: 1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+
+    .transacao {
+
+        width: 100%;
+       
+    
+    }
+}
