@@ -3,8 +3,12 @@ import logo from '../../assets/logo colorized.png';
 import logo_dark from '../../assets/logo dark.png';
 import Style from './loginComponent.module.css';
 import { InputTextComponent } from '../InputComponent/inputComponent';
+import { ButtonTextComponent } from '../ButtonComponent/ButtonComponent';
 
 export const LoginComponent = () => {
+    const handleClickBackButton = () => {
+        window.history.back();
+    }
     return (
         <div className={Style.main}>
             <div>
@@ -30,29 +34,30 @@ export const LoginComponent = () => {
                     name="password" 
                     label="Senha" 
                     type="password" />
-                    
+
                 <div className={Style.pass_check}>
                     <div className={Style.input_checkbox}>
                         <input
+                            className={Style.checkbox_lembrar_senha}
                             type="checkbox"
-                            id="lemebrar_senha"
+                            id="lembrar_senha"
                             required
                         />
-                        <label htmlFor="lemebrar_senha">
+                        <label className="lembrar_senha" htmlFor="lembrar_senha">
                             Lembrar senha
                         </label>
                     </div>
-                    <div className={Style.esqueci_senha}>
-                        <Link to={''}>Esqueci minha senha</Link>
+                    <div>
+                        <Link className={Style.esqueci_senha} to={''}>Esqueci minha senha</Link>
                     </div>
                 </div>
-                <div className={Style.btns}>
-                    <button className={Style.btn}>Entrar</button>
-                    <Link to="/">
-                        <button className={Style.btn}>
-                            Voltar
-                        </button>
-                    </Link>
+                <div className={Style.btns}>  
+                <Link to="/">
+                    <ButtonTextComponent type='submit' description="Entrar" />
+                </Link>
+                <Link to="/">
+                    <ButtonTextComponent description="Voltar" />
+                </Link>
                 </div>
         
             </div>

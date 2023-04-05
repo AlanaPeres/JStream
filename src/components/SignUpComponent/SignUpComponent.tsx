@@ -1,15 +1,22 @@
 import * as React from "react"
+import { Link } from 'react-router-dom';
 import Style from './SignUpComponent.module.css'
 import { STATES_BR } from './constants'
 import { InputTextComponent } from "../InputComponent/inputComponent"
+import { ButtonTextComponent } from "../ButtonComponent/ButtonComponent"
 import logoDark from '../../assets/logo dark.png'
 import logoColorized from '../../assets/logo colorized.png'
+import { link } from "fs"
 
 const SignUpForm = () => {
     const handleClickBackButton = () => {
         window.history.back();
     }
-    return (
+
+    const SignUp = () => {
+        alert("Cadastro feito com sucesso!");        
+    }
+     return (
         <div className={Style.sign_up}>
             <div>
                 <img className={Style.logo_dark} src={logoDark} alt="Imagem da logo" />
@@ -42,12 +49,16 @@ const SignUpForm = () => {
                         Li e concordo com os <a href="#">termos e condições</a>.
                     </label>
                 </div>
-                <div className={Style.form_btn}>               
-                    <button className={Style.btn_sign_up} type="submit">Criar conta</button>  
-                    <button className={Style.btn_sign_up} onClick={handleClickBackButton}>Voltar</button>         
+                <div className={Style.form_btn}>  
+                    <Link to="/loginpage">
+                        <ButtonTextComponent type="submit" description="Cadastrar" />
+                    </Link>  
+                    <Link to="/">
+                        <ButtonTextComponent description="Voltar" />
+                    </Link>                               
                 </div>
             </form>
-            </div>
+        </div>
     );
 }
 
