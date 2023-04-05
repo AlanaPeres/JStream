@@ -1,79 +1,31 @@
-import { useState } from "react";
 import styles from "./transacaoComponent.module.css";
 
-const CardTransacao = () => {
-  const [tasks, setTasks] = useState([
-    {
-      id: "1",
-      metodoDePagamento: "PIX",
-      data: "03/04/2023",
-      valorGasto: "4450",
-      valorAnterior: "23456",
-    },
-    {
-      id: "1",
-      metodoDePagamento: "PIX",
-      data: "03/04/2023",
-      valorGasto: "4450",
-      valorAnterior: "23456",
-    },
-  ]);
+type CardTransacaoProps = {
+  metodo_De_Pagamento: string;
+  data_de_pagamento: string;
+  estabelecimento: string;
+  valor_gasto: number;
+  valor_anterior: number;
+};
 
+const CardTransacao: React.FC<CardTransacaoProps> = ({
+  metodo_De_Pagamento,
+  data_de_pagamento,
+  estabelecimento,
+  valor_gasto,
+  valor_anterior,
+}) => {
   return (
     <>
       <li className={styles.dados_transacao}>
         <div className={styles.div_dados}>
-          <h3 className={styles.metodo_De_Pagamento}>cartao</h3>
-          <p className={styles.data}>04/05/23</p>
-          <p className={styles.estabelecimento}>padaria</p>
+          <h3 className={styles.metodo_De_Pagamento}>{metodo_De_Pagamento}</h3>
+          <p className={styles.data}>{data_de_pagamento}</p>
+          <p className={styles.estabelecimento}>{estabelecimento}</p>
         </div>
         <div className={styles.div_valores}>
-          <p className={styles.valor_gasto}>R$ 445,00</p>
-          <p className={styles.valor_anterior}>R$ 4135,00</p>
-        </div>
-      </li>
-      <li className={styles.dados_transacao}>
-        <div className={styles.div_dados}>
-          <h3 className={styles.metodo_De_Pagamento}>cartao</h3>
-          <p className={styles.data}>04/05/23</p>
-          <p className={styles.estabelecimento}>padaria</p>
-        </div>
-        <div className={styles.div_valores}>
-          <p className={styles.valor_gasto}>R$ 445,00</p>
-          <p className={styles.valor_anterior}>R$ 4135,00</p>
-        </div>
-      </li>
-      <li className={styles.dados_transacao}>
-        <div className={styles.div_dados}>
-          <h3 className={styles.metodo_De_Pagamento}>cartao</h3>
-          <p className={styles.data}>04/05/23</p>
-          <p className={styles.estabelecimento}>padaria</p>
-        </div>
-        <div className={styles.div_valores}>
-          <p className={styles.valor_gasto}>R$ 445,00</p>
-          <p className={styles.valor_anterior}>R$ 4135,00</p>
-        </div>
-      </li>
-      <li className={styles.dados_transacao}>
-        <div className={styles.div_dados}>
-          <h3 className={styles.metodo_De_Pagamento}>cartao</h3>
-          <p className={styles.data}>04/05/23</p>
-          <p className={styles.estabelecimento}>padaria</p>
-        </div>
-        <div className={styles.div_valores}>
-          <p className={styles.valor_gasto}>R$ 445,00</p>
-          <p className={styles.valor_anterior}>R$ 4135,00</p>
-        </div>
-      </li>
-      <li className={styles.dados_transacao}>
-        <div className={styles.div_dados}>
-          <h3 className={styles.metodo_De_Pagamento}>cartao</h3>
-          <p className={styles.data}>04/05/23</p>
-          <p className={styles.estabelecimento}>padaria</p>
-        </div>
-        <div className={styles.div_valores}>
-          <p className={styles.valor_gasto}>R$ 445,00</p>
-          <p className={styles.valor_anterior}>R$ 4135,00</p>
+          <p className={styles.valor_gasto}>R$ {valor_gasto}</p>
+          <p className={styles.valor_anterior}>R$ {valor_anterior}</p>
         </div>
       </li>
     </>
