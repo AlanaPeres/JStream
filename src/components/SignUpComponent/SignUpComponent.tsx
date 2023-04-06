@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from 'react-router-dom';
 import Style from './SignUpComponent.module.css'
 import { STATES_BR } from './constants'
 import { InputTextComponent } from "../InputComponent/InputComponent"
