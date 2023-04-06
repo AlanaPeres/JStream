@@ -1,6 +1,6 @@
 import imagedesktop from "../../assets/home_image.png";
 import logo from "../../assets/logo dark.png";
-import Style  from "../homeComponent/homeComponent.module.css";
+import Style  from "../HomeComponent/HomeComponent.module.css";
 
 export const HomeComponent = () => {
   return (

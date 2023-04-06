@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo colorized.png';
 import logo_dark from '../../assets/logo dark.png';
-import Style from './loginComponent.module.css';
-import { InputTextComponent } from '../InputComponent/inputComponent';
+import Style from './LoginComponent.module.css';
+import { InputTextComponent } from '../InputComponent/InputComponent';
 import { ButtonTextComponent } from '../ButtonComponent/ButtonComponent';
 
 export const LoginComponent = () => {
-    const handleClickBackButton = () => {
-        window.history.back();
-    }
     return (
         <div className={Style.main}>
             <div>

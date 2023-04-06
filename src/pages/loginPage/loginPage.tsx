@@ -1,6 +1,6 @@
-import { LoginComponent } from "../../components/loginComponent/loginComponent";
+import { LoginComponent } from "../../components/LoginComponent/LoginComponent";
 import loginImage from '../../assets/login_image.png';
-import Style from './loginPage.module.css'
+import Style from './LoginPage.module.css'
 
 export const LoginPage = () => {
   return (

@@ -11,12 +11,10 @@
     }
 
     .container {
-        width: 65rem;
+        min-width: 65rem;
         box-sizing: border-box;
-
         display: flex;
         justify-content: flex-end;
-
     }
 
     .register_image {

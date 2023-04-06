@@ -2,11 +2,10 @@ import * as React from "react"
 import { Link } from 'react-router-dom';
 import Style from './SignUpComponent.module.css'
 import { STATES_BR } from './constants'
-import { InputTextComponent } from "../InputComponent/inputComponent"
+import { InputTextComponent } from "../InputComponent/InputComponent"
 import { ButtonTextComponent } from "../ButtonComponent/ButtonComponent"
 import logoDark from '../../assets/logo dark.png'
 import logoColorized from '../../assets/logo colorized.png'
-import { link } from "fs"
 
 const SignUpForm = () => {
     const handleClickBackButton = () => {
@@ -50,12 +49,8 @@ const SignUpForm = () => {
                     </label>
                 </div>
                 <div className={Style.form_btn}>  
-                    <Link to="/loginpage">
-                        <ButtonTextComponent type="submit" description="Cadastrar" />
-                    </Link>  
-                    <Link to="/">
-                        <ButtonTextComponent description="Voltar" />
-                    </Link>                               
+                    <ButtonTextComponent type="submit" description="Cadastrar" onClick={SignUp} />
+                    <ButtonTextComponent description="Voltar" onClick={handleClickBackButton} />                              
                 </div>
             </form>
         </div>

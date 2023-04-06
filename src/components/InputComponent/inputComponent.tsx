@@ -1,4 +1,4 @@
-import Style  from "./inputComponent.module.css";
+import Style  from "./InputComponent.module.css";
 
 export type InputTextComponentProps = {
     name: string
