@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
 import imagedesktop from "../../assets/home_image.png";
 import logo from "../../assets/logo dark.png";
 import Style  from "../HomeComponent/HomeComponent.module.css";
-import { InputTextComponent } from "../InputComponent/InputComponent"
 import { ButtonTextComponent } from "../ButtonComponent/ButtonComponent"
 
 export const HomeComponent = () => {
