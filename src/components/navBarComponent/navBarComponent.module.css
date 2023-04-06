@@ -1,4 +1,4 @@
-nav {
+.navbarnew {
   display: flex;
   background-color: var(--darkbtn-color);
   overflow: hidden;
@@ -7,7 +7,7 @@ nav {
   width: 100%;
 }
 
-nav ul {
+.ulis {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ nav ul {
   width: 100%;
 }
 
-nav li {
+.texto_nav {
   display: inline-block;
   margin-right: 2rem;
   color: var(--backgrounddesktop-color);
@@ -26,14 +26,23 @@ nav li {
   font-size: 1em; 
 }
 
-nav li a {
+.button_div {
+  display: inline-block;
+  margin-right: 2rem;
+  color: var(--backgrounddesktop-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.alink {
   text-decoration: none;
   color: var(--backgrounddesktop-color);
   transition: all 0.25s ease-in-out;
   font-size: 0.875rem;
 }
 
-nav li a:hover {
+.alink:hover {
   color: var(--backgroundmobile-color);
 }
 
@@ -70,12 +79,18 @@ nav li a:hover {
   color: #fafafa;
 }
 @media screen and (max-width: 768px) { 
-  nav li {
+  .texto_nav {
     font-size: 0.9em;
     margin-right: 1.5rem;
    
   }
-  nav{
+
+   .button_div {
+    font-size: 0.9em;
+    margin-right: 1.5rem;
+   
+  }
+  .navbarnew{
     height: 3.5rem;
   }
 
@@ -89,12 +104,18 @@ nav li a:hover {
 
 
 @media screen and (max-width: 500px) { 
-  nav li {
+  .texto_nav {
     font-size: 0.5em;
     margin-right: 1rem;
    
   }
-  nav{
+
+   .button_div {
+    font-size: 0.5em;
+    margin-right: 1rem;
+   
+  }
+  .navbarnew{
     height: 3.5rem;
   }
 
@@ -107,7 +128,12 @@ nav li a:hover {
 }
 
 @media screen and (max-width: 375px) {
-  nav {
+  .navbarnew {
     display: none;
+  }
+
+  .btn {
+    display: block;
+    position: absolute;
   }
 }

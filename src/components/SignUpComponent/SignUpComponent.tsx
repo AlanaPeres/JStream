@@ -1,10 +1,10 @@
-import * as React from "react"
 import Style from './SignUpComponent.module.css'
 import { STATES_BR } from './constants'
 import { InputTextComponent } from "../InputComponent/InputComponent"
 import { ButtonTextComponent } from "../ButtonComponent/ButtonComponent"
 import logoDark from '../../assets/logo dark.png'
 import logoColorized from '../../assets/logo colorized.png'
+import { MostrarModalTermos } from '../modal/modalTermosECondicoes/mostrarModalTermos'
 
 const SignUpForm = () => {
     const handleClickBackButton = () => {
@@ -44,7 +44,7 @@ const SignUpForm = () => {
                 <div className={Style.terms_conditions_group} >
                     <input className={Style.checkbox_input} name="terms_conditions_label" type="checkbox" required/>
                     <label className={Style.terms_conditions_label} htmlFor="terms_conditions_label" >
-                        Li e concordo com os <a href="#">termos e condições</a>.
+                        <MostrarModalTermos/>                                 
                     </label>
                 </div>
                 <div className={Style.form_btn}>  

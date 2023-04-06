@@ -31,7 +31,7 @@ body {
 }
 }
 
-h1 {
+.soft {
     display: none;
 }
 
@@ -52,7 +52,7 @@ h1 {
 }
 
 @media screen and (max-width: 375px) {
-h1 {
+    .soft {
     display: flex;
     flex-direction: column;
 }
@@ -65,7 +65,7 @@ h1 {
     color: var(--darkbtn-color);
 }
 
-h1 span {
+.spanfin {
     color: #408d86;
     letter-spacing: 0.2rem;
 }

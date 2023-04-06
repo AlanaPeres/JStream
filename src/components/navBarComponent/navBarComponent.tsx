@@ -4,26 +4,25 @@ import Style from "../NavBarComponent/NavBarComponent.module.css";
 function NavBar() {
   return (
     <>
-      <nav>
-        <ul>
+      <nav className={Style.navbarnew}>
+        <ul className={Style.ulis}>
           <li className={Style.texto_nav}>
-            <a href="">Sobre</a>
+            <a className={Style.alink} href="">Sobre</a>
           </li>
           <li className={Style.texto_nav}>
-            <a href="">Contato</a>
+            <a className={Style.alink} href="">Contato</a>
           </li>
           <li className={Style.texto_nav}>
-            <a href="">Propostas</a>
+            <a className={Style.alink} href="">Propostas</a>
           </li>
-          <li>
+          <li className={Style.button_div}>
             <Link to={"login"}>
-              <button className={Style.btn}>Entrar</button>
+              <a className={Style.alink} href=""><button className={Style.btn}>Entrar</button></a>
             </Link>
           </li>
-          <li>
-            <Link to={"registrar"}>
-              <button className={Style.btn}>Registrar</button>
-            </Link>
+          <li className={Style.button_div}>
+            <Link to={"registrar"}> <a className={Style.alink} href=""><button className={Style.btn}>registrar</button></a>  </Link>
+           
           </li>
         </ul>
       </nav>
@@ -32,3 +31,4 @@ function NavBar() {
 }
 
 export default NavBar;
+

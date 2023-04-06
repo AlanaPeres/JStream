@@ -4,6 +4,7 @@ import logo_dark from '../../assets/logo dark.png';
 import Style from './LoginComponent.module.css';
 import { InputTextComponent } from '../InputComponent/InputComponent';
 import { ButtonTextComponent } from '../ButtonComponent/ButtonComponent';
+import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
 
 export const LoginComponent = () => {
     return (
@@ -45,7 +46,11 @@ export const LoginComponent = () => {
                         </label>
                     </div>
                     <div>
-                        <Link className={Style.esqueci_senha} to={''}>Esqueci minha senha</Link>
+                        <div className={Style.pass_check}>
+                            <div className={Style.esqueci_senha}>
+                                <MostrarModal />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className={Style.btns}>  

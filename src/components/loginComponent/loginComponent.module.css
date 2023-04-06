@@ -97,9 +97,6 @@ a {
         padding: 0;
     }
 
-
-    /* 
-
     .form_content {
         background-color: var(--backgroundmobile-color);
         display: flex;
@@ -141,5 +138,5 @@ a {
 
     .btn button:last-child {
         display: none;
-    } */
+    }
 }
