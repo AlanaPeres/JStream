@@ -1,0 +1,81 @@
+.content {
+  position: absolute;
+  height: 100vh;
+  width: 85%;
+  top: 0;
+  background-color: var(--backgroundmobile-color);
+  right: 0;
+}
+
+.title {
+  margin-left: 5rem;
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.article {
+  margin: auto;
+  width: 100%;
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.extractWord {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.extract {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  word-spacing: 1rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.valorExtract {
+  font-size: 3rem;
+  word-spacing: 0;
+  font-weight: 400;
+}
+
+.ultimas_trans {
+  margin-top: 3rem;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .valorExtract {
+    display: none;
+  }
+
+  .article {
+    padding-top: 3rem;
+    margin-top: -5rem;
+  }
+
+  .ultimas_trans {
+    font-size: 1rem;
+  }
+
+  .extractWord {
+    display: none;
+  }
+}

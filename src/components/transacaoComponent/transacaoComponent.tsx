@@ -3,7 +3,7 @@ import styles from "./transacaoComponent.module.css";
 type CardTransacaoProps = {
   metodo_De_Pagamento: string;
   data_de_pagamento: string;
-  estabelecimento: string;
+  destino: string;
   valor_gasto: number;
   valor_anterior: number;
 };
@@ -11,7 +11,7 @@ type CardTransacaoProps = {
 const CardTransacao: React.FC<CardTransacaoProps> = ({
   metodo_De_Pagamento,
   data_de_pagamento,
-  estabelecimento,
+  destino,
   valor_gasto,
   valor_anterior,
 }) => {
@@ -21,7 +21,7 @@ const CardTransacao: React.FC<CardTransacaoProps> = ({
         <div className={styles.div_dados}>
           <h3 className={styles.metodo_De_Pagamento}>{metodo_De_Pagamento}</h3>
           <p className={styles.data}>{data_de_pagamento}</p>
-          <p className={styles.estabelecimento}>{estabelecimento}</p>
+          <p className={styles.destino}>{destino}</p>
         </div>
         <div className={styles.div_valores}>
           <p className={styles.valor_gasto}>R$ {valor_gasto}</p>
