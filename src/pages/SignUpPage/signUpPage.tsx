@@ -4,7 +4,7 @@ import SignUpForm from "../../components/SignUpComponent/SignUpComponent";
 import registerImage from '../../assets/register_image.png';
 import './SignUpPage.module.css';
 
-const SignUp = () => {
+export const SignUpPage = () => {
     return (
         <div className={Style.sign_up_page}>
             <div className={Style.container} >
@@ -14,5 +14,3 @@ const SignUp = () => {
         </div>
     );
 }
-
-export default SignUp;
