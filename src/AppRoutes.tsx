@@ -3,6 +3,7 @@ import { Homepage } from "./pages/homePage/homePage";
 import { LoginPage } from "./pages/loginPage/loginPage";
 import SignUp from "./pages/SignUpPage/signUpPage";
 import { TransferenciaPage } from "./pages/transferenciaPage/transferenciaPage";
+import { SaldoPage } from "./pages/saldoPage/saldoPage";
 
 export const AppRoutes = () => {
     return(
@@ -12,6 +13,7 @@ export const AppRoutes = () => {
                 <Route path="login" element={<LoginPage />} />
                 <Route path="registrar" element={<SignUp />} />
                 <Route path="transferencia" element={<TransferenciaPage />} />
+                <Route path="/saldo" element={<SaldoPage />} />
             </Routes>
         </Router>
     )
