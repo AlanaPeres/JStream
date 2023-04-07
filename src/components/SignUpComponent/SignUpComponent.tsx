@@ -6,11 +6,16 @@ import { MostrarModalTermos } from '../modal/modalTermosECondicoes/mostrarModalT
 
 const Back = () => {
     window.history.back();
-}
-
-
+};
 const SignUpForm = () => {
+
+
+    const handleFormSubmit = (event: any) => {
+        console.log(event);
+    }     
+
     return (
+        
         <div className={Style.sign_up}>
             <div>
                 <img className={Style.logo_dark} src={logoDark} alt="Imagem da logo" />
@@ -25,6 +30,14 @@ const SignUpForm = () => {
                     <div className={Style.form_group}>
                         <input name="last_name" className={Style.input} type="text" required/>
                         <label className={Style.input_label} htmlFor="last_name">Sobrenome</label>
+                    </div>
+                    <div className={Style.form_group}>
+                        <input name="cpf" className={Style.input} type="text" required/>
+                        <label className={Style.input_label} htmlFor="cpf">Cpf</label>
+                    </div>
+                    <div className={Style.form_group}>
+                        <input name="email" className={Style.input} type="text" required/>
+                        <label className={Style.input_label} htmlFor="email">E-mail</label>
                     </div>
                     <div className={Style.form_group}>
                         <input name="password" className={Style.input} type="password" required/>
@@ -76,7 +89,7 @@ const SignUpForm = () => {
                     </label>
                 </div>
                 <div className={Style.form_btn}>               
-                    <button className={Style.btn_sign_up} type="submit">Criar conta</button>  
+                    <button className={Style.btn_sign_up} type="submit" onClick={handleFormSubmit}>Criar conta</button>  
                     <button className={Style.btn_sign_up} onClick={Back}>Voltar</button>         
                 </div>
             </form>
