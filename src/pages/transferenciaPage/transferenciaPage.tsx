@@ -1,4 +1,4 @@
-import { TransferenciaForm } from "../../components/TransferenciaComponent/transferenciaComponent";
+import { TransferenciaForm } from "../../components/transferenciaComponent/transferenciaComponent";
 import style from './transferenciaPage.module.css';
 
 export const TransferenciaPage = () => {

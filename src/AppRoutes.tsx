@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import { Homepage } from "./pages/homePage/homePage";
 import { LoginPage } from "./pages/loginPage/loginPage";
 import SignUp from "./pages/SignUpPage/signUpPage";
-import { TransferenciaPage } from "./pages/TransferenciaPage/transferenciaPage";
+import { TransferenciaPage } from "./pages/transferenciaPage/transferenciaPage";
 
 export const AppRoutes = () => {
     return(
