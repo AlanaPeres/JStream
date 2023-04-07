@@ -2,6 +2,7 @@ import imagedesktop from "../../assets/home_image.png";
 import logo from "../../assets/logo dark.png";
 import Style  from "../HomeComponent/HomeComponent.module.css";
 import { ButtonTextComponent } from "../ButtonComponent/ButtonComponent"
+import { Link } from 'react-router-dom';
 
 export const HomeComponent = () => {
   return (
@@ -13,8 +14,12 @@ export const HomeComponent = () => {
           Soft <span className={Style.spanfin}>Finance</span>
         </h1>
         <div className={Style.btn_arrow}>  
-          <ButtonTextComponent description="Entrar" />
-          <ButtonTextComponent description="Registrar" />                              
+          <Link to="/login">
+            <ButtonTextComponent description="Entrar" />
+          </Link>
+          <Link to="/registrar">
+            <ButtonTextComponent description="Registrar" />
+          </Link>               
         </div>
       </div>
     </>
