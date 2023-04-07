@@ -90,6 +90,21 @@
         overflow-y: scroll;
     }
 
+    .form_content::-webkit-scrollbar {
+        width: 0.65rem;
+        
+    }
+    
+    .form_content::-webkit-scrollbar-track {
+        background: var(--hoverbotaoclaropraescuro--color);
+        border-radius: 1rem;
+    }
+
+    .form_content::-webkit-scrollbar-thumb {
+        background: var(--darkbtn-color);
+        border-radius: 1rem;
+    }
+
     .form_btn {
         padding: 0rem 5.1rem 0 5.1rem;  
     }
