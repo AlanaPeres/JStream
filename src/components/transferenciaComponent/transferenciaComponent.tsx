@@ -1,4 +1,6 @@
 import style from './transferenciaComponent.module.css'
+import classNames from 'classnames';
+
 
 export const TransferenciaForm = () =>{
     return(
@@ -9,37 +11,42 @@ export const TransferenciaForm = () =>{
                 
                 <h3 className={style.title_mobile}>Transferência</h3>
             
-                <div className={style.form_container}>
                     <form className={style.form}>
-                        <div className={style.container_input_label}>
-                            <input type="text" pattern="[A-Za-z]+" autoComplete="off" required/>
-                            <label>Tipo de conta</label>
+
+                        <div className={style.col_1}>
+                            <div className={style.container_input_label}>
+                                <input type='text' pattern='[A-Za-z]+' required autoComplete='off' placeholder='Tipo de conta'></input>
+                                <label></label>
+                            </div>
+                            
+                            <div className={style.container_input_label}>
+                               <input type='number' pattern='[0-9]{3}' maxLength={3} minLength={3} required autoComplete='off' placeholder='Cod do banco'></input>
+                                <label></label>
+                            </div>
                         </div>
                         
-                        <div className={style.container_input_label}>
-                            <input type="number" pattern="[0-9]{3}" minLength={3} maxLength={3} autoComplete="off" required/>
-                            <label>Cod do banco</label>
+                        <div className={style.col_2}>
+                            <div className={style.container_input_label}>
+                                <input type='number' pattern='[0-9]*' autoComplete='0ff' required placeholder='agência'></input>
+                                <label></label>
+                            </div>
+                            <div className={style.container_input_label}>
+                                <input type='number' pattern='[0-9]*' autoComplete='off' required placeholder='Nº conta'></input>
+                                <label></label>
+                                
+                            </div>
                         </div>
-                        
-                        <div className={style.container_input_label}>
-                            <input pattern="[0-9]" autoComplete="off" required/>
-                            <label>Agência</label>
+
+                        <div className={style.col_3}>
+                            <div className={style.container_input_label}>
+                                <input type='number' pattern='[0-9.,]+' autoComplete='off' required placeholder='valor'></input>
+                                <label></label>
+                            </div>
                         </div>
-                        
-                        <div className={style.container_input_label}>
-                            <input pattern="[0-9]" autoComplete="off" required/>
-                            <label>Nº conta</label>
-                        </div>
-                        
-                        <div className={style.container_input_label}>
-                            <input pattern="[0-9.,]+" autoComplete="off" required/>
-                            <label>Valor</label>
-                        </div>
-                        
-                        <button className={style.btn} type="submit">Próximo</button>
+                     
+                            <button className={style.btn} type="submit">Próximo</button>
                     </form>
                 </div>
             </div>  
-        </div>
     )
 }

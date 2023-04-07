@@ -1,7 +1,7 @@
-import { TransferenciaForm } from "../../components/transferenciaComponent/transferenciaComponent";
+import { TransferenciaForm } from "../../components/TransferenciaComponent/transferenciaComponent";
 import style from './transferenciaPage.module.css';
 
-export const Transferencia = () => {
+export const TransferenciaPage = () => {
     return(
         <>
             <header className={style.header}>component header aqui</header>
