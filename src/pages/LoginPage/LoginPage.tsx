@@ -1,5 +1,5 @@
 import { LoginComponent } from "../../components/LoginComponent/LoginComponent";
-import loginImage from '../../assets/login_image.png';
+import loginImage from '../../assets/login_image.webp';
 import Style from './LoginPage.module.css'
 
 export const LoginPage = () => {

@@ -2,8 +2,8 @@ import Style from './SignUpComponent.module.css'
 import { STATES_BR } from './constants'
 import { InputTextComponent } from "../InputComponent/InputComponent"
 import { ButtonTextComponent } from "../ButtonComponent/ButtonComponent"
-import logoDark from '../../assets/logo dark.png'
-import logoColorized from '../../assets/logo colorized.png'
+import logoDark from '../../assets/logo_dark.webp'
+import logoColorized from '../../assets/logo_colorized.webp'
 import { MostrarModalTermos } from '../modal/modalTermosECondicoes/mostrarModalTermos'
 
 const SignUpForm = () => {

@@ -1,5 +1,5 @@
-import imagedesktop from "../../assets/home_image.png";
-import logo from "../../assets/logo dark.png";
+import imagedesktop from "../../assets/home_image.webp";
+import logo from "../../assets/logo_dark.webp";
 import Style  from "../HomeComponent/HomeComponent.module.css";
 import { ButtonTextComponent } from "../ButtonComponent/ButtonComponent"
 import { Link } from 'react-router-dom';

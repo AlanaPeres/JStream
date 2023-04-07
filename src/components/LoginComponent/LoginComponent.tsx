@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo colorized.png';
-import logo_dark from '../../assets/logo dark.png';
+import logo from '../../assets/logo_colorized.webp';
+import logo_dark from '../../assets/logo_dark.webp';
 import Style from './LoginComponent.module.css';
 import { InputTextComponent } from '../InputComponent/InputComponent';
 import { ButtonTextComponent } from '../ButtonComponent/ButtonComponent';
