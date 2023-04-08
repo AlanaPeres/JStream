@@ -1,7 +1,7 @@
 body {
     background-color: var(--backgrounddesktop-color);
 }
-    
+
 .logotipo {
     width: 15%;
     position: absolute;
@@ -24,15 +24,15 @@ body {
 }
 
 @keyframes move-up-down {
-0% {
-    margin-top: 0;
-}
-50% {
-    margin-top: -2%;
-}
-100% {
-    margin-top: 0;
-}
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: -2%;
+    }
+    100% {
+        margin-top: 0;
+    }
 }
 
 .soft {
@@ -44,100 +44,96 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-
-.imagem {
-    display: none;
-    
-}
-.logotipo{
-    left: 50%;
-    width: 40%;
+    .imagem {
+        display: none;
+    }
+    .logotipo {
+        left: 50%;
+        width: 40%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .soft {
-    display: flex;
-    flex-direction: column;
-}
+        display: flex;
+        flex-direction: column;
+    }
 
-.imagem {
-    display: none;
-}
+    .imagem {
+        display: none;
+    }
 
-.soft {
-    color: var(--darkbtn-color);
-}
+    .soft {
+        color: var(--darkbtn-color);
+    }
 
-.spanfin {
-    color: #408d86;
-    letter-spacing: 0.2rem;
-}
+    .spanfin {
+        color: #408d86;
+        letter-spacing: 0.2rem;
+    }
 
-body {
-    background-color: var(--backgroundmobile-color);
-}
+    body {
+        background-color: var(--backgroundmobile-color);
+    }
 
-.logotipo {
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: translateY(0);
-    animation: move-up-down 2.5s ease-in-out infinite;
-    width: 8rem;
-    margin-top: 0;
-    margin: auto;
-}
+    .logotipo {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(0);
+        animation: move-up-down 2.5s ease-in-out infinite;
+        width: 8rem;
+        margin-top: 0;
+        margin: auto;
+    }
 
-@keyframes move-up-down {
-0% {
-    transform: translateY(0);
-}
-50% {
-    transform: translateY(-10%);
-}
-100% {
-    transform: translateY(0);
-}
-}
+    @keyframes move-up-down {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 
-.container {
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+    .container {
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
-.btn {
-    display: block;
-    background-color: var(--darkbtn-color);
-    color: var(--backgroundmobile-color);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    width: 10rem;
-    margin: auto;
-    margin-top: 1rem;
-    border: none;
-    color: var(--backgroundmobile-color);
-    letter-spacing: 0.1rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: all 0.25s ease-in-out;
-}
+    .btn {
+        display: block;
+        background-color: var(--darkbtn-color);
+        color: var(--backgroundmobile-color);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        width: 10rem;
+        margin: auto;
+        margin-top: 1rem;
+        border: none;
+        color: var(--backgroundmobile-color);
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: all 0.25s ease-in-out;
+    }
 
-.btn:hover {
-    cursor: pointer;
-    background-color: var(--hoverbotaoescuropraclaro--color);
-    color: black;
-}
+    .btn:hover {
+        cursor: pointer;
+        background-color: var(--hoverbotaoescuropraclaro--color);
+        color: black;
+    }
 
-.btn_arrow {
-    display: block;
-
+    .btn_arrow {
+        display: block;
+    }
 }
-}
-

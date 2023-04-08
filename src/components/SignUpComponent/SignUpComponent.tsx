@@ -1,10 +1,10 @@
 import Style from './SignUpComponent.module.css';
 import { STATES_BR } from './constants';
-import logoDark from '../../assets/logo dark.png';
-import logoColorized from '../../assets/logo colorized.png';
 import { MostrarModalTermos } from '../modal/modalTermosECondicoes/mostrarModalTermos';
 import IUser from '../../interface/IUsers';
 import contaService from '../../service/contaService';
+import logoDark from '../../assets/logo_dark.webp';
+import logoColorized from '../../assets/logo_colorized.webp';
 
 const Back = () => {
     window.history.back();
@@ -27,6 +27,7 @@ const SignUpForm = () => {
             bairro: event.target[11].value,
             cidade: event.target[12].value,
             estado: event.target[13].value,
+            saldoAtual: 100
         };
         contaService.criar(user);
     };

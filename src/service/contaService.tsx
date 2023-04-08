@@ -26,6 +26,17 @@ const contaService = {
 
         return true;
     },
+
+    currentUser: function(cpf: string) {
+      let user: any = users.find(u => u.cpf == cpf);
+      localStorage.setItem('usuario', user);
+    },
+
+    getUserLogged: function() {
+      let userLogged = localStorage.getItem('usuario');
+      return JSON.stringify(userLogged);
+    }
+
 };
 
 export default contaService;

@@ -1,5 +1,4 @@
 import Style  from "./ButtonComponent.module.css";
-import { Link } from 'react-router-dom';
 
 export type ButtonTextComponentProps = {
     type?: "submit" ,

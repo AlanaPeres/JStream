@@ -14,6 +14,7 @@ interface IUser{
     bairro: string;
     cidade: string;
     estado: string;
+    saldoAtual: number;
 }
 
 export default IUser;

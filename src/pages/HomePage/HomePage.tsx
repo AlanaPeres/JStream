@@ -1,5 +1,5 @@
-import NavBar from "../../components/NavBarComponent/NavBarComponent";
-import { HomeComponent } from "../../components/HomeComponent/HomeComponent";
+import { HomeComponent } from "../../components/homeComponent/HomeComponent";
+import NavBar from "../../components/navBarComponent/NavBarComponent";
 
 export const Homepage = () => {
   return (
