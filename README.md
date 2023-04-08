@@ -18,6 +18,7 @@ Software desenvolvido como projeto final do bootcamp <b>Sharp Coders</b>.
 
 ⚙️ Professor: <b>Hugo Rafael</b>
 
+⚙️Deploy: http://soft-finance.vercel.app
 <br />
 
 ## 🛠️ 1ª Etapa do projeto Front-end construído com
@@ -37,6 +38,9 @@ Software desenvolvido como projeto final do bootcamp <b>Sharp Coders</b>.
 <li>Login</li>
 <li>Recuperação de Senha</li>
 <li>Termos e Condições</li>
+<li>Saldo</li>
+<li>Transferência</li>
+<li>Histórico de transações</li>
 </ul>
 
 <br />

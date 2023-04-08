@@ -1,5 +1,5 @@
-import img from "../../assets/logo dark.png";
-import profileicon from "../../assets/profile icon.png";
+import img from "../../assets/logo_dark.webp";
+import profileicon from "../../assets/profile_icon.webp";
 import Styles from "./headerMobileComponent.module.css";
 
 type HeaderMobileProps = {

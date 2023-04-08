@@ -4,7 +4,6 @@
   overflow: hidden;
   height: 4rem;
   text-decoration: dotted;
-  text-transform: uppercase;
   width: 100%;
 }
 
@@ -40,6 +39,7 @@
   text-decoration: none;
   color: var(--backgrounddesktop-color);
   transition: all 0.25s ease-in-out;
+  font-size: 0.875rem;
 }
 
 .alink:hover {
@@ -62,15 +62,14 @@
 
 .btn {
   height: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 1.25rem;
   width: 6rem;
   background-color: var(--backgrounddesktop-color);
   border: none;
   font-family: "roboto";
-  text-transform: uppercase;
   color: var(--darkbtn-color);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.875rem;
   transition: all 0.25s ease-in-out;
 }
 
@@ -101,6 +100,10 @@
     height: 1.2rem;
     width: 5rem;
   }
+
+  .button_div {
+    display: none;
+  }
 }
 
 
@@ -126,12 +129,17 @@
     height: 1.2rem;
     width: 5rem;
   }
+
+  .button_div {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 375px) {
-  .navbarnew {
+  .button_div {
     display: none;
   }
+
 
   .btn {
     display: block;

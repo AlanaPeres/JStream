@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { HeaderMobile } from "../headerMobileComponent/headerMobileComponent";
 import styles from "../saldoComponent/saldoComponent.module.css";
 import Transacoes from "../transacaoContainerComponent/transacaoContainerComponent";
