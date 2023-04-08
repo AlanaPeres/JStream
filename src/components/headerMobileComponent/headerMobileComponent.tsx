@@ -4,12 +4,12 @@ import Styles from "./headerMobileComponent.module.css";
 
 type HeaderMobileProps = {
   user: string;
-  saldoAtual: number;
+  currentBalance: number;
 };
 
 export const HeaderMobile: React.FC<HeaderMobileProps> = ({
   user,
-  saldoAtual,
+  currentBalance,
 }) => {
   return (
     <>
@@ -21,7 +21,7 @@ export const HeaderMobile: React.FC<HeaderMobileProps> = ({
         </div>
         <div className={Styles.show_valores}>
           <h2 className={Styles.saldos}>Saldo Disponivel</h2>
-          <h2 className={Styles.valores}>R$ {saldoAtual}</h2>
+          <h2 className={Styles.valores}>R$ {currentBalance}</h2>
         </div>
       </div>
     </>

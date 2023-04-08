@@ -1,14 +1,14 @@
-import { ExtractComponent } from "../../components/extractComponent/extractComponent";
+import { StatementComponent } from "../../components/StatementComponent/StatementComponent";
 import { NavBarPrincipal } from "../../components/navBarPrincipalComponent/navBarPrincipalComponent";
 
-export const ExtractPage = () => {
-  const user = "Fulano";
-  const saldoAtual = Number(3.691);
+export const StatementPage = () => {
+  const user = "Matheus";
+  const currentBalance = Number(3.691);
 
   return (
     <>
       <NavBarPrincipal />
-      <ExtractComponent user={user} saldoAtual={saldoAtual} />
+      <StatementComponent user={user} currentBalance={currentBalance} />
     </>
   );
 };

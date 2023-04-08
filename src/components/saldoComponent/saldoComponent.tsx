@@ -5,23 +5,23 @@ import Transacoes from "../transacaoContainerComponent/transacaoContainerCompone
 
 type SaldoContentProps = {
   user: string;
-  saldoAtual: number;
+  currentBalance: number;
 }
 
 export const SaldoContent: React.FC<SaldoContentProps> = ({
-  user, saldoAtual
+  user, currentBalance
 }) => {
 
 
   return (
     <>
       <div className={styles.content}>
-        <HeaderMobile user={user} saldoAtual={saldoAtual} />
+        <HeaderMobile user={user} currentBalance={currentBalance} />
         <h1 className={styles.titulo}>Olá, {user}</h1>
         <div className={styles.article}>
           <h2 className={styles.saldo}>
             <span className={styles.saldoword}>saldo:</span>{" "}
-            <span className={styles.valorsaldo}>R$ {saldoAtual}</span>
+            <span className={styles.valorsaldo}>R$ {currentBalance}</span>
           </h2>
           <h2 className={styles.ultimas_trans}>ultimas transações</h2>
           <div className={styles.container_transacao}>

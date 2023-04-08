@@ -17,17 +17,17 @@
 .article {
   margin: auto;
   width: 100%;
-  margin-top: 7rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
-.extractWord {
+.statementWord {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.extract {
+.statement {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,19 +37,21 @@
   font-weight: 100;
 }
 
-.valorExtract {
+.statementAmount {
   font-size: 3rem;
   word-spacing: 0;
   font-weight: 400;
 }
 
-.ultimas_trans {
-  margin-top: 3rem;
-  font-weight: 300;
+.extract {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
+  margin-top: 3rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 765px) {
   .content {
     position: absolute;
     width: 100%;
@@ -62,7 +64,7 @@
     display: none;
   }
 
-  .valorExtract {
+  .statementAmount {
     display: none;
   }
 
@@ -71,11 +73,15 @@
     margin-top: -5rem;
   }
 
-  .ultimas_trans {
+  .extract {
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 1rem;
   }
 
-  .extractWord {
+  .statementWord {
     display: none;
   }
 }
