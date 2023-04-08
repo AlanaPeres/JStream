@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import ModalTermos from './modalTermos'
-import Style from '.../SignUpComponent/SignUpComponent.module.css'
 
 export const MostrarModalTermos = () =>{
 

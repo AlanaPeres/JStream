@@ -1,10 +1,10 @@
 import { NavLink, NavLinkProps, useLocation } from "react-router-dom";
 import styles from "./navBarPrincipalComponent.module.css";
-import img from "../../assets/logo dark.png";
-import homebutton from "../../assets/home button.png";
-import dollarbutton from "../../assets/dollar button.png";
-import transferbutton from "../../assets/transfer button.png";
-import profileicon from "../../assets/profile icon.png";
+import img from "../../assets/logo_dark.webp";
+import homebutton from "../../assets/home_button.webp";
+import dollarbutton from "../../assets/dollar_button.webp";
+import transferbutton from "../../assets/transfer_button.webp";
+import profileicon from "../../assets/profile_icon.webp";
 
 interface NavButtonProps extends NavLinkProps {
   activeClassName?: string;

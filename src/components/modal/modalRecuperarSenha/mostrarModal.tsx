@@ -5,12 +5,13 @@ import { BtnEsqueciSenha } from "./modal.style";
 export const MostrarModal = () =>{
     const [isModalVisible, setIsModalVisible] = useState(false);
 
-    const alterarModal = () =>{
+    const alterarModal = () => {
       setIsModalVisible(wasModalVisible => !wasModalVisible)
     }
     return(
        <>
-        <BtnEsqueciSenha onClick={alterarModal}>Esqueci a senha</BtnEsqueciSenha>
+        <BtnEsqueciSenha onClick={alterarModal}>Esqueci minha senha</BtnEsqueciSenha>
+        
         <BaseModalRecuperaSenha isModalVisible={isModalVisible} onBackdropClick={alterarModal}/>
        </>
     );   

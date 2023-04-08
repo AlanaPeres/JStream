@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Style from "../navBarComponent/navBarComponent.module.css";
+import Style from "../NavBarComponent/NavBarComponent.module.css";
 
 function NavBar() {
   return (
@@ -10,7 +10,7 @@ function NavBar() {
             <a className={Style.alink} href="">Sobre</a>
           </li>
           <li className={Style.texto_nav}>
-            <a className={Style.alink} href="">Contanto</a>
+            <a className={Style.alink} href="">Contato</a>
           </li>
           <li className={Style.texto_nav}>
             <a className={Style.alink} href="">Propostas</a>
