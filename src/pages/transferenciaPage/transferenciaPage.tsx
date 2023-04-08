@@ -1,12 +1,19 @@
-import { TransferenciaForm } from "../../components/transferenciaComponent/transferenciaComponent";
+import { TransferenciaContent } from "../../components/transferenciaComponent/transferenciaComponent";
 import style from './transferenciaPage.module.css';
+import { HeaderMobile } from "../../components/headerMobileComponent/headerMobileComponent";
+import { NavBarPrincipal } from "../../components/navBarPrincipalComponent/navBarPrincipalComponent";
+
 
 export const TransferenciaPage = () => {
+    let user = ' matheus';
+    let saldoAtual = 500.0;
     return(
         <>
-            <header className={style.header}>component header aqui</header>
-             <TransferenciaForm />
-            <footer className={style.footer}>component footer aqui</footer>
+            <HeaderMobile user={user} saldoAtual={saldoAtual} />
+
+            <TransferenciaContent />
+            
+            <NavBarPrincipal />
         </>
     );
 }

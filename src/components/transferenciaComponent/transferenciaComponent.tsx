@@ -1,8 +1,7 @@
 import style from './transferenciaComponent.module.css'
-import classNames from 'classnames';
 
 
-export const TransferenciaForm = () =>{
+export const TransferenciaContent = () =>{
     return(
         <div className={style.container}>
             <h3 className={style.title_desktop}>Transferência</h3>
