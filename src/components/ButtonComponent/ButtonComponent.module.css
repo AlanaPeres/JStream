@@ -1,0 +1,35 @@
+.form_btn {
+    margin-top: 1rem;  
+}
+
+.btn {
+    width: 100%;
+    height: 2.8rem;
+    border-radius: 0.9rem;
+    border: 1px solid var(--darkbtn-color);;
+    background-color: var(--darkbtn-color);
+    color: #ffffff;
+    font-size: 1.1rem;
+    
+}
+
+@media only screen and (min-width:768px) {
+    .form_btn {
+        width: 100%; 
+    }
+
+    .btn {
+        width: 100%;
+        height: 2.813rem;
+        border-radius: 1.25rem;
+        background-color: var(--hoverbotaoescuropraclaro--color);
+        color: #ffffff;
+        cursor: pointer;
+        transition: background-color .3s ease;
+        font-size: 0.875rem;
+    }
+
+    .btn:hover {
+        background-color: #408D86;  
+    }
+}

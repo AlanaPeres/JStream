@@ -1,7 +1,8 @@
+
 @media only screen and (min-width: 768px) {
     .sign_up_page {
         width: 100%;
-        min-height: 100vh;
+        height: 100vh;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
@@ -11,17 +12,17 @@
 
     .container {
         min-width: 65rem;
-        padding: 2.5rem;
         box-sizing: border-box;
         display: flex;
         justify-content: flex-end;
     }
 
     .register_image {
-        width: 53%;
+        width: 55%;
         height: 30rem;
-        margin: 3.75rem 3.75rem 0 0;
+        margin-right: 80px;
     }
+
 }
 @media only screen and (max-width: 768px) {
     .container {
