@@ -4,8 +4,28 @@ import logo from '../../assets/logo colorized.png';
 import logo_dark from '../../assets/logo dark.png';
 import styles from './loginComponent.module.css';
 import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
+import contaService from '../../service/contaService';
 
 export const LoginComponent = () => {
+    const handleLoginForm = (e: any) => {
+        e.preventDefault();
+        let user: any = {
+            cpf: e.target[0].value,
+            senha: e.target[1].value,
+        };
+        contaService.getUsers()
+        const isSuccessLogin = contaService.validateUserByCpf(user.cpf, user.senha);
+        
+        if (isSuccessLogin) {
+            
+        }
+    };
+
+    function paginaAtual(props: any) {
+        const handlePage = () => {
+            props.history.push('/saldo');
+        }
+    }
     return (
         <>
             <div className={styles.main}>
@@ -30,7 +50,7 @@ export const LoginComponent = () => {
                         width="100"
                     />
                     <div>
-                        <form>
+                        <form onSubmit={handleLoginForm}>
                             <div>
                                 <input
                                     className={styles.input}
@@ -52,7 +72,6 @@ export const LoginComponent = () => {
                                     <input
                                         type="checkbox"
                                         id="lemebrar_senha"
-                                        required
                                     />
                                     <label htmlFor="lemebrar_senha">
                                         Lembrar senha
@@ -63,7 +82,7 @@ export const LoginComponent = () => {
                                 </div>
                             </div>
                             <div className={styles.btns}>
-                                <Link to={"/saldo"}><button className={styles.btn}>Entrar</button></Link>
+                                <button className={styles.btn}>Entrar</button>
                                 <Link to="/">
                                     <button className={styles.btn}>
                                         Voltar
