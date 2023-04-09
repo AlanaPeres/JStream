@@ -101,9 +101,9 @@ input[type='date']:focus {
     color: #000;
 }
 
-/* .form_btn {
+.form_btn {
     margin-top: 20px;
-} */
+}
 
 .btn_sign_up {
     margin-bottom: 10px;

@@ -43,8 +43,8 @@ export const LoginComponent = () => {
                     />
                     <div>
                         <form onSubmit={handleLoginForm}>
-                            <InputTextComponent name="cpf" type="number" label="CPF" pattern=''/>
-                            <InputTextComponent name="password" type="password" label="Senha" pattern=''/>
+                            <InputTextComponent name="cpf" type="text" label="CPF" />
+                            <InputTextComponent name="password" type="password" label="Senha" />
                             <div className={styles.pass_check}>
                                 <div className={styles.input_checkbox}>
                                     <input

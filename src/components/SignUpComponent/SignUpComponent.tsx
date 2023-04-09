@@ -31,6 +31,7 @@ const SignUpForm = () => {
             saldoAtual: 4000
         };
         contaService.criar(user);
+        contaService.getUsers();
         
     };
 
@@ -82,19 +83,19 @@ const SignUpForm = () => {
             </div>
             <form onSubmit={handleFormSubmit}>
                 <div className={Style.form_content}>
-                <InputTextComponent name="name" type="name" label="Nome" pattern="[A-Za-zÀ-ú\s]+" />
+                <InputTextComponent name="name" type="name" label="Nome" pattern="[A-Za-zÀ-ú\s]+"  />
                 <InputTextComponent name="last_name" type="text" label="Sobrenome" pattern="[A-Za-zÀ-ú\s]+"/>
-                <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
+                <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" onChange={handleCpfChange} />
                 <InputTextComponent name="email" type="email" label="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-                <InputTextComponent name="password" type="password" label="Senha" pattern=''/>
-                <InputTextComponent name="confirm_password" type="password" label="Confirmar senha" pattern=''/>
+                <InputTextComponent name="password" type="password" label="Senha" />
+                <InputTextComponent name="confirm_password" type="password" label="Confirmar senha" />
                 <InputTextComponent name="date_of_birth" type="text" label="Data de nascimento" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)\d{2})" />
                 <InputTextComponent name="cep" type="text" label="CEP" pattern="[0-9]{8}" />
-                <InputTextComponent name="street" type="text" label="Rua" pattern=''/>
+                <InputTextComponent name="street" type="text" label="Rua" />
                 <InputTextComponent name="number" type="text" label="Número" pattern="[A-Za-z0-9]+[A-Za-z0-9\s]*" />
-                <InputTextComponent name="complement" type="text" label="Complemento" pattern='' />
-                <InputTextComponent name="neighborhood" type="text" label="Bairro" pattern='' />
-                <InputTextComponent name="city" type="text" label="Cidade" pattern=''/>
+                <InputTextComponent name="complement" type="text" label="Complemento" />
+                <InputTextComponent name="neighborhood" type="text" label="Bairro" />
+                <InputTextComponent name="city" type="text" label="Cidade" />
                 <div className={Style.form_group}>
                     <select className={Style.group_uf} name="uf">
                         {STATES_BR.map(({ id, value, text }) => (
@@ -120,7 +121,7 @@ const SignUpForm = () => {
                     </label>
                 </div>
                 <div className={Style.form_btn}>
-                    <ButtonTextComponent type='submit' description='Entrar' />
+                    <ButtonTextComponent type='submit' description='Cadastrar' />
                     <Link to="/">
                         <ButtonTextComponent description='Voltar' />                                    
                     </Link>
