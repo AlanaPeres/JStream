@@ -27,7 +27,7 @@ const SignUpForm = () => {
             bairro: event.target[11].value,
             cidade: event.target[12].value,
             estado: event.target[13].value,
-            saldoAtual: 4980
+            saldoAtual: 4000
         };
         contaService.criar(user);
     };
