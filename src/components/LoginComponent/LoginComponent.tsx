@@ -3,7 +3,7 @@ import logo from '../../assets/logo_colorized.webp';
 import logo_dark from '../../assets/logo_dark.webp';
 import styles from './LoginComponent.module.css';
 import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
-import contaService from '../../service/contaService';
+import {contaService} from '../../service/contaService';
 
 export const LoginComponent = () => {
     const handleLoginForm = (e: any) => {
@@ -16,6 +16,7 @@ export const LoginComponent = () => {
         const isSuccessLogin = contaService.validateUserByCpf(
             user.cpf,
             user.senha
+            
         );
         if (isSuccessLogin) {
             contaService.currentUser(user.cpf);

@@ -1,3 +1,4 @@
+import { type } from "os";
 
 interface IUser{
     nome: string;
@@ -16,5 +17,16 @@ interface IUser{
     estado: string;
     saldoAtual: number;
 }
+
+type UserState = {
+    users : IUser[];
+}
+
+type UserActiont = {
+    type: string
+    user:IUser
+}
+
+type DispatchType = (args: UserActiont) => UserActiont;
 
 export default IUser;
