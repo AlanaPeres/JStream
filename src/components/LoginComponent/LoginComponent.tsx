@@ -4,6 +4,8 @@ import logo_dark from '../../assets/logo_dark.webp';
 import styles from './LoginComponent.module.css';
 import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
 import {contaService} from '../../service/contaService';
+import { InputTextComponent } from '../InputComponent/InputComponent';
+import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
 
 export const LoginComponent = () => {
     const handleLoginForm = (e: any) => {
@@ -41,22 +43,8 @@ export const LoginComponent = () => {
                     />
                     <div>
                         <form onSubmit={handleLoginForm}>
-                            <div>
-                                <input
-                                    className={styles.input}
-                                    type="number"
-                                    placeholder="CPF"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <input
-                                    className={styles.input}
-                                    type="password"
-                                    placeholder="SENHA"
-                                    required
-                                />
-                            </div>
+                            <InputTextComponent name="cpf" type="number" label="CPF" pattern=''/>
+                            <InputTextComponent name="password" type="password" label="Senha" pattern=''/>
                             <div className={styles.pass_check}>
                                 <div className={styles.input_checkbox}>
                                     <input
@@ -72,11 +60,9 @@ export const LoginComponent = () => {
                                 </div>
                             </div>
                             <div className={styles.btns}>
-                                <button className={styles.btn}>Entrar</button>
+                                <ButtonTextComponent type='submit' description='Entrar' />
                                 <Link to="/">
-                                    <button className={styles.btn}>
-                                        Voltar
-                                    </button>
+                                    <ButtonTextComponent type='submit' description='Voltar' />                                    
                                 </Link>
                             </div>
                         </form>
