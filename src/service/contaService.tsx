@@ -2,11 +2,11 @@ import IUser from '../interface/IUsers';
 
 let users: IUser[] = [];
 
-
 export const contaService = 
 {
   criar: function (user: any) {
     users.push(user);
+    window.location.href = 'http://localhost:3000/login'
   },
 
   getUsers: function () {
@@ -33,13 +33,11 @@ export const contaService =
 
   currentUser: function(cpf: string) {
     let user: any = users.find(u => u.cpf == cpf);     
-    return localStorage.setItem('usuario', JSON.stringify(user))
-    
+    return localStorage.setItem('usuario', JSON.stringify(user))    
   },
 
   getUserLogged: function(usuario: string): any{
-    let userLogged = localStorage.getItem(usuario);           
-     
+    let userLogged = localStorage.getItem(usuario);                
     if (userLogged) 
     { 
     try
