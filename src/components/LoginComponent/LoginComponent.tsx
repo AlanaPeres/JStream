@@ -1,61 +1,88 @@
-import { Link } from "react-router-dom";
-import logo from "../../assets/logo_colorized.webp";
-import logo_dark from "../../assets/logo_dark.webp";
-import Style from "./LoginComponent.module.css";
-import { InputTextComponent } from "../InputComponent/InputComponent";
-import { ButtonTextComponent } from "../ButtonComponent/ButtonComponent";
-import { MostrarModal } from "../modal/modalRecuperarSenha/mostrarModal";
+import { Link } from 'react-router-dom';
+import logo from '../../assets/logo_colorized.webp';
+import logo_dark from '../../assets/logo_dark.webp';
+import styles from './LoginComponent.module.css';
+import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
+import {contaService} from '../../service/contaService';
 
 export const LoginComponent = () => {
-  return (
-    <div className={Style.main}>
-      <div>
-        <img
-          className={Style.normal_logo}
-          src={logo}
-          alt="Imagem da logo"
-          width="100"
-        />
-        <img
-          className={Style.dark_logo}
-          src={logo_dark}
-          alt="Imagem da logo"
-          width="100"
-        />
-      </div>
-      <div className={Style.form_content}>
-        <InputTextComponent name="cpf" label="CPF" type="number" />
-        <InputTextComponent name="password" label="Senha" type="password" />
+    const handleLoginForm = (e: any) => {
+        e.preventDefault();
 
-        <div className={Style.pass_check}>
-          <div className={Style.input_checkbox}>
-            <input
-              className={Style.checkbox_lembrar_senha}
-              type="checkbox"
-              id="lembrar_senha"
-              required
-            />
-            <label className="lembrar_senha" htmlFor="lembrar_senha">
-              Lembrar senha
-            </label>
-          </div>
-          <div>
-            <div className={Style.pass_check}>
-              <div className={Style.esqueci_senha}>
-                <MostrarModal />
-              </div>
+        let user: any = {
+            cpf: e.target[0].value,
+            senha: e.target[1].value,
+        };
+        const isSuccessLogin = contaService.validateUserByCpf(
+            user.cpf,
+            user.senha
+            
+        );
+        if (isSuccessLogin) {
+            contaService.currentUser(user.cpf);
+            window.location.href = 'http://localhost:3000/saldo'
+        }
+    };
+    return (
+        <>
+            <div className={styles.main}>
+                <div className={styles.form_content}>
+                    <img
+                        className={styles.normal_logo}
+                        src={logo}
+                        alt=""
+                        width="100"
+                    />
+                    <img
+                        className={styles.dark_logo}
+                        src={logo_dark}
+                        alt=""
+                        width="100"
+                    />
+                    <div>
+                        <form onSubmit={handleLoginForm}>
+                            <div>
+                                <input
+                                    className={styles.input}
+                                    type="number"
+                                    placeholder="CPF"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    className={styles.input}
+                                    type="password"
+                                    placeholder="SENHA"
+                                    required
+                                />
+                            </div>
+                            <div className={styles.pass_check}>
+                                <div className={styles.input_checkbox}>
+                                    <input
+                                        type="checkbox"
+                                        id="lemebrar_senha"
+                                    />
+                                    <label htmlFor="lemebrar_senha">
+                                        Lembrar senha
+                                    </label>
+                                </div>
+                                <div className={styles.esqueci_senha}>
+                                    <MostrarModal />
+                                </div>
+                            </div>
+                            <div className={styles.btns}>
+                                <button className={styles.btn}>Entrar</button>
+                                <Link to="/">
+                                    <button className={styles.btn}>
+                                        Voltar
+                                    </button>
+                                </Link>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div className={Style.btns}>
-          <Link to="/saldo">
-            <ButtonTextComponent type="submit" description="Entrar" />
-          </Link>
-          <Link to="/">
-            <ButtonTextComponent description="Voltar" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+        </>
+    );
 };

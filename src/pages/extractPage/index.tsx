@@ -1,14 +1,13 @@
 import { StatementComponent } from "../../components/StatementComponent/StatementComponent";
 import { NavBarPrincipal } from "../../components/navBarPrincipalComponent/navBarPrincipalComponent";
+import { contaService } from "../../service/contaService";
 
 export const StatementPage = () => {
-  const user = "Matheus";
-  const currentBalance = Number(3.691);
-
+  let user = contaService.getUserLogged('usuario');
   return (
     <>
       <NavBarPrincipal />
-      <StatementComponent user={user} currentBalance={currentBalance} />
+      <StatementComponent user={user.nome}  />
     </>
   );
 };

@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Homepage } from "./pages/HomePage/HomePage";
-import { LoginPage } from "./pages/loginPage/LoginPage";
+import { StatementPage } from "./pages/extractPage";
 import { SignUpPage } from "./pages/SignUpPage/SignUpPage";
 import { SaldoPage } from "./pages/saldoPage/saldoPage";
-import { StatementPage } from "./pages/extractPage";
+import { Homepage } from "./pages/HomePage/HomePage";
+import { LoginPage } from "./pages/loginPage/LoginPage";
 
 export const AppRoutes = () => {
   return (
