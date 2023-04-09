@@ -5,10 +5,12 @@ import IUser from '../../interface/IUsers';
 import {contaService} from '../../service/contaService';
 import logoDark from '../../assets/logo_dark.webp';
 import logoColorized from '../../assets/logo_colorized.webp';
+import { useState } from 'react';
 
 const Back = () => {
     window.history.back();
 };
+
 const SignUpForm = () => {
     const handleFormSubmit = (event: any) => {
         event.preventDefault();
@@ -27,11 +29,44 @@ const SignUpForm = () => {
             bairro: event.target[11].value,
             cidade: event.target[12].value,
             estado: event.target[13].value,
-            saldoAtual: 4980
+            saldoAtual: 4000
         };
         contaService.criar(user);
+        
     };
 
+    const [cpf, setCpf] = useState(""); 
+    const formatCpf = (value: string) => {
+      // Remove qualquer caractere que não seja dígito numérico
+      const cleanedValue = value.replace(/\D/g, "");
+  
+      // Adiciona pontos e hífens em posições específicas do valor limpo
+      let formattedValue = cleanedValue;
+      if (cleanedValue.length > 3) {
+        formattedValue =
+          cleanedValue.substr(0, 3) +
+          "." +
+          cleanedValue.substr(3, 3) +
+          "." +
+          cleanedValue.substr(6, 3);
+      }
+      if (cleanedValue.length > 9) {
+        formattedValue += "-" + cleanedValue.substr(9, 2);
+      }
+  
+      return formattedValue;
+    };
+  
+    const handleCpfChange = (event: { target: { value: any; }; }) => {
+      // Obtém o valor atualizado do campo de CPF
+      const newValue = event.target.value;
+  
+      // Formata o valor e atualiza o estado do componente
+      const formattedValue = formatCpf(newValue);
+      setCpf(formattedValue);
+    };
+
+   
     return (
         <div className={Style.sign_up}>
             <div>
@@ -52,8 +87,9 @@ const SignUpForm = () => {
                         <input
                             name="name"
                             className={Style.input}
-                            type="text"
-                            required
+                            type="text"                           
+                            pattern="[A-Za-zÀ-ú\s]+" 
+                            required 
                         />
                         <label className={Style.input_label} htmlFor="name">
                             Nome
@@ -64,6 +100,7 @@ const SignUpForm = () => {
                             name="last_name"
                             className={Style.input}
                             type="text"
+                            pattern="[A-Za-zÀ-ú\s]+"
                             required
                         />
                         <label
@@ -73,13 +110,17 @@ const SignUpForm = () => {
                             Sobrenome
                         </label>
                     </div>
-                    <div className={Style.form_group}>
+                    <div className={Style.form_group}>                        
                         <input
                             name="cpf"
                             className={Style.input}
                             type="text"
+                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                            value={cpf}
+                            onChange={handleCpfChange}
                             required
                         />
+                        
                         <label className={Style.input_label} htmlFor="cpf">
                             Cpf
                         </label>
@@ -89,6 +130,7 @@ const SignUpForm = () => {
                             name="email"
                             className={Style.input}
                             type="text"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                             required
                         />
                         <label className={Style.input_label} htmlFor="email">
@@ -125,6 +167,7 @@ const SignUpForm = () => {
                             name="date_of_birth"
                             className={Style.input}
                             type="date"
+                            pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)\d{2})"
                             required
                         />
                         <label
@@ -139,6 +182,7 @@ const SignUpForm = () => {
                             name="cep"
                             className={Style.input}
                             type="text"
+                            pattern="[0-9]{8}"
                             required
                         />
                         <label className={Style.input_label} htmlFor="cep">
@@ -161,6 +205,7 @@ const SignUpForm = () => {
                             name="number"
                             className={Style.input}
                             type="text"
+                            pattern="[A-Za-z0-9]+[A-Za-z0-9\s]*"
                             required
                         />
                         <label className={Style.input_label} htmlFor="number">
@@ -242,5 +287,6 @@ const SignUpForm = () => {
         </div>
     );
 };
+
 
 export default SignUpForm;

@@ -5,11 +5,13 @@ import { contaService } from "../../service/contaService";
 
 export const SaldoPage = () => {
  let user = contaService.getUserLogged('usuario');
+ 
+ 
 
   return (
     <> 
       <NavBarPrincipal/>
-      <SaldoContent user={user.nome}/>
+      <SaldoContent user={user.nome} saldo={user.saldoAtual}/>
     </>
   );
 };
