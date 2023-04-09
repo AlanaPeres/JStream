@@ -65,13 +65,13 @@
     color: #fff;
 }
 
-form input:focus ~ label,
+/* form input:focus ~ label,
 form input:valid ~ label {
     transform: translateY(-33px);
     font-size: 14px;
     opacity: 1;
     color: #408d86;
-}
+} */
 
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
@@ -219,11 +219,11 @@ form input:focus ~ label {
     border: 1px solid #d0ebea;
 }
 
-form input:focus ~ label,
+/* form input:focus ~ label,
 form input:valid ~ label {
     transform: translateY(-33px);
     color: #fff;
-}
+} */
 
 .checkbox_input {
     width: 20px;

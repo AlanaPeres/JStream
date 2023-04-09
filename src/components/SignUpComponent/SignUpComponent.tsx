@@ -85,7 +85,7 @@ const SignUpForm = () => {
                 <div className={Style.form_content}>
                 <InputTextComponent name="name" type="name" label="Nome" pattern="[A-Za-zÀ-ú\s]+"  />
                 <InputTextComponent name="last_name" type="text" label="Sobrenome" pattern="[A-Za-zÀ-ú\s]+"/>
-                <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" onChange={handleCpfChange} />
+                <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" onChange={handleCpfChange} value={cpf} />
                 <InputTextComponent name="email" type="email" label="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
                 <InputTextComponent name="password" type="password" label="Senha" />
                 <InputTextComponent name="confirm_password" type="password" label="Confirmar senha" />

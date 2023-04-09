@@ -29,18 +29,20 @@ export const LoginComponent = () => {
         <>
             <div className={styles.main}>
                 <div className={styles.form_content}>
-                    <img
-                        className={styles.normal_logo}
-                        src={logo}
-                        alt=""
-                        width="100"
-                    />
-                    <img
-                        className={styles.dark_logo}
-                        src={logo_dark}
-                        alt=""
-                        width="100"
-                    />
+                    <div className={styles.img_container}>
+                        <img
+                            className={styles.normal_logo}
+                            src={logo}
+                            alt=""
+                            width="100"
+                        />
+                        <img
+                            className={styles.dark_logo}
+                            src={logo_dark}
+                            alt=""
+                            width="100"
+                        />
+                    </div>
                     <div>
                         <form onSubmit={handleLoginForm}>
                             <InputTextComponent name="cpf" type="text" label="CPF" />
@@ -48,10 +50,11 @@ export const LoginComponent = () => {
                             <div className={styles.pass_check}>
                                 <div className={styles.input_checkbox}>
                                     <input
+                                    className={styles.checkbox_lembrar_senha}
                                         type="checkbox"
-                                        id="lemebrar_senha"
+                                        id="lembrar_senha"
                                     />
-                                    <label htmlFor="lemebrar_senha">
+                                    <label htmlFor="lembrar_senha">
                                         Lembrar senha
                                     </label>
                                 </div>

@@ -7,6 +7,7 @@ export type InputTextComponentProps = {
     required?: boolean
     type?: string
     onChange?: (event:any) => void
+    value?: string
 }
 
 export const InputTextComponent = ({
@@ -15,11 +16,12 @@ export const InputTextComponent = ({
     pattern,
     required = true,
     type = 'text',
-    onChange
+    onChange,
+    value
 }: InputTextComponentProps) => {
     return (
         <div className={Style.form_group}>
-            <input name={name} className={Style.input} type={type} required={required} pattern={pattern} onChange={onChange}/>
+            <input name={name} className={Style.input} type={type} required={required} pattern={pattern} onChange={onChange} value={value}/>
             <label className={Style.input_label} htmlFor={name}>{label}</label>
         </div>
     )
