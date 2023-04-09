@@ -77,18 +77,24 @@
     color: #FFFFFF;
 }
 
+.container_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn{
     width: 260px;
     height: 40px;
     background: #263339;
     border-radius: 15px;
     color: #FFFFFF;
-    margin: auto;
     border-style: none;
     transition: 0.5s;
     text-transform: uppercase;
     cursor: pointer;
 }
+
 .btn:hover{
     background-color: var(--hoverbotaoclaropraescuro--color);
 }

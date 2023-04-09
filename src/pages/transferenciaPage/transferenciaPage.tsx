@@ -11,7 +11,7 @@ export const TransferenciaPage = () => {
 
     return(
         <>
-            <HeaderMobile user={user.nome}/>
+            <HeaderMobile user={user}/>
 
             <TransferenciaContent />
             

@@ -42,8 +42,10 @@ export const TransferenciaContent = () =>{
                                 <label></label>
                             </div>
                         </div>
-                     
-                            <button className={style.btn} type="submit">Próximo</button>
+
+                            <div className={style.container_btn}>
+                                <button className={style.btn} type="submit">Próximo</button>
+                            </div>
                     </form>
                 </div>
             </div>  
