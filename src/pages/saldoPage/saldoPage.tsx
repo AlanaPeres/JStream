@@ -1,16 +1,15 @@
 
 import { NavBarPrincipal } from "../../components/navBarPrincipalComponent/navBarPrincipalComponent";
 import { SaldoContent } from "../../components/saldoComponent/saldoComponent";
-
+import { contaService } from "../../service/contaService";
 
 export const SaldoPage = () => {
-  const user = "matheus";
-  const saldoAtual = 500.0;
+ let user = contaService.getUserLogged('usuario');
 
   return (
     <> 
       <NavBarPrincipal/>
-      <SaldoContent user={user} saldoAtual={saldoAtual} />
+      <SaldoContent user={user.nome}/>
     </>
   );
 };

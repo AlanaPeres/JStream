@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ModalTermos from './modalTermos'
 
 export const MostrarModalTermos = () =>{
@@ -15,4 +15,3 @@ export const MostrarModalTermos = () =>{
        </>
     );   
 }
-  
