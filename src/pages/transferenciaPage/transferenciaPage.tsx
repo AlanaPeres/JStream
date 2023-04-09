@@ -2,14 +2,16 @@ import { TransferenciaContent } from "../../components/transferenciaComponent/tr
 import style from './transferenciaPage.module.css';
 import { HeaderMobile } from "../../components/headerMobileComponent/headerMobileComponent";
 import { NavBarPrincipal } from "../../components/navBarPrincipalComponent/navBarPrincipalComponent";
+import { contaService } from "../../service/contaService";
+
 
 
 export const TransferenciaPage = () => {
-    let user = ' matheus';
-    let saldoAtual = 500.0;
+    let user = contaService.getUserLogged('usuario');
+
     return(
         <>
-            <HeaderMobile user={user} saldoAtual={saldoAtual} />
+            <HeaderMobile user={user.nome}/>
 
             <TransferenciaContent />
             
