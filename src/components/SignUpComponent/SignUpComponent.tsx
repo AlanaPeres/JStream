@@ -89,7 +89,7 @@ const SignUpForm = () => {
                 <InputTextComponent name="email" type="email" label="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
                 <InputTextComponent name="password" type="password" label="Senha" />
                 <InputTextComponent name="confirm_password" type="password" label="Confirmar senha" />
-                <InputTextComponent name="date_of_birth" type="text" label="Data de nascimento" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)\d{2})" />
+                <InputTextComponent name="date_of_birth" type="date" label="Data de nascimento" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)\d{2})" />
                 <InputTextComponent name="cep" type="text" label="CEP" pattern="[0-9]{8}" />
                 <InputTextComponent name="street" type="text" label="Rua" />
                 <InputTextComponent name="number" type="text" label="Número" pattern="[A-Za-z0-9]+[A-Za-z0-9\s]*" />
