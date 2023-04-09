@@ -8,9 +8,11 @@ import { contaService } from "../../service/contaService";
 
 type HeaderMobileProps = {
   user: IUser;  
+  saldo: number;
 }
 
-export const HeaderMobile: React.FC<HeaderMobileProps> = ({user})=>{
+export const HeaderMobile: React.FC<HeaderMobileProps> = ({user, saldo})=>{
+
   const [loginData, setLoginData] = useState<IUser | null>(null);
 
   useEffect(() => {
@@ -32,7 +34,7 @@ export const HeaderMobile: React.FC<HeaderMobileProps> = ({user})=>{
           <h2 className={Styles.saldos}>
             Saldo Disponivel 
           </h2>
-          <h2 className={Styles.valores}>R$ {}</h2>
+          <h2 className={Styles.valores}>R$ {saldo}</h2>
         </div>
       </div>
     </>

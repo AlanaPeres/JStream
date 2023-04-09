@@ -19,7 +19,7 @@ export const LoginComponent = () => {
             
         );
         if (isSuccessLogin) {
-            contaService.currentUser(user.cpf);
+            user = contaService.getUserLogged('usuario');           
             window.location.href = 'http://localhost:3000/saldo'
         }
     };
