@@ -9,7 +9,6 @@ type BalanceContentProps = {
 };
 
 export const StatementComponent: React.FC<BalanceContentProps> = ({ user }) => {
-   user = contaService.getUserLogged("usuario");
   return (
     <>
       <div>

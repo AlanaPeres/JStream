@@ -3,7 +3,8 @@ import { StatementPage } from "./pages/extractPage";
 import { SignUpPage } from "./pages/SignUpPage/SignUpPage";
 import { SaldoPage } from "./pages/saldoPage/saldoPage";
 import { Homepage } from "./pages/HomePage/HomePage";
-import { LoginPage } from "./pages/loginPage/LoginPage";
+import { LoginPage } from "./pages/LoginPage/LoginPage";
+
 
 export const AppRoutes = () => {
   return (

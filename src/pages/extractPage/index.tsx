@@ -7,7 +7,7 @@ export const StatementPage = () => {
   return (
     <>
       <NavBarPrincipal />
-      <StatementComponent user={user.nome}  />
+      <StatementComponent user={user}  />
     </>
   );
 };

@@ -23,7 +23,7 @@ const Transacoes: React.FC = () => {
     },
     {
       id: "2",
-      metodo_De_Pagamento: "Cartão",
+      metodo_De_Pagamento: "Débito",
       data_de_pagamento: "02/04/2023",
       destino: "supermercado",
       valor_gasto: 3.007,
