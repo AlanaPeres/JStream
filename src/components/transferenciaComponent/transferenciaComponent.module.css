@@ -30,6 +30,10 @@
     margin-left: 400px;
 }
 
+.container_title_desktop{
+   margin-left: 140px ;
+}
+
 .title_mobile{
     display: none;
 }

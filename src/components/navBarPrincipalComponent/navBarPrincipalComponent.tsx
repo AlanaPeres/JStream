@@ -34,11 +34,13 @@ export const NavBarPrincipal = () => {
   return (
     <>
       <nav className={styles.navbar}>
-        <img className={styles.perfil} src={profileicon} alt="" />
+      <NavLink {...navButtonProps} to={"/NovaRotaContaUsuario"}>
+        <img  title="Conta" className={styles.perfil} src={profileicon} alt="" />
+      </NavLink>
         <ul className={styles.ul}>
           <li className={styles.li}>
             <NavLink {...navButtonProps} to={"/extrato"}>
-              <button className={ExtratoBtnClassName}>
+              <button title="Extrato" className={ExtratoBtnClassName}>
                 <img
                   className={styles.imagemdollar}
                   src={dollarbutton}
@@ -49,14 +51,14 @@ export const NavBarPrincipal = () => {
           </li>
           <li className={styles.li}>
             <NavLink {...navButtonProps} to={"/saldo"}>
-              <button className={SaldoBtnClassName}>
+              <button title="Saldo" className={SaldoBtnClassName}>
                 <img className={styles.imagemsaldo} src={homebutton} alt="" />
               </button>
             </NavLink>
           </li>
           <li className={styles.li}>
             <NavLink {...navButtonProps} to={"/transferencia"}>
-              <button className={Transferclassname}>
+              <button title="Transferencia" className={Transferclassname}>
                 <img
                   className={styles.imagemtranfer}
                   src={transferbutton}
@@ -66,7 +68,9 @@ export const NavBarPrincipal = () => {
             </NavLink>
           </li>
         </ul>
-        <img className={styles.logotipo} src={img} alt="" />
+        <NavLink {...navButtonProps} to={"/"}>
+          <img title="Home" className={styles.logotipo} src={img} alt="" />
+        </NavLink>
       </nav>
     </>
   );
