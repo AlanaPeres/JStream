@@ -10,8 +10,17 @@ import { InputTextComponent } from '../InputComponent/InputComponent';
 import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
 import { Link } from 'react-router-dom';
 
+const usersManager = function () {
+    return {
+        createUser: (user: IUser) => {
+            localStorage.setItem('usuarios', JSON.stringify(user))
+        }
+    }
+}
+
 const SignUpForm = () => {
     const handleFormSubmit = (event: any) => {
+        console.log('handleFormSubmit')
         event.preventDefault();
         let user: IUser = {
             nome: event.target[0].value,
@@ -30,6 +39,8 @@ const SignUpForm = () => {
             estado: event.target[13].value,
             saldoAtual: 4000
         };
+        const users = usersManager()
+        users.createUser(user)
         contaService.criar(user);
         contaService.getUsers();
         
