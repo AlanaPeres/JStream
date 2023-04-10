@@ -67,7 +67,7 @@ export const ContainerInputModal = styled.div`
     top: 0;
     font-size: 0.85rem;
     background-color: transparent;
-    border-radius: 30px;
+    color: black;
     }
 `;
 

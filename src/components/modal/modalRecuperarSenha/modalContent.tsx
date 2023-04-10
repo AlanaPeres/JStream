@@ -21,7 +21,7 @@ export const ContentRecuperarSenha = ()=>{
 
             <Formulario> 
                 <ContainerInputModal>
-                    <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autoComplete="off"/>
+                    <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
                     <label htmlFor="email">e-mail</label>
                 </ContainerInputModal>
 
