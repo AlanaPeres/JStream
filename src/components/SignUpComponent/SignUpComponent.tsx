@@ -2,13 +2,15 @@ import Style from './SignUpComponent.module.css';
 import { STATES_BR } from './constants';
 import { MostrarModalTermos } from '../modal/modalTermosECondicoes/mostrarModalTermos';
 import IUser from '../../interface/IUsers';
-import {contaService} from '../../service/contaService';
 import logoDark from '../../assets/logo_dark.webp';
 import logoColorized from '../../assets/logo_colorized.webp';
 import { useState } from 'react';
 import { InputTextComponent } from '../InputComponent/InputComponent';
 import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
 import { Link } from 'react-router-dom';
+import { UsersManager } from '../../service/usersManagers';
+
+
 
 const SignUpForm = () => {
     const handleFormSubmit = (event: any) => {
@@ -30,9 +32,8 @@ const SignUpForm = () => {
             estado: event.target[13].value,
             saldoAtual: 4000
         };
-        contaService.criar(user);
-        contaService.getUsers();
-        
+        const users = new UsersManager();
+        users.createUser(user);        
     };
 
     const [cpf, setCpf] = useState(""); 

@@ -3,26 +3,23 @@ import logo from '../../assets/logo_colorized.webp';
 import logo_dark from '../../assets/logo_dark.webp';
 import styles from './LoginComponent.module.css';
 import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
-import {contaService} from '../../service/contaService';
 import { InputTextComponent } from '../InputComponent/InputComponent';
 import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
+import { UsersManager } from '../../service/usersManagers';
+
 
 export const LoginComponent = () => {
     const handleLoginForm = (e: any) => {
         e.preventDefault();
 
-        let user: any = {
-            cpf: e.target[0].value,
-            senha: e.target[1].value,
-        };
-        const isSuccessLogin = contaService.validateUserByCpf(
-            user.cpf,
-            user.senha
-            
-        );
-        if (isSuccessLogin) {
-            user = contaService.getUserLogged('usuario');           
+        const cpf = e.target[0].value;
+        const senha = e.target[1].value;
+        const _user = new UsersManager();
+        try {
+            _user.authenticate(cpf, senha);
             window.location.href = 'http://localhost:3000/saldo'
+        } catch (err) {
+            console.error(err)
         }
     };
     return (
