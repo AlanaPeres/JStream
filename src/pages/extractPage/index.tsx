@@ -1,9 +1,14 @@
 import { StatementComponent } from "../../components/StatementComponent/StatementComponent";
 import { NavBarPrincipal } from "../../components/navBarPrincipalComponent/navBarPrincipalComponent";
-import { contaService } from "../../service/contaService";
+import { UsersManager } from "../../service/usersManagers";
 
 export const StatementPage = () => {
-  let user = contaService.getUserLogged('usuario');
+  const userManager = new UsersManager();
+  let user = userManager.getSessionUser();
+  if (!user) {
+    const host = window.location.host;
+    window.location.href = `http://${host}/login`;
+  }
   return (
     <>
       <NavBarPrincipal />

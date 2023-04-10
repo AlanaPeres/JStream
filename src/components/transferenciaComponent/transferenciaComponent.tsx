@@ -1,11 +1,23 @@
 import style from './transferenciaComponent.module.css'
+import { UsersManager } from "../../service/usersManagers";
+import { ButtonLougoutTextComponent } from '../ButtonLogoutComponent/ButtonLogoutComponent'
 
 
 export const TransferenciaContent = () =>{
+    const usersManagers = new UsersManager();
+
+    function handleClickLogoutButton() {
+        usersManagers.logOut()
+        const host = window.location.host;
+        window.location.href = `http://${host}/login`;
+    }
+
     return(
         <div className={style.container}>
-            <h3 className={style.title_desktop}>Transferência</h3>
-            
+            <div className={style.top}>
+                <h3 className={style.title_desktop}>Transferência</h3>
+                <ButtonLougoutTextComponent label="Sair" onClick={handleClickLogoutButton} />
+            </div>           
             <div className={style.content}>
                 
                 <h3 className={style.title_mobile}>Transferência</h3>

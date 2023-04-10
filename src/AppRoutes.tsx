@@ -4,6 +4,7 @@ import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { SignUpPage } from "./pages/SignUpPage/SignUpPage";
 import { TransferenciaPage } from "./pages/transferenciaPage/transferenciaPage";
 import { SaldoPage } from "./pages/saldoPage/saldoPage";
+import { StatementPage } from "./pages/extractPage";
 
 export const AppRoutes = () => {
     return(
@@ -15,6 +16,7 @@ export const AppRoutes = () => {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/saldo" element={<SaldoPage />} />
                 <Route path="/transferencia" element={<TransferenciaPage />} />
+                <Route path="/extrato" element={<StatementPage />} />
             </Routes>
         </Router>
     )
