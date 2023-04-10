@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Texto } from "./modalTransferencia.style";
 
 
-export const ModalTransferencia = ()=> {
+export const ModalTransferenciaContent = ()=> {
     const [isModalVisible, setIsModalVisible] = useState(true);
       
         const handleTransfer = (event: React.FormEvent<HTMLFormElement>) => {
