@@ -9,7 +9,7 @@ export type ButtonTextComponentProps = {
 
 export const ButtonTextComponent = ({
     type,
-    description = 'text',
+    description = 'button',
     onClick
 }: ButtonTextComponentProps) => {
     return (

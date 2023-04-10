@@ -65,6 +65,13 @@ a {
     color: var(--backgroundmobile-color);
 }
 
+.message {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding-top: 30px;
+}
+
 @media screen and (max-width: 768px) {
     .main {
         height: 100vh;
