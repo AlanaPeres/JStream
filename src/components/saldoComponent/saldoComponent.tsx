@@ -3,15 +3,26 @@ import { UsersManager } from "../../service/usersManagers";
 import { HeaderMobile } from "../headerMobileComponent/headerMobileComponent";
 import styles from "../saldoComponent/saldoComponent.module.css";
 import Transacoes from "../transacaoContainerComponent/transacaoContainerComponent";
+import { ButtonLougoutTextComponent } from "../ButtonLogoutComponent/ButtonLogoutComponent";
 
 export const SaldoContent: React.FC = () => { 
   const usersManagers = new UsersManager();
   const user: IUser = usersManagers.getSessionUser();
+
+  function handleClickLogoutButton() {
+    usersManagers.logOut()
+    const host = window.location.host;
+    window.location.href = `http://${host}/login`;
+  }
+
   return (
     <>
       <div className={styles.content}>
         <HeaderMobile user={user} />
-        <h1 className={styles.titulo}>Olá, {user?.nome}</h1>
+        <div className={styles.top}>
+          <h1 className={styles.titulo}>Olá, {user?.nome}</h1>
+          <ButtonLougoutTextComponent label="Sair" onClick={handleClickLogoutButton} />
+        </div>
         <div className={styles.article}>
           <h2 className={styles.saldo}>
             <span className={styles.saldoword}>Saldo: </span>
