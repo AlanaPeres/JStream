@@ -23,3 +23,5 @@ export const modalTransferencia: React.FC<modalTransferenciaProps> = ({onBackdro
     )
 }
 
+export default modalTransferencia;
+
