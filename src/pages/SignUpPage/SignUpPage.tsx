@@ -1,4 +1,3 @@
-import React from "react";
 import Style from './SignUpPage.module.css'
 import SignUpForm from "../../components/SignUpComponent/SignUpComponent";
 import registerImage from '../../assets/register_image.webp';
