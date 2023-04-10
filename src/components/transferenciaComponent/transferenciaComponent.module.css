@@ -99,11 +99,11 @@
     background-color: var(--hoverbotaoclaropraescuro--color);
 }
 
-
-
-
-
-
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
 @media (max-width: 768px){
     .container{

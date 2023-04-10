@@ -4,7 +4,7 @@ import { UsersManager } from "../../service/usersManagers";
 
 export const StatementPage = () => {
   const userManager = new UsersManager();
-  let user = userManager.getSessionUser()
+  let user = userManager.getSessionUser();
   if (!user) {
     const host = window.location.host;
     window.location.href = `http://${host}/login`;
