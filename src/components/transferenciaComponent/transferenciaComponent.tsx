@@ -15,7 +15,9 @@ export const TransferenciaContent = () =>{
     return(
         <div className={style.container}>
             <div className={style.top}>
-                <h3 className={style.title_desktop}>Transferência</h3>
+                <div className={style.container_title_desktop}>
+                    <h3 className={style.title_desktop}>Transferência</h3>
+                </div>
                 <ButtonLougoutTextComponent label="Sair" onClick={handleClickLogoutButton} />
             </div>           
             <div className={style.content}>
