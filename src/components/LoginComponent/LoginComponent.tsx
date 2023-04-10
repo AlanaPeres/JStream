@@ -4,6 +4,8 @@ import logo_dark from '../../assets/logo_dark.webp';
 import styles from './LoginComponent.module.css';
 import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
 import {contaService} from '../../service/contaService';
+import { InputTextComponent } from '../InputComponent/InputComponent';
+import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
 
 export const LoginComponent = () => {
     const handleLoginForm = (e: any) => {
@@ -27,43 +29,32 @@ export const LoginComponent = () => {
         <>
             <div className={styles.main}>
                 <div className={styles.form_content}>
-                    <img
-                        className={styles.normal_logo}
-                        src={logo}
-                        alt=""
-                        width="100"
-                    />
-                    <img
-                        className={styles.dark_logo}
-                        src={logo_dark}
-                        alt=""
-                        width="100"
-                    />
+                    <div className={styles.img_container}>
+                        <img
+                            className={styles.normal_logo}
+                            src={logo}
+                            alt=""
+                            width="100"
+                        />
+                        <img
+                            className={styles.dark_logo}
+                            src={logo_dark}
+                            alt=""
+                            width="100"
+                        />
+                    </div>
                     <div>
                         <form onSubmit={handleLoginForm}>
-                            <div>
-                                <input
-                                    className={styles.input}
-                                    type="number"
-                                    placeholder="CPF"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <input
-                                    className={styles.input}
-                                    type="password"
-                                    placeholder="SENHA"
-                                    required
-                                />
-                            </div>
+                            <InputTextComponent name="cpf" type="text" label="CPF" />
+                            <InputTextComponent name="password" type="password" label="Senha" />
                             <div className={styles.pass_check}>
                                 <div className={styles.input_checkbox}>
                                     <input
+                                    className={styles.checkbox_lembrar_senha}
                                         type="checkbox"
-                                        id="lemebrar_senha"
+                                        id="lembrar_senha"
                                     />
-                                    <label htmlFor="lemebrar_senha">
+                                    <label htmlFor="lembrar_senha">
                                         Lembrar senha
                                     </label>
                                 </div>
@@ -72,11 +63,9 @@ export const LoginComponent = () => {
                                 </div>
                             </div>
                             <div className={styles.btns}>
-                                <button className={styles.btn}>Entrar</button>
+                                <ButtonTextComponent type='submit' description='Entrar' />
                                 <Link to="/">
-                                    <button className={styles.btn}>
-                                        Voltar
-                                    </button>
+                                    <ButtonTextComponent type='submit' description='Voltar' />                                    
                                 </Link>
                             </div>
                         </form>

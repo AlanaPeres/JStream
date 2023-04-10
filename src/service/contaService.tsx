@@ -6,7 +6,7 @@ export const contaService =
 {
   criar: function (user: any) {
     users.push(user);
-    window.location.href = 'http://localhost:3000/login'
+    /* window.location.href = 'http://localhost:3000/login' */
   },
 
   getUsers: function () {

@@ -6,10 +6,9 @@ import {contaService} from '../../service/contaService';
 import logoDark from '../../assets/logo_dark.webp';
 import logoColorized from '../../assets/logo_colorized.webp';
 import { useState } from 'react';
-
-const Back = () => {
-    window.history.back();
-};
+import { InputTextComponent } from '../InputComponent/InputComponent';
+import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
+import { Link } from 'react-router-dom';
 
 const SignUpForm = () => {
     const handleFormSubmit = (event: any) => {
@@ -32,6 +31,7 @@ const SignUpForm = () => {
             saldoAtual: 4000
         };
         contaService.criar(user);
+        contaService.getUsers();
         
     };
 
@@ -83,183 +83,28 @@ const SignUpForm = () => {
             </div>
             <form onSubmit={handleFormSubmit}>
                 <div className={Style.form_content}>
-                    <div className={Style.form_group}>
-                        <input
-                            name="name"
-                            className={Style.input}
-                            type="text"                           
-                            pattern="[A-Za-zÀ-ú\s]+" 
-                            required 
-                        />
-                        <label className={Style.input_label} htmlFor="name">
-                            Nome
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="last_name"
-                            className={Style.input}
-                            type="text"
-                            pattern="[A-Za-zÀ-ú\s]+"
-                            required
-                        />
-                        <label
-                            className={Style.input_label}
-                            htmlFor="last_name"
-                        >
-                            Sobrenome
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>                        
-                        <input
-                            name="cpf"
-                            className={Style.input}
-                            type="text"
-                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-                            value={cpf}
-                            onChange={handleCpfChange}
-                            required
-                        />
-                        
-                        <label className={Style.input_label} htmlFor="cpf">
-                            Cpf
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="email"
-                            className={Style.input}
-                            type="text"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                            required
-                        />
-                        <label className={Style.input_label} htmlFor="email">
-                            E-mail
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="password"
-                            className={Style.input}
-                            type="password"
-                            required
-                        />
-                        <label className={Style.input_label} htmlFor="password">
-                            Senha
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="confirm_password"
-                            className={Style.input}
-                            type="password"
-                            required
-                        />
-                        <label
-                            className={Style.input_label}
-                            htmlFor="confirm_password"
-                        >
-                            Confirmar senha
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="date_of_birth"
-                            className={Style.input}
-                            type="date"
-                            pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)\d{2})"
-                            required
-                        />
-                        <label
-                            className={Style.input_label}
-                            htmlFor="date_of_birth"
-                        >
-                            Data de nascimento
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="cep"
-                            className={Style.input}
-                            type="text"
-                            pattern="[0-9]{8}"
-                            required
-                        />
-                        <label className={Style.input_label} htmlFor="cep">
-                            CEP
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="street"
-                            className={Style.input}
-                            type="text"
-                            required
-                        />
-                        <label className={Style.input_label} htmlFor="street">
-                            Rua
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="number"
-                            className={Style.input}
-                            type="text"
-                            pattern="[A-Za-z0-9]+[A-Za-z0-9\s]*"
-                            required
-                        />
-                        <label className={Style.input_label} htmlFor="number">
-                            Número
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="complement"
-                            className={Style.input}
-                            type="text"
-                            required
-                        />
-                        <label
-                            className={Style.input_label}
-                            htmlFor="complement"
-                        >
-                            Complemento
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="neighborhood"
-                            className={Style.input}
-                            type="text"
-                            required
-                        />
-                        <label
-                            className={Style.input_label}
-                            htmlFor="neighborhood"
-                        >
-                            Bairro
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <input
-                            name="city"
-                            className={Style.input}
-                            type="text"
-                            required
-                        />
-                        <label className={Style.input_label} htmlFor="city">
-                            Cidade
-                        </label>
-                    </div>
-                    <div className={Style.form_group}>
-                        <select className={Style.group_uf} name="uf">
-                            {STATES_BR.map(({ id, value, text }) => (
-                                <option key={id} value={value}>
-                                    {text}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
+                <InputTextComponent name="name" type="text" label="Nome" pattern="[A-Za-zÀ-ú\s]+"  />
+                <InputTextComponent name="last_name" type="text" label="Sobrenome" pattern="[A-Za-zÀ-ú\s]+"/>
+                <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" onChange={handleCpfChange} value={cpf} />
+                <InputTextComponent name="email" type="email" label="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                <InputTextComponent name="password" type="password" label="Senha" />
+                <InputTextComponent name="confirm_password" type="password" label="Confirmar senha" />
+                <InputTextComponent name="date_of_birth" type="date" label="Data de nascimento" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)\d{2})" />
+                <InputTextComponent name="cep" type="text" label="CEP" pattern="[0-9]{8}" />
+                <InputTextComponent name="street" type="text" label="Rua" />
+                <InputTextComponent name="number" type="text" label="Número" pattern="[A-Za-z0-9]+[A-Za-z0-9\s]*" />
+                <InputTextComponent name="complement" type="text" label="Complemento" />
+                <InputTextComponent name="neighborhood" type="text" label="Bairro" />
+                <InputTextComponent name="city" type="text" label="Cidade" />
+                <div className={Style.form_group}>
+                    <select className={Style.group_uf} name="uf">
+                        {STATES_BR.map(({ id, value, text }) => (
+                            <option key={id} value={value}>
+                                {text}
+                            </option>
+                        ))}
+                    </select>
+                </div>
                 </div>
                 <div className={Style.terms_conditions_group}>
                     <input
@@ -276,12 +121,10 @@ const SignUpForm = () => {
                     </label>
                 </div>
                 <div className={Style.form_btn}>
-                    <button className={Style.btn_sign_up} type="submit">
-                        Criar conta
-                    </button>
-                    <button className={Style.btn_sign_up} onClick={Back}>
-                        Voltar
-                    </button>
+                    <ButtonTextComponent type='submit' description='Cadastrar' />
+                    <Link to="/">
+                        <ButtonTextComponent description='Voltar' />                                    
+                    </Link>
                 </div>
             </form>
         </div>
