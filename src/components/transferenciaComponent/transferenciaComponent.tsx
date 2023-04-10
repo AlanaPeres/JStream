@@ -55,9 +55,8 @@ export const TransferenciaContent = () =>{
                                 <label></label>
                             </div>
                         </div>
-
                             <div className={style.container_btn}>
-                                <button className={style.btn} type="submit">Próximo</button>
+                                {/* <button className={style.btn} type="submit">Próximo</button> */}
                                 <MostrarModalTransferencia />
                             </div>
                     </form>

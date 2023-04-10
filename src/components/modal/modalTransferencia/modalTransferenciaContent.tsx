@@ -7,11 +7,7 @@ import { Texto } from "./modalTransferencia.style";
 export const ModalTransferenciaContent = ()=> {
     const [isModalVisible, setIsModalVisible] = useState(true);
       
-        const handleTransfer = (event: React.FormEvent<HTMLFormElement>) => {
-          event.preventDefault();
-          // Valide as informações do formulário e envie a solicitação de transferência
-          // Mostre uma mensagem de confirmação ao usuário se a transferência for bem sucedida
-        };
+    
     
     const fecharModal = () => {
         setIsModalVisible(false);
@@ -31,7 +27,7 @@ export const ModalTransferenciaContent = ()=> {
             </Texto>      
                 <Buttons>
                     <BtnVoltar onClick={fecharModal}>Voltar</BtnVoltar>
-                    <InputSenha>Senha</InputSenha>
+                    <InputSenha/>Senha
                     <BtnConfirmar onClick={fecharModal}>Confirmar</BtnConfirmar>
                 </Buttons>
                 </ModalContainer>

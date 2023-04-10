@@ -3,7 +3,7 @@ import { IsOpen } from "../isModalOpen";
 import { ModalTransferenciaContent } from "./modalTransferenciaContent";
 
 interface modalTransferenciaProps{
-    isModalVisible?: boolean;
+    isModalVisible: boolean;
     onBackdropClick: () => void;
 }
 

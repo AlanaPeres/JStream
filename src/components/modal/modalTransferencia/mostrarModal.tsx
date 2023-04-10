@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { ModalTransferenciaContent}  from './modalTransferenciaContent'
 import ModalTransferencia from './modalTransferencia'
+import style from '../../transferenciaComponent/transferenciaComponent.module.css'
 
 export const MostrarModalTransferencia = () => {
 
@@ -10,8 +10,12 @@ export const MostrarModalTransferencia = () => {
       setIsModalVisible(wasModalVisible => !wasModalVisible)
     }
     return(
-       <>                            
-         <ModalTransferencia isModalVisible={isModalVisible}onBackdropClick={alterarModal}/>
+       <>    
+         <button onClick={alterarModal} className={style.btn} type="submit" >
+           <ModalTransferencia isModalVisible={isModalVisible}onBackdropClick={alterarModal}/>
+          Próximo
+          </button>   
+         {/* <ModalTransferencia isModalVisible={isModalVisible}onBackdropClick={alterarModal}/> */}
        </>
     );   
 }
