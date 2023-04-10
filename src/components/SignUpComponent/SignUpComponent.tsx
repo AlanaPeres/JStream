@@ -33,7 +33,8 @@ const SignUpForm = () => {
             saldoAtual: 4000
         };
         const users = new UsersManager();
-        users.createUser(user);        
+        users.createUser(user);
+        window.location.href = 'http://localhost:3000/login'
     };
 
     const [cpf, setCpf] = useState(""); 

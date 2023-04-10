@@ -1,11 +1,12 @@
 import IUser from "../../interface/IUsers";
-import {contaService} from "../../service/contaService";
+import { UsersManager } from "../../service/usersManagers";
 import { HeaderMobile } from "../headerMobileComponent/headerMobileComponent";
 import styles from "../saldoComponent/saldoComponent.module.css";
 import Transacoes from "../transacaoContainerComponent/transacaoContainerComponent";
 
 export const SaldoContent: React.FC = () => { 
-  const user: IUser = contaService.getUserLogged('usuario');
+  const usersManagers = new UsersManager();
+  const user: IUser = usersManagers.getSessionUser();
   return (
     <>
       <div className={styles.content}>
