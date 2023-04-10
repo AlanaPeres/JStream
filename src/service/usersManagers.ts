@@ -14,6 +14,9 @@ export class UsersManager {
     }
 
     getSessionUser () {
+        console.log('getSessionUser >>>', localStorage.getItem('usuario'))
+        const user = localStorage.getItem('usuario');
+        if (!user) return null
         return JSON.parse(localStorage.getItem('usuario') || '');
     }
 
