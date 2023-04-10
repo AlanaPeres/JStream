@@ -1,0 +1,29 @@
+.month {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  width: 95%;
+  padding-inline: 2rem;
+  background-color: #afe9e5;
+  margin-top: 2rem;
+  font-size: 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.month:first-child {
+  margin-top: 1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .month {
+    margin: 2rem 1rem 0 1rem;
+    font-size: 1.5rem;
+    height: 4rem;
+  }
+}

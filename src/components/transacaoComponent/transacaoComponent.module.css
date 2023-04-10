@@ -1,122 +1,92 @@
 .dados_transacao {
-   
-    list-style: none;
-    height: 7rem;
-    width: 95%;
-    background-color: #AFE9E5;
-    margin: auto;
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    border-radius: 30px;
-    justify-content: space-between;
-    display: flex;
-    font-weight: bold;
-    text-transform: uppercase;
-    
-
+  list-style: none;
+  height: 7rem;
+  width: 95%;
+  background-color: #afe9e5;
+  margin: auto;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  justify-content: space-between;
+  display: flex;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .data {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 .div_dados {
-
-    left: 0;
-    height: 7rem;
-    width: 50%;
-    padding-top: 0.5rem;
-    text-align: left;
-    padding-left: 2rem;
+  left: 0;
+  height: 7rem;
+  width: 50%;
+  padding-top: 0.5rem;
+  text-align: left;
+  padding-left: 2rem;
 }
 
-
 .div_valores {
-
-    left: 0;
-    height: 7rem;
-    width: 50%;
-    padding-right: 2rem;
-    text-align: right;
-    padding-top: 2rem;
-
-
-
+  left: 0;
+  height: 7rem;
+  width: 50%;
+  padding-right: 2rem;
+  text-align: right;
+  padding-top: 2rem;
 }
 
 .valor_gasto {
-
-    font-size: 2rem;
-    font-weight: bold;
-
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .valor_anterior {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-
 @media screen and (max-width: 907px) {
-   .valor_gasto {
-
+  .valor_gasto {
     font-size: 1.5rem;
-   }
+  }
 
-   .valor_anterior {
+  .valor_anterior {
     font-size: 1rem;
-   }
-
-
-    
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .dados_transacao {
+    width: 90%;
+  }
 
+  .div_dados {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+  }
 
-    .dados_transacao {
-        width: 90%;
-    }
+  .div_valores {
+    padding-top: 2rem;
+  }
 
+  .valor_gasto {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 
-    .div_dados {
+  .valor_anterior {
+    font-size: 1rem;
+  }
 
+  .metodo_De_Pagamento {
+    font-size: 1.5rem;
+  }
 
-        padding-top: 1rem;
-        font-size: 1.5rem;
-    }
+  .data {
+    font-size: 1rem;
+  }
 
-
-    .div_valores {
-
-        padding-top: 2rem;
-
-
-    }
-
-    .valor_gasto {
-
-        font-size: 1.5rem;
-        font-weight: bold;
-
-    }
-
-    .valor_anterior {
-        font-size: 1rem;
-    }
-
-    .metodo_De_Pagamento{
-
-        font-size: 1.5rem;
-    }
-
-    .data {
-
-        font-size: 1rem;
-    }
-
-    .estabelecimento{
-
-        font-weight: bold;
-        text-transform: uppercase;
-    }
+  .destino {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }

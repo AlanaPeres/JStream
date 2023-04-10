@@ -1,0 +1,27 @@
+.transactions {
+  width: 50%;
+  margin: auto;
+  overflow-y: scroll;
+  max-height: 50vh;
+}
+
+.transactions::-webkit-scrollbar {
+  width: 0.65rem;
+}
+.transactions::-webkit-scrollbar-track {
+  background: var(--hoverbotaoclaropraescuro--color);
+  border-radius: 1rem;
+}
+.transactions::-webkit-scrollbar-thumb {
+  background: var(--darkbtn-color);
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 765px) {
+  .transactions {
+    width: 95%;
+  }
+  .transactions::-webkit-scrollbar {
+    display: none;
+  }
+}

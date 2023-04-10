@@ -3,67 +3,55 @@ import logo from '../../assets/logo_colorized.webp';
 import logo_dark from '../../assets/logo_dark.webp';
 import styles from './LoginComponent.module.css';
 import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
-import {contaService} from '../../service/contaService';
+import { InputTextComponent } from '../InputComponent/InputComponent';
+import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
+import { UsersManager } from '../../service/usersManagers';
+
 
 export const LoginComponent = () => {
     const handleLoginForm = (e: any) => {
         e.preventDefault();
 
-        let user: any = {
-            cpf: e.target[0].value,
-            senha: e.target[1].value,
-        };
-        const isSuccessLogin = contaService.validateUserByCpf(
-            user.cpf,
-            user.senha
-            
-        );
-        if (isSuccessLogin) {
-            contaService.currentUser(user.cpf);
+        const cpf = e.target[0].value;
+        const senha = e.target[1].value;
+        const _user = new UsersManager();
+        try {
+            _user.authenticate(cpf, senha);
             window.location.href = 'http://localhost:3000/saldo'
+        } catch (err) {
+            console.error(err)
         }
     };
     return (
         <>
             <div className={styles.main}>
                 <div className={styles.form_content}>
-                    <img
-                        className={styles.normal_logo}
-                        src={logo}
-                        alt=""
-                        width="100"
-                    />
-                    <img
-                        className={styles.dark_logo}
-                        src={logo_dark}
-                        alt=""
-                        width="100"
-                    />
+                    <div className={styles.img_container}>
+                        <img
+                            className={styles.normal_logo}
+                            src={logo}
+                            alt=""
+                            width="100"
+                        />
+                        <img
+                            className={styles.dark_logo}
+                            src={logo_dark}
+                            alt=""
+                            width="100"
+                        />
+                    </div>
                     <div>
                         <form onSubmit={handleLoginForm}>
-                            <div>
-                                <input
-                                    className={styles.input}
-                                    type="number"
-                                    placeholder="CPF"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <input
-                                    className={styles.input}
-                                    type="password"
-                                    placeholder="SENHA"
-                                    required
-                                />
-                            </div>
+                            <InputTextComponent name="cpf" type="text" label="CPF" />
+                            <InputTextComponent name="password" type="password" label="Senha" />
                             <div className={styles.pass_check}>
                                 <div className={styles.input_checkbox}>
                                     <input
+                                    className={styles.checkbox_lembrar_senha}
                                         type="checkbox"
-                                        id="lemebrar_senha"
+                                        id="lembrar_senha"
                                     />
-                                    <label htmlFor="lemebrar_senha">
+                                    <label htmlFor="lembrar_senha">
                                         Lembrar senha
                                     </label>
                                 </div>
@@ -72,11 +60,9 @@ export const LoginComponent = () => {
                                 </div>
                             </div>
                             <div className={styles.btns}>
-                                <button className={styles.btn}>Entrar</button>
+                                <ButtonTextComponent type='submit' description='Entrar' />
                                 <Link to="/">
-                                    <button className={styles.btn}>
-                                        Voltar
-                                    </button>
+                                    <ButtonTextComponent type='submit' description='Voltar' />                                    
                                 </Link>
                             </div>
                         </form>
