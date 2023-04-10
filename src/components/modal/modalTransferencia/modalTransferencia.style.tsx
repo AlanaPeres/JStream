@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
 @media (max-width: 768px) {
-    /* Estilos para smartphones */
+    
 	font-family:"roboto", sans-serif;
 	position: fixed;
 	left: 50%;
@@ -10,11 +10,11 @@ export const ModalContainer = styled.div`
 	transform: translate(-50%, -50%);
 	background: #E0F2F1;
 	z-index: 10;
-	width: 340px;
-    heigth:495px;
+	width: 340px;    
 	max-width: 80%;
 	padding: 1.5rem;
-	border-radius: 4px;
+	border-radius: 2rem;
+    
   }
   font-family:"roboto", sans-serif;
   position: fixed;
@@ -23,36 +23,32 @@ export const ModalContainer = styled.div`
   transform: translate(-50%, -50%);
   background: #E0F2F1;
   z-index: 10;
-  width: 1172px;
-  height:923px;
+  width: 600px;
   max-width: 90%;
   padding: 1.5rem;
-  border-radius: 4px;
+  border-radius: 2rem;
+  box-sizing: border-box;
 	
 `;
 
 export const Texto = styled.div`
 @media (max-width: 768px) {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     background: #263339; 
-    width: 272px;
+    padding: 1.5rem;
     height:258px;
-    border-radius: 30px;
+    border-radius: 2rem;
 }
 position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
   background: #263339;
   z-index: 10;
-  width: 937.6px;
+  width: 406px;
   height:481.08px;
   max-width: 90%;
   padding: 1.5rem;
-  border-radius: 4px;
+  border-radius: 2rem;
+  box-sizing: border-box;
 `;
 
 export const Buttons = styled.footer`
@@ -92,7 +88,7 @@ export const InputSenha = styled.input`
     top: 0;
     font-size: 0.85rem;
     background-color: transparent;
-    border-radius: 30px;
+    border-radius: 2rem;
     }
 
 `
@@ -128,5 +124,5 @@ export const BtnConfirmar = styled.button`
     background-color: #263339;
     color: aliceblue;
     cursor: pointer;
-`;
+`
 

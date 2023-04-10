@@ -12,10 +12,10 @@ export const MostrarModalTransferencia = () => {
     return(
        <>    
          <button onClick={alterarModal} className={style.btn} type="submit" >
-           <ModalTransferencia isModalVisible={isModalVisible}onBackdropClick={alterarModal}/>
+           
           Próximo
           </button>   
-         {/* <ModalTransferencia isModalVisible={isModalVisible}onBackdropClick={alterarModal}/> */}
+         { <ModalTransferencia isModalVisible={isModalVisible}onBackdropClick={alterarModal}/> }
        </>
     );   
 }
