@@ -1,6 +1,7 @@
 import style from './transferenciaComponent.module.css'
 import { UsersManager } from "../../service/usersManagers";
 import { ButtonLougoutTextComponent } from '../ButtonLogoutComponent/ButtonLogoutComponent'
+import { MostrarModalTransferencia } from '../modal/modalTransferencia/mostrarModal';
 
 
 export const TransferenciaContent = () =>{
@@ -56,9 +57,9 @@ export const TransferenciaContent = () =>{
                                 <label></label>
                             </div>
                         </div>
-
                             <div className={style.container_btn}>
-                                <button className={style.btn} type="submit">Próximo</button>
+                                {/* <button className={style.btn} type="submit">Próximo</button> */}
+                                <MostrarModalTransferencia />
                             </div>
                     </form>
                 </div>
