@@ -134,7 +134,7 @@ input[type='date']:focus {
         padding: 30px 10px 10px 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 30px 10px;
+        gap: 2px 15px;
         overflow-y: scroll;
     }
     
@@ -234,9 +234,4 @@ input[type='date']:focus {
     input[type='date']:focus {
         color: #263339;
     }
-    
-
-   /*  @@ -132,102 +81,73 @@ input[type=date]:focus {
-        color: #fff;
-    } */
 }

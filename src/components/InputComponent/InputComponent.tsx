@@ -21,7 +21,15 @@ export const InputTextComponent = ({
 }: InputTextComponentProps) => {
     return (
         <div className={Style.form_group}>
-            <input name={name} className={Style.input} type={type} required={required} pattern={pattern} onChange={onChange} value={value}/>
+            <input 
+                name={name}
+                placeholder={label}
+                className={Style.input} 
+                type={type} 
+                required={required} 
+                pattern={pattern} 
+                onChange={onChange} 
+                value={value}/>
             <label className={Style.input_label} htmlFor={name}>{label}</label>
         </div>
     )
