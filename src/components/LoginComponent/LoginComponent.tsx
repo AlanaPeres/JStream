@@ -11,7 +11,7 @@ import { UsersManager } from '../../service/usersManagers';
 export const LoginComponent = () => {
     const handleLoginForm = (e: any) => {
         e.preventDefault();
-
+        
         const cpf = e.target[0].value;
         const senha = e.target[1].value;
         const _user = new UsersManager();
@@ -42,7 +42,7 @@ export const LoginComponent = () => {
                     </div>
                     <div>
                         <form onSubmit={handleLoginForm}>
-                            <InputTextComponent name="cpf" type="text" label="CPF" />
+                            <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
                             <InputTextComponent name="password" type="password" label="Senha" />
                             <div className={styles.pass_check}>
                                 <div className={styles.input_checkbox}>
