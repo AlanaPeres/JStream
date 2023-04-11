@@ -8,6 +8,7 @@
     width: 85%;
     top: 0;
     right: 0;
+    overflow:scroll;
     background-color: var(--backgroundmobile-color);
 }
 
@@ -113,6 +114,7 @@
 @media (max-width: 768px){
     .container{
         position: absolute;
+        top: -5rem;
         width: 100%;
         z-index: -1;
         height: 100vh;
