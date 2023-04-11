@@ -10,23 +10,73 @@ interface Transacao {
     saldo: number;
 }
 
-async function fetchTransacoes(): Promise<Transacao[]> {
-    // Caminho usado localmente para teste
-    let response = await fetch('http://localhost:5173/api/transacoes.json');
-    let data = await response.json();
-    return data;
-}
+// async function fetchTransacoes(): Promise<Transacao[]> {
+//     // Caminho usado localmente para teste
+//     let response = await fetch('http://localhost:5173/api/transacoes.json');
+//     let data = await response.json();
+//     return data;
+// }
 
 export const ContentExtrato = () => {
-    const [transacoes, setTansacoes] = useState<Transacao[]>([]);
+    // const [transacoes, setTansacoes] = useState<Transacao[]>([]);
+    const [transacoes, setTansacoes] = useState<Transacao[]>([
+        {
+            tipo: 'Cartão',
+            data: '20/06/2022',
+            description: 'Padaria',
+            valor: 50,
+            saldo: 450
+        },
+        {
+            tipo: 'Cartão',
+            data: '20/06/2022',
+            description: 'Padaria',
+            valor: 50,
+            saldo: 450
+        },
+        {
+            tipo: 'Cartão',
+            data: '20/06/2022',
+            description: 'Padaria',
+            valor: 50,
+            saldo: 450
+        },
+        {
+            tipo: 'Cartão',
+            data: '20/06/2022',
+            description: 'Padaria',
+            valor: 50,
+            saldo: 450
+        },
+        {
+            tipo: 'Cartão',
+            data: '20/06/2022',
+            description: 'Padaria',
+            valor: 50,
+            saldo: 450
+        },
+        {
+            tipo: 'Cartão',
+            data: '20/06/2022',
+            description: 'Padaria',
+            valor: 50,
+            saldo: 450
+        }
+    ]);
 
     useEffect(() => {
         async function getTransacoes() {
-            const data = await fetchTransacoes();
-            setTansacoes(data /*['transacoes']*/);
+            setTansacoes(transacoes);
         }
         getTransacoes();
     }, []);
+    // useEffect(() => {
+    //     async function getTransacoes() {
+    //         const data = await fetchTransacoes();
+    //         setTansacoes(data /*['transacoes']*/);
+    //     }
+    //     getTransacoes();
+    // }, []);
 
     const [isModalVisible, setIsModalVisible] = useState(true);
 
