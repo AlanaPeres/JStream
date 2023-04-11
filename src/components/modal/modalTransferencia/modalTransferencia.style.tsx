@@ -82,6 +82,7 @@ export const InputSenha = styled.input`
     outline: none;
     padding 10px;
     color: white;
+    text-align: center;
 
     ::placeholder{
         color: white;
