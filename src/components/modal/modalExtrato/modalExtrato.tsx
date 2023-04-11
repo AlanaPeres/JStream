@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { IsOpen } from '../isModalOpen';
 import { EstruturaModal } from '../estruturaModal';
 import { CardTransacoes } from './modalCardTransacoes';
-import './modal.style.tsx';
+import './modal.style';
 import { ContentExtrato } from './modalContent';
 
 interface BaseModalProps {
