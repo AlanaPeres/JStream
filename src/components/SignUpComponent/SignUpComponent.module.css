@@ -6,6 +6,8 @@
     background-color: #e0f2f1;
 }
 
+
+
 .logo_dark {
     width: 99px;
     height: 150px;
@@ -37,6 +39,20 @@
     outline: none;
     @@ -40,88 +38,39 @@
     color: #fff;
+}
+
+
+.form_content::-webkit-scrollbar {
+    width: 0.65rem;
+    
+}
+.form_content::-webkit-scrollbar-track {
+    background: var(--hoverbotaoclaropraescuro--color);
+    border-radius: 1rem;
+}
+.form_content::-webkit-scrollbar-thumb {
+    background: var(--darkbtn-color);
+    border-radius: 1rem;
 }
 
 .btn_sign_up {
