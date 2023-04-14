@@ -1,0 +1,14 @@
+
+
+export const UserPageData = () => {
+
+    return (
+
+<>
+
+        
+
+</>
+
+    )
+}
