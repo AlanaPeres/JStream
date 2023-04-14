@@ -9,14 +9,16 @@ type HeaderMobileProps = {
 };
 
 export const HeaderMobile: React.FC<HeaderMobileProps> = ({ user }) => {
-
   return (
     <>
       <div className={Styles.header_mobile}>
         <div className={Styles.tres_itens}>
           <img className={Styles.logotipos} src={img} alt="" />
           <h1 className={Styles.boas_vindas}>ola,{user.nome}</h1>
-      <NavLink to={"/perfil"}>  <img className={Styles.user_icon} src={profileicon} alt="" /> </NavLink>   
+          <NavLink to={"/perfil"}>
+            {" "}
+            <img className={Styles.user_icon} src={profileicon} alt="" />{" "}
+          </NavLink>
         </div>
         <div className={Styles.show_valores}>
           <h2 className={Styles.saldos}>Saldo Disponivel</h2>
