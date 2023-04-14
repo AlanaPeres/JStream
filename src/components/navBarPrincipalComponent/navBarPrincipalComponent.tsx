@@ -34,7 +34,7 @@ export const NavBarPrincipal = () => {
   return (
     <>
       <nav className={styles.navbar}>
-      <NavLink {...navButtonProps} to={"/NovaRotaContaUsuario"}>
+      <NavLink {...navButtonProps} to={"/perfil"}>
         <img  title="Conta" className={styles.perfil} src={profileicon} alt="" />
       </NavLink>
         <ul className={styles.ul}>

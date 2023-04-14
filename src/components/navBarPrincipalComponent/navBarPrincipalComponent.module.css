@@ -27,6 +27,13 @@
 .perfil {
     width: 5rem;
     margin-top: 2rem;
+    border-radius: 50%;
+    transition: all 0.25s ease-in-out;
+}
+
+.perfil:hover {
+
+    background-color: var(--backgrounddesktop-color);
 }
 
 .btn {

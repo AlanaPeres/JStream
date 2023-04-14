@@ -5,6 +5,7 @@ import { SignUpPage } from "./pages/SignUpPage/SignUpPage";
 import { TransferenciaPage } from "./pages/transferenciaPage/transferenciaPage";
 import { SaldoPage } from "./pages/saldoPage/saldoPage";
 import { StatementPage } from "./pages/extractPage";
+import { UserPageData } from "./pages/UserPage/UserPage";
 
 export const AppRoutes = () => {
     return(
@@ -17,6 +18,7 @@ export const AppRoutes = () => {
                 <Route path="/saldo" element={<SaldoPage />} />
                 <Route path="/transferencia" element={<TransferenciaPage />} />
                 <Route path="/extrato" element={<StatementPage />} />
+                <Route path="/perfil" element={<UserPageData />} />
             </Routes>
         </Router>
     )

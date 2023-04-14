@@ -1,0 +1,170 @@
+.DataContainer {
+
+    background-color: var(--backgroundmobile-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75vh;
+    width: 50%;
+    text-align: center;
+    padding-top: 4rem;
+       display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.Nome {
+
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.DadosDoBanco {
+
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    
+
+}
+
+.BankData {
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.Saldo {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #80CBC4;
+    width: 15rem;
+    height: 3.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    flex-shrink: 1;
+    font-size: 2rem;
+}
+
+.DadosContato {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.Datamail {
+
+    padding: 1rem;
+    background-color: rgb(241, 241, 241);
+    border-radius: 20px;
+    box-shadow: 1px 1px 25px 1px rgb(201, 200, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.Datadress {
+
+    padding: 1rem;
+    background-color: rgb(241, 241, 241);
+    border-radius: 20px;
+    box-shadow: 1px 1px 25px 1px rgb(201, 200, 200);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BtnVoltar {
+
+    
+    height: 3rem;
+    border-radius: 1.25rem;
+    margin-top: 3rem;
+    width: 12rem;
+    background-color: var(--backgrounddesktop-color);
+    border: none;
+    font-family: "roboto";
+    color: var(--darkbtn-color);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.25s ease-in-out;
+    font-size: 1.25rem;
+}
+
+
+.BtnVoltar:hover {
+    cursor: pointer;
+    background-color: var(--hoverbotaoclaropraescuro--color);
+   
+  }
+
+
+
+@media screen and (max-width: 768px) {
+
+
+    .DataContainer {
+        height: auto;
+        width: 90%;
+        border-radius: 0;
+        padding-top: 2rem;
+        justify-content: flex-start;
+      }
+    
+      .DadosDoBanco {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    
+      .BtnVoltar {
+        margin-top: 2rem;
+      } 
+
+      .DadosContato {
+        gap: 1rem;
+      }
+
+      .Datamail {
+
+       padding: 0.25rem;
+       height: 3rem;
+     
+        
+    }
+    
+    .Datadress {
+    
+         
+        padding: 0.25rem;
+       height: 3rem;
+       width: 10rem;
+    }
+    
+
+
+   
+}
+
+@media screen  and (max-width: 1025px){
+
+    .DataContainer {
+        width: 75%;
+    }
+    
+}
