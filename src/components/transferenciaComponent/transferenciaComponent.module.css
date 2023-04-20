@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,13 +8,13 @@
     width: 85%;
     top: 0;
     right: 0;
-    overflow:scroll;
+    overflow: scroll;
     background-color: var(--backgroundmobile-color);
 }
 
-.content{
+.content {
     background-color: #AFE9E5;
-    width: 1000px;
+    width: 75%;
     height: 550px;
     border-radius: 30px;
     display: flex;
@@ -22,54 +22,68 @@
     align-items: center;
 }
 
-.title_desktop{
+.title_desktop {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 15px;
     font-size: 40px;
     font-weight: normal;
-    margin-left: 400px;
+
+
+
+
 }
 
-.container_title_desktop{
-   margin-left: 140px ;
+.container_title_desktop {
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
 }
 
-.title_mobile{
+.title_mobile {
     display: none;
 }
 
 
 
-.form{
+.form {
     padding: 10px;
+    width: 100%;
 }
 
-.col_1{
+.col_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: wrap;
+    
+
+}
+
+.col_2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: wrap;
 }
-.col_2{
+
+.col_3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: wrap;
-}
-.col_3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 4rem;
 }
 
-.container_input_label{
+.container_input_label {
     margin: 40px;
+    margin-bottom: 60px;
+    width: 90%;
+
 
 }
 
-.container_input_label input{
-    width: 390px;
+.container_input_label input {
+    width: 90%;
     height: 45px;
     padding: 10px;
     border-radius: 15px;
@@ -77,20 +91,23 @@
     border-style: none;
     background-color: #408D86;
     color: #FFFFFF;
+
 }
 
-.container_input_label input::placeholder{
+.container_input_label input::placeholder {
     color: #FFFFFF;
 }
 
-.container_btn{
+.container_btn {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 15rem;
+
 }
 
-.btn{
-    width: 260px;
+.btn {
+    width: 100%;
     height: 40px;
     background: #263339;
     border-radius: 15px;
@@ -101,7 +118,7 @@
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--hoverbotaoclaropraescuro--color);
 }
 
@@ -111,15 +128,16 @@
     justify-content: space-between;
 }
 
-@media (max-width: 768px){
-    .container{
+@media (max-width: 768px) {
+    .container {
         position: absolute;
         top: -5rem;
         width: 100%;
         z-index: -1;
         height: 100vh;
     }
-    .content{
+
+    .content {
         width: 350px;
         height: 550px;
         position: absolute;
@@ -129,12 +147,12 @@
         align-items: center;
         flex-direction: column;
     }
-    
-    .title_desktop{
+
+    .title_desktop {
         display: none;
     }
-    
-    .title_mobile{
+
+    .title_mobile {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -143,34 +161,51 @@
         letter-spacing: 2px;
         margin-top: 15px;
     }
-    
-    .form{     
+
+    .form {
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-    .container_input_label{
+
+    .container_input_label {
         margin: 0;
-    
+        text-align: center;
+
+
     }
-    .container_input_label input{
+
+    .container_input_label input {
         width: 260px;
         height: 40px;
         margin-bottom: 30px;
     }
 
-    .col_1, .col_2, .col_3{
+    .col_1,
+    .col_2,
+    .col_3 {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         margin: 0;
     }
-    
-    .btn{
+
+    .col_3 {
+        gap: 1rem;
+    }
+
+    .btn {
+
         width: 260px;
         height: 40px;
         margin: auto;
     }
-}
 
+    .container_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+       }
+}
