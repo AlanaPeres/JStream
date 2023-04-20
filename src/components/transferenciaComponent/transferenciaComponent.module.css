@@ -8,8 +8,16 @@
     width: 85%;
     top: 0;
     right: 0;
-    overflow: scroll;
+    overflow: scroll hidden;
     background-color: var(--backgroundmobile-color);
+}
+
+.btnsair {
+    position: absolute;
+   top: 0;
+   right: 0;
+    z-index: 1;
+
 }
 
 .content {
@@ -20,6 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .title_desktop {
@@ -135,6 +144,7 @@
         width: 100%;
         z-index: -1;
         height: 100vh;
+        overflow: scroll;
     }
 
     .content {
@@ -208,4 +218,10 @@
         align-items: center;
         margin-left: 0;
        }
+
+       .btnsair {
+        position: relative;
+        
+    
+    }
 }

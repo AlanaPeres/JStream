@@ -18,7 +18,7 @@
 .article {
     margin: auto;
     width: 100%;
-    margin-top: 7rem;
+    margin-top: 1rem;
     text-align: center;
     
 }
@@ -28,6 +28,18 @@
     font-size: 1.5rem;
     font-weight: 100;
     margin-right: 6rem;
+    padding: 2rem;
+    width: 25rem;
+    margin: auto;
+    background-color: var( --backgrounddesktop-color);
+    border-radius: 30px;
+}
+
+.saldoword {
+
+    display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .valorsaldo {
@@ -88,4 +100,7 @@
         display: none;
     }
 
+    .saldo {
+       display: none;
+    }
 }
