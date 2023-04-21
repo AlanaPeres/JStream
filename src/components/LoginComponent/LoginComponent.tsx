@@ -27,6 +27,40 @@ export const LoginComponent = () => {
             setLoginError(true);
         }
     };
+
+    
+    const [cpf, setCpf] = useState(""); 
+    const formatCpf = (value: string) => {
+      // Remove qualquer caractere que não seja dígito numérico
+      const cleanedValue = value.replace(/\D/g, "");
+  
+      // Adiciona pontos e hífens em posições específicas do valor limpo
+      let formattedValue = cleanedValue;
+      if (cleanedValue.length > 3) {
+        formattedValue =
+          cleanedValue.substr(0, 3) +
+          "." +
+          cleanedValue.substr(3, 3) +
+          "." +
+          cleanedValue.substr(6, 3);
+      }
+      if (cleanedValue.length > 9) {
+        formattedValue += "-" + cleanedValue.substr(9, 2);
+      }
+  
+      return formattedValue;
+    };
+
+    
+    const handleCpfChange = (event: { target: { value: any; }; }) => {
+        // Obtém o valor atualizado do campo de CPF
+        const newValue = event.target.value;
+    
+        // Formata o valor e atualiza o estado do componente
+        const formattedValue = formatCpf(newValue);
+        setCpf(formattedValue);
+      };
+
     return (
         <div className={styles.main}>
             <div className={styles.form_content}>
@@ -46,7 +80,7 @@ export const LoginComponent = () => {
                 </div>
                 <div>
                     <form onSubmit={handleLoginForm}>
-                        <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
+                    <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" onChange={handleCpfChange} value={cpf} />
                         <InputTextComponent name="password" type="password" label="Senha" />
                         <div className={styles.pass_check}>
                             <div className={styles.input_checkbox}>

@@ -55,7 +55,7 @@ const SignUpForm = () => {
       if (cleanedValue.length > 9) {
         formattedValue += "-" + cleanedValue.substr(9, 2);
       }
-  
+      
       return formattedValue;
     };
   
