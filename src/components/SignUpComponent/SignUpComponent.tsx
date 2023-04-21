@@ -1,3 +1,4 @@
+import axios from "axios";
 import Style from './SignUpComponent.module.css';
 import { STATES_BR } from './constants';
 import { MostrarModalTermos } from '../modal/modalTermosECondicoes/mostrarModalTermos';
@@ -8,36 +9,45 @@ import { useState } from 'react';
 import { InputTextComponent } from '../InputComponent/InputComponent';
 import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
 import { Link } from 'react-router-dom';
-import { UsersManager } from '../../service/usersManagers';
+import { Loading } from "../Loading/Loading";
 
+const API_DOMAIN = 'https://localhost:7079';
+const APP_DOMAIN = 'http://localhost:3000';
 
+const createPayload = (target: any[]): IUser => {
+    return {
+        nome: target[0].value,
+        cpf: target[2].value,
+        email: target[3].value,
+        dataNascimento: target[6].value,
+        cep: target[7].value,
+        rua: target[8].value,
+        numero: target[9].value,
+        complemento: target[10].value,
+        bairro: target[11].value,
+        cidade: target[12].value,
+        estado: target[13].value,
+    }
+}
 
 const SignUpForm = () => {
+    const [isLoading, setIsLoading] = useState(false);
+    const [cpf, setCpf] = useState(""); 
+
     const handleFormSubmit = (event: any) => {
         event.preventDefault();
-        let user: IUser = {
-            nome: event.target[0].value,
-            sobrenome: event.target[1].value,
-            cpf: event.target[2].value,
-            email: event.target[3].value,
-            senha: event.target[4].value,
-            confirmarSenha: event.target[5].value,
-            nascimento: event.target[6].value,
-            cep: event.target[7].value,
-            rua: event.target[8].value,
-            numero: event.target[9].value,
-            complemento: event.target[10].value,
-            bairro: event.target[11].value,
-            cidade: event.target[12].value,
-            estado: event.target[13].value,
-            saldoAtual: 4000
-        };
-        const users = new UsersManager();
-        users.createUser(user);
-        window.location.href = 'http://localhost:3000/login'
+        const user: IUser = createPayload(event.target);
+
+        setIsLoading(true);
+        axios.post(`${API_DOMAIN}/Clientes`, user).then(() => {
+            window.location.href = `${APP_DOMAIN}/login`;
+        }).catch((err) => {
+            console.error('Ocorreu um erro na request', err);
+        }).finally(() => {
+            setIsLoading(false);
+        })
     };
 
-    const [cpf, setCpf] = useState(""); 
     const formatCpf = (value: string) => {
       // Remove qualquer caractere que não seja dígito numérico
       const cleanedValue = value.replace(/\D/g, "");
@@ -67,10 +77,10 @@ const SignUpForm = () => {
       const formattedValue = formatCpf(newValue);
       setCpf(formattedValue);
     };
-
    
     return (
         <div className={Style.sign_up}>
+            {isLoading && <Loading />}
             <div>
                 <img
                     className={Style.logo_dark}
