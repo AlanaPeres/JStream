@@ -1,4 +1,3 @@
-import axios from "axios";
 import Style from './SignUpComponent.module.css';
 import { STATES_BR } from './constants';
 import { MostrarModalTermos } from '../modal/modalTermosECondicoes/mostrarModalTermos';
@@ -10,8 +9,8 @@ import { InputTextComponent } from '../InputComponent/InputComponent';
 import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
 import { Link } from 'react-router-dom';
 import { Loading } from "../Loading/Loading";
+import { Api } from "../../service/api";
 
-const API_DOMAIN = 'https://localhost:7079';
 const APP_DOMAIN = 'http://localhost:3000';
 
 const createPayload = (target: any[]): IUser => {
@@ -39,7 +38,7 @@ const SignUpForm = () => {
         const user: IUser = createPayload(event.target);
 
         setIsLoading(true);
-        axios.post(`${API_DOMAIN}/Clientes`, user).then(() => {
+        Api().post(`/clientes`, user).then(() => {
             window.location.href = `${APP_DOMAIN}/login`;
         }).catch((err) => {
             console.error('Ocorreu um erro na request', err);
