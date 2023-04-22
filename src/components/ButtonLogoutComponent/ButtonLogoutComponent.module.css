@@ -3,9 +3,6 @@
     justify-content: center;
     align-items: center;
     background-color: var(--hoverbotaoclaropraescuro--color);
-}
-
-.btn_logout {
     width: 40px;
     height: 25px;
     margin: 10px 10px 0 0;
@@ -13,5 +10,13 @@
     border-radius: 5px;
     color: #fff;
     font-size: 12px;
-    
+    top: 0;
+    right: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn_logout:hover {
+
+    cursor: pointer;
+    background-color: var(--hoverbotaoescuropraclaro--color);
 }

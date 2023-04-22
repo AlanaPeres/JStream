@@ -20,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .title_desktop {
@@ -28,11 +29,15 @@
     margin: 15px;
     font-size: 40px;
     font-weight: normal;
-    margin-left: 400px;
+
+
+
+
 }
 
 .container_title_desktop {
     margin-left: 140px;
+=======
 }
 
 .title_mobile {
@@ -41,6 +46,7 @@
 
 .form {
     padding: 10px;
+    width: 100%;
 }
 
 .col_1 {
@@ -48,17 +54,22 @@
     justify-content: center;
     align-items: center;
     flex-direction: wrap;
+    
+
 }
+
 .col_2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: wrap;
 }
+
 .col_3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 4rem;
 }
 
 .container_input_label {
@@ -67,6 +78,7 @@
 
 .container_input_label input {
     width: 390px;
+=======
     height: 45px;
     padding: 10px;
     border-radius: 15px;
@@ -78,12 +90,15 @@
 
 .container_input_label input::placeholder {
     color: #ffffff;
+
 }
 
 .container_btn {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 15rem;
+
 }
 
 .btn {
@@ -115,6 +130,7 @@
         width: 100%;
         z-index: -1;
         height: 100vh;
+        overflow: scroll;
     }
     .content {
         width: 350px;
@@ -149,6 +165,7 @@
     .container_input_label {
         margin: 0;
     }
+
     .container_input_label input {
         width: 260px;
         height: 40px;
