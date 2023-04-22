@@ -20,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .title_desktop {
@@ -28,7 +29,10 @@
     margin: 15px;
     font-size: 40px;
     font-weight: normal;
-    margin-left: 400px;
+
+
+
+
 }
 
 .container_title_desktop {
@@ -41,6 +45,7 @@
 
 .form {
     padding: 10px;
+    width: 100%;
 }
 
 .col_1 {
@@ -48,6 +53,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: wrap;
+    
+
 }
 .col_2 {
     display: flex;
@@ -59,6 +66,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 4rem;
 }
 
 .container_input_label {
@@ -84,6 +92,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 15rem;
+
 }
 
 .btn {
@@ -115,6 +125,7 @@
         width: 100%;
         z-index: -1;
         height: 100vh;
+        overflow: scroll;
     }
     .content {
         width: 350px;
