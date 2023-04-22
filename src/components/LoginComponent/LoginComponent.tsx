@@ -5,27 +5,34 @@ import styles from './LoginComponent.module.css';
 import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
 import { InputTextComponent } from '../InputComponent/InputComponent';
 import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
-import { UsersManager } from '../../service/usersManagers';
 import { useState } from 'react';
+import { Api } from '../../service/api';
+import { Loading } from '../Loading/Loading';
 
 
 export const LoginComponent = () => {
     const [loginError, setLoginError] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     
     const handleLoginForm = (e: any) => {
         e.preventDefault();
         
         const cpf = e.target[0].value;
         const senha = e.target[1].value;
-        const _user = new UsersManager();
 
-        try {
-            _user.authenticate(cpf, senha);
-            const host = window.location.host;
-            window.location.href = `http://${host}/saldo`;
-        } catch (err) {
+        setIsLoading(true);
+        Api().get(`/clientes/${cpf}`).then((res) => {
+            if (res.data?.senha === senha) {
+                const host = window.location.host;
+                window.location.href = `http://${host}/saldo`;
+            } else {
+                setLoginError(true);
+            }
+        }).catch(() => {
             setLoginError(true);
-        }
+        }).finally(() => {
+            setIsLoading(false);
+        })
     };
 
     
@@ -63,6 +70,7 @@ export const LoginComponent = () => {
 
     return (
         <div className={styles.main}>
+            {isLoading && <Loading />}
             <div className={styles.form_content}>
                 <div className={styles.img_container}>
                     <img
