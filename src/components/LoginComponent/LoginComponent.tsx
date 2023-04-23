@@ -7,24 +7,40 @@ import { InputTextComponent } from '../InputComponent/InputComponent';
 import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
 import { UsersManager } from '../../service/usersManagers';
 import { useState } from 'react';
-
+import { Api } from '../../service/api/Api';
 
 export const LoginComponent = () => {
     const [loginError, setLoginError] = useState(false);
-    
-    const handleLoginForm = (e: any) => {
+    const [cpf, setCpf] = useState('');
+    const [password, setPassword] = useState('');
+
+
+    async function handleLoginForm(e: any){
         e.preventDefault();
-        
-        const cpf = e.target[0].value;
-        const senha = e.target[1].value;
-        const _user = new UsersManager();
+        const data = {
+            cpf, 
+            password
+        }
+        // const cpf = e.target[0].value;
+        // const senha = e.target[1].value;
+        // const _user = new UsersManager();
 
         try {
-            _user.authenticate(cpf, senha);
-            const host = window.location.host;
-            window.location.href = `http://${host}/saldo`;
+            // _user.authenticate(cpf, senha);
+            
+            const response = await Api.post('/logar', data)
+            
+            localStorage.setItem('cpf', cpf);
+            localStorage.setItem('token', response.data.token);
+            // localStorage.setItem('expiration', response.data.expiration);
+            
+            // const host = window.location.host;
+            // window.location.href = `http://${host}/saldo`;
+            // <Link to="http://localhost:3000/saldo"/>
+            console.log("clicou");
         } catch (err) {
             setLoginError(true);
+            alert(err + " : a requisição de login falhou ")
         }
     };
     return (
@@ -46,8 +62,8 @@ export const LoginComponent = () => {
                 </div>
                 <div>
                     <form onSubmit={handleLoginForm}>
-                        <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" />
-                        <InputTextComponent name="password" type="password" label="Senha" />
+                        <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" value={cpf} onChange={e=>setCpf(e.target.value)} />
+                        <InputTextComponent name="password" type="password" label="Senha" value={password} onChange={e=>setPassword(e.target.value)}/>
                         <div className={styles.pass_check}>
                             <div className={styles.input_checkbox}>
                                 <input
