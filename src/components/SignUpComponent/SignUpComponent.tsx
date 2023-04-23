@@ -10,6 +10,7 @@ import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
 import { Link } from 'react-router-dom';
 import { Loading } from "../Loading/Loading";
 import { Api } from "../../service/api";
+import axios from 'axios';
 
 const APP_DOMAIN = 'http://localhost:3000';
 
@@ -77,6 +78,64 @@ const SignUpForm = () => {
       const formattedValue = formatCpf(newValue);
       setCpf(formattedValue);
     };
+
+    function checkPasswordsMatch() {
+        const passwordInput = document.querySelector('input[name="password"]') as HTMLInputElement;
+        const confirmPasswordInput = document.querySelector('input[name="confirm_password"]') as HTMLInputElement;
+      
+        if (passwordInput.value !== confirmPasswordInput.value) {
+            let pswdconfirm = document.querySelector('input[name=confirm_password]') as HTMLInputElement;
+            let label2 = document.querySelector('label[for=confirm_password]') as HTMLLabelElement;
+            pswdconfirm.style.border = "1px solid red";
+            label2.innerText = "Senha incompatível";
+        }
+        else{
+            let pswdconfirm = document.querySelector('input[name=confirm_password]') as HTMLInputElement;
+            let label2 = document.querySelector('label[for=confirm_password]') as HTMLLabelElement;
+            pswdconfirm.style.border = "";
+            label2.innerText = "Confirmar Senha";
+    
+        }
+      }
+    
+    
+    
+    const [cep, setCep] = useState("");
+    const [street, setStreet] = useState("");
+    const [number, setNumber] = useState("");
+    const [complement, setComplement] = useState("");
+    const [neighborhood, setNeighborhood] = useState("");
+    const [city, setCity] = useState("");
+    const [state, setState] = useState("");
+    
+    const handleCepChange = async (event: React.FocusEvent<HTMLInputElement>) => {
+      const cep = event.target.value;
+      if (cep.length === 8) {
+        try {
+          const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+          const data = response.data;
+          setCep(cep);
+          setStreet(data.logradouro);
+          setNumber("");
+          setComplement(data.complemento);
+          setNeighborhood(data.bairro);
+          setCity(data.localidade);
+          setState(data.uf);
+        } catch (error) {
+          console.error(error);
+        }
+      } else {
+        // limpa os dados caso o cep não tenha 8 dígitos
+        setCep("");
+        setStreet("");
+        setNumber("");
+        setComplement("");
+        setNeighborhood("");
+        setCity("");
+        setState("");
+      }}
+
+
    
     return (
       <div className={Style.sign_up}>
@@ -100,16 +159,16 @@ const SignUpForm = () => {
             <InputTextComponent name="cpf" type="text" label="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" onChange={handleCpfChange} value={cpf} />
             <InputTextComponent name="email" type="email" label="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
             <InputTextComponent name="password" type="password" label="Senha" />
-            <InputTextComponent name="confirm_password" type="password" label="Confirmar senha" />
+            <InputTextComponent name="confirm_password" type="password" label="Confirmar senha" onChange={checkPasswordsMatch} />
             <InputTextComponent name="date_of_birth" type="date" label="Data de nascimento" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)\d{2})" />
-            <InputTextComponent name="cep" type="text" label="CEP" pattern="[0-9]{8}" />
-            <InputTextComponent name="street" type="text" label="Rua" />
+            <InputTextComponent name="cep" type="text" label="CEP" pattern="[0-9]{8}" onChange={handleCepChange} />
+            <InputTextComponent name="street" type="text" label="Rua" value={street} />
             <InputTextComponent name="number" type="text" label="Número" pattern="[A-Za-z0-9]+[A-Za-z0-9\s]*" />
             <InputTextComponent name="complement" type="text" label="Complemento" />
-            <InputTextComponent name="neighborhood" type="text" label="Bairro" />
-            <InputTextComponent name="city" type="text" label="Cidade" />
+            <InputTextComponent name="neighborhood" type="text" label="Bairro" value={neighborhood} />
+            <InputTextComponent name="city" type="text" label="Cidade" value={city} />
             <div className={Style.form_group}>
-                <select className={Style.group_uf} name="uf">
+                <select className={Style.group_uf} name="uf" value={state}>
                     {STATES_BR.map(({ id, value, text }) => (
                         <option key={id} value={value}>
                             {text}
