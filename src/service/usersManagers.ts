@@ -1,5 +1,5 @@
 import IUser from "../interface/IUsers"
-import { Api } from "./api/Api";
+import { Api } from "./api";
 
 export class UsersManager {
     createUser (user: IUser) {
@@ -39,7 +39,7 @@ export class UsersManager {
             return;
        }
 
-       Api.get('autorizacao', {
+       Api().get('autorizacao', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
