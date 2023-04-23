@@ -6,10 +6,8 @@ import { TransferenciaPage } from "./pages/transferenciaPage/transferenciaPage";
 import { SaldoPage } from "./pages/saldoPage/saldoPage";
 import { StatementPage } from "./pages/extractPage";
 import { UserPageData } from "./pages/UserPage/UserPage";
-import axios from "axios";
 
 export const AppRoutes = () => {
-    axios.get('https://localhost:7079/Clientes').then(data => console.log(data))
     return(
         <Router>
             <Routes>
