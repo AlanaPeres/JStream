@@ -1,4 +1,5 @@
 import IUser from "../interface/IUsers"
+import { Api } from "./api";
 
 export class UsersManager {
     createUser (user: IUser) {
@@ -28,6 +29,27 @@ export class UsersManager {
 
         localStorage.setItem('usuario', JSON.stringify(_user));
         return _user;
+    }
+
+    authenticateJwt(){
+        const token = localStorage.getItem('token');
+        if(token === null){
+           const host = window.location.host;
+            window.location.href = `http://${host}/login`;
+            return;
+       }
+
+       Api().get('autorizacao', {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+            })
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
     }
 
     logOut () {
