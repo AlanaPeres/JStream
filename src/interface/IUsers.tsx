@@ -2,12 +2,12 @@ import { type } from "os";
 
 interface IUser{
     nome: string;
-    sobrenome: string;
+    sobrenome?: string;
     cpf: string;
     email: string;
-    senha: string;
-    confirmarSenha: string;
-    nascimento:string;
+    senha?: string;
+    confirmarSenha?: string;
+    dataNascimento:string;
     cep: string;
     rua: string;
     numero: string;
@@ -15,7 +15,7 @@ interface IUser{
     bairro: string;
     cidade: string;
     estado: string;
-    saldoAtual: number;
+    saldoAtual?: number;
 }
 
 type UserState = {

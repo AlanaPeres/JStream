@@ -5,9 +5,8 @@ import styles from './LoginComponent.module.css';
 import { MostrarModal } from '../modal/modalRecuperarSenha/mostrarModal';
 import { InputTextComponent } from '../InputComponent/InputComponent';
 import {ButtonTextComponent} from '../ButtonComponent/ButtonComponent';
-import { UsersManager } from '../../service/usersManagers';
 import { useState } from 'react';
-import { Api } from '../../service/api/Api';
+import { Api } from '../../service/api';
 
 export const LoginComponent = () => {
     const [loginError, setLoginError] = useState(false);
@@ -24,7 +23,7 @@ export const LoginComponent = () => {
 
         try {
             
-            const response = await Api.post('/logar', data)
+            const response = await Api().post('/logar', data)
             
             localStorage.setItem('cpf', cpf);
             localStorage.setItem('token', response.data.token);
@@ -40,6 +39,7 @@ export const LoginComponent = () => {
             alert(err + " : a requisição de login falhou ")
         }
     };
+
     return (
         <div className={styles.main}>
             <div className={styles.form_content}>

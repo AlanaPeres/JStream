@@ -13,7 +13,7 @@ export const HeaderMobile: React.FC<HeaderMobileProps> = ({ user }) => {
     <>
       <div className={Styles.header_mobile}>
         <div className={Styles.tres_itens}>
-          <img className={Styles.logotipos} src={img} alt="" />
+        <NavLink to={"/"}><img className={Styles.logotipos} src={img} alt="" />  </NavLink>        
           <h1 className={Styles.boas_vindas}>ola,{user.nome}</h1>
           <NavLink to={"/perfil"}>
             {" "}
