@@ -21,23 +21,20 @@ export const LoginComponent = () => {
             cpf, 
             password
         }
-        // const cpf = e.target[0].value;
-        // const senha = e.target[1].value;
-        // const _user = new UsersManager();
 
         try {
-            // _user.authenticate(cpf, senha);
             
             const response = await Api.post('/logar', data)
             
             localStorage.setItem('cpf', cpf);
             localStorage.setItem('token', response.data.token);
+            localStorage.setItem('usuario', JSON.stringify(response.data.usuario));
             // localStorage.setItem('expiration', response.data.expiration);
-            
-            // const host = window.location.host;
-            // window.location.href = `http://${host}/saldo`;
-            // <Link to="http://localhost:3000/saldo"/>
-            console.log("clicou");
+            const token = localStorage.getItem('token');
+            if(token != null){
+                const host = window.location.host;
+                window.location.href = `http://${host}/saldo`;
+            }
         } catch (err) {
             setLoginError(true);
             alert(err + " : a requisição de login falhou ")
