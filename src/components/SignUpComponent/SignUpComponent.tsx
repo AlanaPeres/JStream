@@ -18,6 +18,7 @@ const createPayload = (target: any[]): IUser => {
         nome: target[0].value,
         cpf: target[2].value,
         email: target[3].value,
+        senha: target[4].value,
         dataNascimento: target[6].value,
         cep: target[7].value,
         rua: target[8].value,
