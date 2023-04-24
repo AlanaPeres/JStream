@@ -7,12 +7,12 @@ import { ButtonLougoutTextComponent } from "../ButtonLogoutComponent/ButtonLogou
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export const SaldoContent: React.FC = () => { 
+export const SaldoContent: React.FC = () => {
   const usersManagers = new UsersManager();
   const user: IUser = usersManagers.getSessionUser();
 
   function handleClickLogoutButton() {
-    usersManagers.logOut()
+    usersManagers.logOut();
     const host = window.location.host;
     window.location.href = `http://${host}/login`;
   }
@@ -20,12 +20,13 @@ export const SaldoContent: React.FC = () => {
   const [saldo, setSaldo] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://localhost:7079/Contas/${user.cpf}`)
-      .then(response => {
+    axios
+      .get(`https://localhost:7079/Contas/${user.cpf}`)
+      .then((response) => {
         // Aqui você pode acessar os dados da resposta
         setSaldo(response.data.saldo);
       })
-      .catch(error => {
+      .catch((error) => {
         // Aqui você pode lidar com erros que ocorrem durante a requisição
         console.error(error);
       });
@@ -37,7 +38,10 @@ export const SaldoContent: React.FC = () => {
         <HeaderMobile user={user} />
         <div className={styles.top}>
           <h1 className={styles.titulo}>Olá, {user?.nome}</h1>
-          <ButtonLougoutTextComponent label="Sair" onClick={handleClickLogoutButton} />
+          <ButtonLougoutTextComponent
+            label="Sair"
+            onClick={handleClickLogoutButton}
+          />
         </div>
         <div className={styles.article}>
           <h2 className={styles.saldo}>
@@ -53,4 +57,3 @@ export const SaldoContent: React.FC = () => {
     </>
   );
 };
-
