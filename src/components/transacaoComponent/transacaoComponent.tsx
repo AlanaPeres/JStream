@@ -5,7 +5,6 @@ type CardTransacaoProps = {
   data_de_pagamento: string;
   destino: string;
   valor_gasto: number;
-  valor_anterior: number;
 };
 
 const CardTransacao: React.FC<CardTransacaoProps> = ({
@@ -13,7 +12,6 @@ const CardTransacao: React.FC<CardTransacaoProps> = ({
   data_de_pagamento,
   destino,
   valor_gasto,
-  valor_anterior,
 }) => {
   return (
     <>
@@ -25,7 +23,7 @@ const CardTransacao: React.FC<CardTransacaoProps> = ({
         </div>
         <div className={styles.div_valores}>
           <p className={styles.valor_gasto}>R$ {valor_gasto}</p>
-          <p className={styles.valor_anterior}>R$ {valor_anterior}</p>
+          <p className={styles.valor_anterior}></p>
         </div>
       </li>
     </>

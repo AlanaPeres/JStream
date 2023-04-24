@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { UsersManager } from "../../service/usersManagers";
 import CardTransacao from "../transacaoComponent/transacaoComponent";
 import styles from "./transacaoContainerComponent.module.css";
+import axios from "axios";
+import IUser from "../../interface/IUsers";
 
 type Card = {
   id: string;
@@ -11,89 +14,39 @@ type Card = {
   valor_anterior: number;
 };
 
+const usersManagers = new UsersManager();
+const user: IUser = usersManagers.getSessionUser();
+
 const Transacoes: React.FC = () => {
-  const [cards, setCards] = useState<Card[]>([
-    {
-      id: "1",
-      metodo_De_Pagamento: "PIX",
-      data_de_pagamento: "03/04/2023",
-      destino: "padaria",
-      valor_gasto: 4.451,
-      valor_anterior: 23.456,
-    },
-    {
-      id: "2",
-      metodo_De_Pagamento: "Débito",
-      data_de_pagamento: "02/04/2023",
-      destino: "supermercado",
-      valor_gasto: 3.007,
-      valor_anterior: 18.456,
-    },
-    {
-      id: "3",
-      metodo_De_Pagamento: "Depósito",
-      data_de_pagamento: "03/04/2023",
-      destino: "Soft Finance",
-      valor_gasto: 4.451,
-      valor_anterior: 23.456,
-    },
-    {
-      id: "4",
-      metodo_De_Pagamento: "Cartão",
-      data_de_pagamento: "02/04/2023",
-      destino: "supermercado",
-      valor_gasto: 3007,
-      valor_anterior: 18.456,
-    },
-    {
-      id: "5",
-      metodo_De_Pagamento: "Depósito",
-      data_de_pagamento: "03/04/2023",
-      destino: "Soft Finance",
-      valor_gasto: 4.451,
-      valor_anterior: 23.456,
-    },
-    {
-      id: "6",
-      metodo_De_Pagamento: "Cartão",
-      data_de_pagamento: "02/04/2023",
-      destino: "supermercado",
-      valor_gasto: 3007,
-      valor_anterior: 18.456,
-    },
-    {
-      id: "7",
-      metodo_De_Pagamento: "PIX",
-      data_de_pagamento: "03/04/2023",
-      destino: "padaria",
-      valor_gasto: 4.451,
-      valor_anterior: 23.456,
-    },
-    {
-      id: "8",
-      metodo_De_Pagamento: "Cartão",
-      data_de_pagamento: "02/04/2023",
-      destino: "supermercado",
-      valor_gasto: 3007,
-      valor_anterior: 18.456,
-    },
-    {
-      id: "9",
-      metodo_De_Pagamento: "Depósito",
-      data_de_pagamento: "03/04/2023",
-      destino: "Soft Finance",
-      valor_gasto: 4.451,
-      valor_anterior: 23.456,
-    },
-    {
-      id: "10",
-      metodo_De_Pagamento: "Cartão",
-      data_de_pagamento: "02/04/2023",
-      destino: "supermercado",
-      valor_gasto: 3007,
-      valor_anterior: 18.456,
-    },
-  ]);
+  const [cards, setCards] = useState<Card[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get(
+          `https://localhost:7079/api/Transacoes/${user.cpf}`
+        );
+        const data = response.data;
+    
+        const formattedData: Card[] = [
+          {
+            id: data.id.toString(),
+            metodo_De_Pagamento: data.tipoTransacao,
+            data_de_pagamento: new Date(data.dataHora).toLocaleDateString(),
+            destino: data.cpfDestino,
+            valor_gasto: data.valor,
+            valor_anterior: data.valor,
+          },
+        ];
+    
+        setCards(formattedData);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   return (
     <div className={styles.transacao}>
@@ -105,7 +58,7 @@ const Transacoes: React.FC = () => {
             data_de_pagamento={card.data_de_pagamento}
             destino={card.destino}
             valor_gasto={card.valor_gasto}
-            valor_anterior={card.valor_anterior}
+    
           />
         ))}
       </ul>

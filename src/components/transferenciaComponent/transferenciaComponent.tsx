@@ -8,11 +8,7 @@ import { Tabs } from '../TabComponent/Tabs';
 export const TransferenciaContent = () => {
     const usersManagers = new UsersManager();
 
-    function handleClickLogoutButton() {
-        usersManagers.logOut();
-        const host = window.location.host;
-        window.location.href = `http://${host}/login`;
-    }
+   
 
     return (
         <div className={style.container}>
@@ -20,7 +16,7 @@ export const TransferenciaContent = () => {
                 {/* <div className={style.container_title_desktop}>
                     <h3 className={style.title_desktop}>Transferência</h3>
                 </div> */}
-                <ButtonLougoutTextComponent label="Sair" onClick={handleClickLogoutButton} />
+               
             </div>
             <div className={style.content}>
                 {/* <h3 className={style.title_mobile}>Transferência</h3> */}
