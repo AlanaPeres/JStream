@@ -11,7 +11,7 @@ export const FormDeposito = () => {
     const user: IUser = usersManagers.getSessionUser();
   
 
-    const [valordepo, setValorDepo] = useState(0);
+    const [valordepo, setValorDepo] = useState('');
 
   const handleChange = (event: any) => {
     setValorDepo(event.target.value);
