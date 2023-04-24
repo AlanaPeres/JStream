@@ -11,7 +11,7 @@ export const MostrarModalDeposito = () => {
     return (
         <>
             <button onClick={alterarModal} className={style.btn} type="submit">
-                Próximo
+                Depositar
             </button>
             {<ModalDeposito isModalVisible={isModalVisible} onBackdropClick={alterarModal} />}
         </>

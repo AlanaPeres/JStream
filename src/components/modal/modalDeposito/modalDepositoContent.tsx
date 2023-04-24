@@ -15,14 +15,13 @@ export const ModalDepositoContent = () => {
                 <ModalContainer>
                     <ContainerTexto>
                         <Texto>
-                            <p>Você confirma que deseja fazer um Depósito?</p>
-                            <p>Valor: R$ 100,00</p>
+                            <p>Depósito Realizado</p>
+                            
                         </Texto>
                     </ContainerTexto>
                     <Buttons>
                         <Btn onClick={fecharModal}>Voltar</Btn>
-                        <Btn onClick={fecharModal}>Emitir Boleto</Btn>
-                    </Buttons>
+                                </Buttons>
                 </ModalContainer>
             )}
         </div>
