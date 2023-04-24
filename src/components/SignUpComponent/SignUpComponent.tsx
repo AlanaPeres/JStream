@@ -124,16 +124,7 @@ const SignUpForm = () => {
         } catch (error) {
           console.error(error);
         }
-      } else {
-        // limpa os dados caso o cep não tenha 8 dígitos
-        setCep("");
-        setStreet("");
-        setNumber("");
-        setComplement("");
-        setNeighborhood("");
-        setCity("");
-        setState("");
-      }}
+      } }
 
 
    

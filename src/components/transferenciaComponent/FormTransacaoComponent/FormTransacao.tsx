@@ -38,7 +38,7 @@ const handleTransf = (event: any) => {
        cpfDestino: `${cpftrans}`,
         valor: `${valortrans}`,
         dataHora: '2023-04-24T11:33:41.052Z',
-        tipoTransacao: 'p'
+        tipoTransacao: 'T'
       };
       
          axios.post(`https://localhost:7079/api/Transacoes/${user.cpf}?cpfDestino=${cpftrans}`, transaction)

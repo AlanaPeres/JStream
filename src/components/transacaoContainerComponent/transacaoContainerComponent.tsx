@@ -28,16 +28,14 @@ const Transacoes: React.FC = () => {
         );
         const data = response.data;
     
-        const formattedData: Card[] = [
-          {
-            id: data.id.toString(),
-            metodo_De_Pagamento: data.tipoTransacao,
-            data_de_pagamento: new Date(data.dataHora).toLocaleDateString(),
-            destino: data.cpfDestino,
-            valor_gasto: data.valor,
-            valor_anterior: data.valor,
-          },
-        ];
+        const formattedData: Card[] = data.map((transaction: any) => ({
+          id: transaction.id.toString(),
+          metodo_De_Pagamento: transaction.tipoTransacao,
+          data_de_pagamento: new Date(transaction.dataHora).toLocaleDateString(),
+          destino: transaction.cpfDestino,
+          valor_gasto: transaction.valor,
+          valor_anterior: transaction.valor,
+        }));
     
         setCards(formattedData);
       } catch (error) {
