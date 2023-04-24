@@ -4,6 +4,8 @@ import { HeaderMobile } from "../headerMobileComponent/headerMobileComponent";
 import styles from "../StatementComponent/StatementComponent.module.css";
 import BankTransactions from "../StatementContainerComponent/StatementContainerComponent";
 import { ButtonLougoutTextComponent } from "../ButtonLogoutComponent/ButtonLogoutComponent";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 type BalanceContentProps = {
   user: IUser;
@@ -18,6 +20,21 @@ export const StatementComponent: React.FC<BalanceContentProps> = ({ user }) => {
     window.location.href = `http://${host}/login`;
   }
 
+
+  const [saldo, setSaldo] = useState(null);
+
+  useEffect(() => {
+    axios.get(`https://localhost:7079/Contas/${user.cpf}`)
+      .then(response => {
+        // Aqui você pode acessar os dados da resposta
+        setSaldo(response.data.saldo);
+      })
+      .catch(error => {
+        // Aqui você pode lidar com erros que ocorrem durante a requisição
+        console.error(error);
+      });
+  }, []);
+
   return (
     <>
       <div>
@@ -31,7 +48,7 @@ export const StatementComponent: React.FC<BalanceContentProps> = ({ user }) => {
             <h2 className={styles.statement}>
               <span className={styles.statementWord}>Saldo:</span>
               <span className={styles.statementAmount}>
-                R$ {user.saldoAtual}
+                R$ {saldo}
               </span>
             </h2>
             <div className={styles.extract}>

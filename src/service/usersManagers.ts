@@ -55,4 +55,6 @@ export class UsersManager {
     logOut () {
         localStorage.removeItem('usuario');
     }
+
+   
 }
