@@ -21,7 +21,7 @@ export const ModalDepositoContent = () => {
                     </ContainerTexto>
                     <Buttons>
                         <Btn onClick={fecharModal}>Voltar</Btn>
-                        <Btn onClick={fecharModal}>Emitir Boleto</Btn>
+                        <Btn type='button' onClick={fecharModal}>Confirmar</Btn>
                     </Buttons>
                 </ModalContainer>
             )}
