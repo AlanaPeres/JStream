@@ -14,22 +14,16 @@ type BalanceContentProps = {
 export const StatementComponent: React.FC<BalanceContentProps> = ({ user }) => {
   const usersManagers = new UsersManager();
 
-  function handleClickLogoutButton() {
-    usersManagers.logOut()
-    const host = window.location.host;
-    window.location.href = `http://${host}/login`;
-  }
-
-
   const [saldo, setSaldo] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://localhost:7079/Contas/${user.cpf}`)
-      .then(response => {
+    axios
+      .get(`https://localhost:7079/Contas/${user.cpf}`)
+      .then((response) => {
         // Aqui você pode acessar os dados da resposta
         setSaldo(response.data.saldo);
       })
-      .catch(error => {
+      .catch((error) => {
         // Aqui você pode lidar com erros que ocorrem durante a requisição
         console.error(error);
       });
@@ -42,14 +36,11 @@ export const StatementComponent: React.FC<BalanceContentProps> = ({ user }) => {
           <HeaderMobile user={user} />
           <div className={styles.top}>
             <h1 className={styles.title}>Olá, {user.nome}</h1>
-            <ButtonLougoutTextComponent label="Sair" onClick={handleClickLogoutButton} />
-        </div>
+          </div>
           <div className={styles.article}>
             <h2 className={styles.statement}>
               <span className={styles.statementWord}>Saldo:</span>
-              <span className={styles.statementAmount}>
-                R$ {saldo}
-              </span>
+              <span className={styles.statementAmount}>R$ {saldo}</span>
             </h2>
             <div className={styles.extract}>
               <p>EXTRATO</p>

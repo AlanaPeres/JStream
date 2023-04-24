@@ -11,11 +11,7 @@ export const SaldoContent: React.FC = () => {
   const usersManagers = new UsersManager();
   const user: IUser = usersManagers.getSessionUser();
 
-  function handleClickLogoutButton() {
-    usersManagers.logOut();
-    const host = window.location.host;
-    window.location.href = `http://${host}/login`;
-  }
+  
 
   const [saldo, setSaldo] = useState(null);
 
@@ -38,10 +34,7 @@ export const SaldoContent: React.FC = () => {
         <HeaderMobile user={user} />
         <div className={styles.top}>
           <h1 className={styles.titulo}>Olá, {user?.nome}</h1>
-          <ButtonLougoutTextComponent
-            label="Sair"
-            onClick={handleClickLogoutButton}
-          />
+          
         </div>
         <div className={styles.article}>
           <h2 className={styles.saldo}>

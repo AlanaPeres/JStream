@@ -3,10 +3,17 @@ import profilepic from "./../../assets/profile_icon.webp";
 import { UsersManager } from "../../service/usersManagers";
 import IUser from "../../interface/IUsers";
 import { NavLink } from "react-router-dom";
+import { ButtonLougoutTextComponent } from "../ButtonLogoutComponent/ButtonLogoutComponent";
 
 export const UserDataComponent = () => {
   const usersManagers = new UsersManager();
   const user: IUser = usersManagers.getSessionUser();
+
+  function handleClickLogoutButton() {
+    usersManagers.logOut();
+    const host = window.location.host;
+    window.location.href = `http://${host}/login`;
+}
 
   return (
     <>
@@ -28,6 +35,7 @@ export const UserDataComponent = () => {
         </div>
         <NavLink to={"/saldo"}>
           <button className={styles.BtnVoltar}>VOLTAR</button>
+          <ButtonLougoutTextComponent label="Sair" onClick={handleClickLogoutButton} />
         </NavLink>
       </div>
     </>

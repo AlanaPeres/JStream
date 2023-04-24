@@ -8,13 +8,13 @@
     width: 85%;
     top: 0;
     right: 0;
-    overflow: scroll;
+    overflow: hidden;
     background-color: var(--backgroundmobile-color);
 }
 
 .content {
     background-color: #afe9e5;
-    width: 1000px;
+    width: 75%;
     height: 550px;
     border-radius: 30px;
     display: flex;
@@ -67,14 +67,16 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    width: 50%;
 }
 
 .container_input_label {
     margin: 40px;
+    width: 100%;
 }
 
 .container_input_label input {
-    width: 390px;
+    width: 100%;
     height: 45px;
     padding: 10px;
     border-radius: 15px;
@@ -106,7 +108,10 @@
     transition: 0.5s;
     text-transform: uppercase;
     cursor: pointer;
-}
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
 
 .btn:hover {
     background-color: var(--hoverbotaoclaropraescuro--color);
@@ -126,6 +131,7 @@
         z-index: -1;
         height: 100vh;
         overflow: scroll;
+       
     }
     .content {
         width: 350px;
@@ -159,6 +165,8 @@
     }
     .container_input_label {
         margin: 0;
+        margin: auto;
+        margin-left: 2rem;
     }
     .container_input_label input {
         width: 260px;
@@ -180,5 +188,8 @@
         width: 260px;
         height: 40px;
         margin: auto;
-    }
+        
+      
+      }
+    
 }
