@@ -26,7 +26,7 @@ export const FormDeposito = () => {
           cpfDestino: `stringstrin`,
           valor: valordepo,
           dataHora: '2023-04-24T11:33:41.052Z',
-          tipoTransacao: 'p'
+          tipoTransacao: 'U'
         };
       
         axios.post(`https://localhost:7079/api/Transacoes?cpf=${user.cpf}`, transaction)
