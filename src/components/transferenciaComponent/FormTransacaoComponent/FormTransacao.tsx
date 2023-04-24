@@ -16,6 +16,14 @@ export const FormTransacao = () => {
 
   const handleCpf = (event: any) => {
     setCpf(event.target.value);
+
+     // Obtém o valor atualizado do campo de CPF
+     const newValue = event.target.value;
+    
+     // Formata o valor e atualiza o estado do componente
+     const formattedValue = formatCpf(newValue);
+     setCpf(formattedValue);
+
   }
 const handleTransf = (event: any) => {
     setValortrans(event.target.value);
@@ -43,6 +51,29 @@ const handleTransf = (event: any) => {
        }
 
 
+       
+    const formatCpf = (value: string) => {
+        // Remove qualquer caractere que não seja dígito numérico
+        const cleanedValue = value.replace(/\D/g, "");
+    
+        // Adiciona pontos e hífens em posições específicas do valor limpo
+        let formattedValue = cleanedValue;
+        if (cleanedValue.length > 3) {
+          formattedValue =
+            cleanedValue.substr(0, 3) +
+            "." +
+            cleanedValue.substr(3, 3) +
+            "." +
+            cleanedValue.substr(6, 3);
+        }
+        if (cleanedValue.length > 9) {
+          formattedValue += "-" + cleanedValue.substr(9, 2);
+        }
+    
+        return formattedValue;
+      };
+    
+     
     return (
         <form className={style.form} onSubmit={submitDeposit}>
             <div className={style.col_1}>
